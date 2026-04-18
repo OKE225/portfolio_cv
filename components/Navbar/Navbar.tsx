@@ -18,7 +18,7 @@ const Navbar = () => {
       </button>
 
       <nav
-        className={`fixed top-3 left-1/2 -translate-x-1/2 w-fit text-gray-500 lg:block z-49 max-lg:top-0 max-lg:bg-slate-950 max-lg:w-full max-lg:h-full ${isOpen ? "block" : "hidden"}`}>
+        className={`fixed top-3 left-1/2 -translate-x-1/2 w-fit lg:block z-49 max-lg:top-0 max-lg:bg-slate-950 max-lg:w-full max-lg:h-full ${isOpen ? "block" : "hidden"}`}>
         <ul className="flex gap-2 flex-nowrap whitespace-nowrap text-xl max-lg:text-3xl max-lg:flex-col max-lg:mt-25 max-lg:mx-2 max-lg:gap-y-5">
           <NavbarItem href="#home" closeMenu={() => setIsOpen(false)}>
             {"<Home />"}

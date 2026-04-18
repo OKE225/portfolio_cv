@@ -5,3 +5,16 @@
   /* themes: black --default; */
 }
 @plugin "@iconify/tailwind4";
+
+@keyframes move-diagonal {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+.animate-move-diagonal {
+  animation: move-diagonal 60s linear infinite;
+}

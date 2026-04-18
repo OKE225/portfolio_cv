@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${pixelifySans.variable} ${pixelifySans.className} h-full antialiased bg-slate-950`}>
+      className={`${pixelifySans.variable} ${pixelifySans.className} h-full antialiased bg-slate-950 overflow-x-hidden scroll-smooth`}>
       <body className="min-h-full">
         <Navbar />
         {children}
