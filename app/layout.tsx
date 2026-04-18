@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Pixelify_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar/Navbar";
 
 const pixelifySans = Pixelify_Sans({
   variable: "--font-pixelify-sans",
@@ -22,7 +23,10 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${pixelifySans.variable} ${pixelifySans.className} h-full antialiased bg-slate-950`}>
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
