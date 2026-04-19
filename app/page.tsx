@@ -1,5 +1,5 @@
 import AboutMeSection from "@/components/Sections/AboutMeSection";
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/Sections/HeroSection";
 
 const Page = () => {
   return (

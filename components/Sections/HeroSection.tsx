@@ -1,8 +1,8 @@
-import CTA from "./Hero/CTA";
-import Profession from "./Hero/Profession";
-import ShortDescription from "./Hero/ShortDescription";
-import SocialIcon from "./Hero/SocialIcon";
-import WelcomeText from "./Hero/WelcomeText";
+import CTA from "../Hero/CTA";
+import Profession from "../Hero/Profession";
+import ShortDescription from "../Hero/ShortDescription";
+import SocialIcon from "../Hero/SocialIcon";
+import WelcomeText from "../Hero/WelcomeText";
 
 const HeroSection = () => {
   return (
@@ -28,7 +28,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <span className="from-slate-950 bg-linear-0 w-full h-[25%] absolute bottom-0 left-0 right-0"></span>
+      <span className="from-slate-950 bg-linear-0 w-full h-[30%] absolute bottom-0 left-0 right-0"></span>
     </div>
   );
 };
