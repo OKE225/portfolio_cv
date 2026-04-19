@@ -7,15 +7,11 @@ const Navbar = () => {
 
   return (
     <>
-      <button
-        className="fixed top-2 right-2 z-50 lg:hidden flex"
-        onClick={() => setIsOpen((prev) => !prev)}>
-        {isOpen ? (
-          <span className="icon-[rivet-icons--close] w-8 h-8 bg-gray-500"></span>
-        ) : (
-          <span className="icon-[rivet-icons--menu] w-8 h-8 bg-gray-500"></span>
-        )}
-      </button>
+      <label className="swap fixed top-2 right-2 z-50 lg:hidden">
+        <input type="checkbox" onClick={() => setIsOpen((prev) => !prev)} />
+        <span className="icon-[rivet-icons--close] swap-on w-8 h-8 bg-gray-500"></span>
+        <span className="icon-[rivet-icons--menu] swap-off w-8 h-8 bg-gray-500"></span>
+      </label>
 
       <nav
         className={`fixed top-3 left-1/2 -translate-x-1/2 w-fit lg:block z-49 max-lg:top-0 max-lg:bg-slate-950 max-lg:w-full max-lg:h-full ${isOpen ? "block" : "hidden"}`}>

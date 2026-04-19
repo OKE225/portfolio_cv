@@ -2,9 +2,23 @@
 
 @plugin "flyonui" {
   themes: black --default;
-  /* themes: black --default; */
 }
 @plugin "@iconify/tailwind4";
+
+:root::-webkit-scrollbar {
+  width: 0 !important;
+  display: none !important;
+}
+
+:root {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  overflow: overlay !important;
+}
+
+.animate-move-diagonal {
+  animation: move-diagonal 60s linear infinite;
+}
 
 @keyframes move-diagonal {
   from {
@@ -13,8 +27,4 @@
   to {
     background-position: 100% 100%;
   }
-}
-
-.animate-move-diagonal {
-  animation: move-diagonal 60s linear infinite;
 }
