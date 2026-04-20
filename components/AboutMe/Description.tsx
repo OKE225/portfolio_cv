@@ -1,6 +1,6 @@
 const Description = () => {
   return (
-    <div className="text-gray-400 mt-5">
+    <div className="text-gray-400">
       <p className="mb-5">
         Fusce at lorem ut arcu euismod posuere. Maecenas mollis eros at dui
         placerat varius. Praesent sed consectetur mauris. Morbi in condimentum
