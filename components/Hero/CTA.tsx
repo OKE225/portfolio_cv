@@ -1,18 +1,25 @@
-import Link from "next/link";
+"use client";
 
 const CTA = () => {
+  const handleScroll = (id: string) => {
+    const el = document.querySelector(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-      <Link
-        href="#projects"
-        className="bg-rose-500 text-zinc-50 font-bold text-3xl px-5 py-2 mr-5 max-xl:text-2xl">
+      <button
+        onClick={() => handleScroll("#projects")}
+        className="bg-rose-500 text-zinc-50 font-bold text-3xl px-5 py-2 mr-2 max-xl:text-2xl shadow-rose-950 shadow-lg">
         Moje Prace
-      </Link>
-      <Link
-        href="#contact"
+      </button>
+      <button
+        onClick={() => handleScroll("#contact")}
         className="text-rose-500 font-bold text-3xl px-5 py-2 shadow-[inset_0_0_0_3px] shadow-rose-500 max-xl:text-2xl">
         Get in Touch
-      </Link>
+      </button>
     </>
   );
 };

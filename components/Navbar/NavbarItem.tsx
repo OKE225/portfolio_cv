@@ -7,9 +7,18 @@ interface NavbarItemProps {
 }
 
 const NavbarItem = ({ href, closeMenu, children }: NavbarItemProps) => {
+  const onClick = () => {
+    closeMenu();
+    const el = document.querySelector(href);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <li className="bg-slate-950 border-3 border-slate-900 text-gray-500 hover:text-zinc-50 ">
-      <Link href={href} className="block w-full py-1 px-3" onClick={closeMenu}>
+    <li
+      className="bg-slate-950 border-3 border-slate-900 text-gray-500 hover:text-zinc-50 shadow-xl"
+      onClick={onClick}>
+      <Link href={href} className="block w-full py-1 px-3">
         {children}
       </Link>
     </li>
