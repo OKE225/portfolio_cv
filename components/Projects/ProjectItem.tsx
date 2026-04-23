@@ -9,24 +9,28 @@ const ProjectItem = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div>
+    <div className="card overflow-hidden bg-slate-900">
       <Link href="" className="block w-full relative aspect-video">
         <Image
           src="https://placehold.co/600x400.png"
           alt="placeholder"
           fill
-          className="object-cover hover:scale-105 hover:rotate-1 transition ease-in-out"
+          className="object-cover"
         />
       </Link>
 
-      <h3 className="text-3xl font-bold">Project Name</h3>
-      <p
-        className="inline-block text-rose-500 text-lg underline cursor-pointer"
-        onClick={() => setIsOpen((prev) => !prev)}>
-        Details →
-      </p>
+      <div className="card-body">
+        <h3 className="card-title">Project Name</h3>
+        <div className="card-actions inline-block">
+          <p
+            className="text-rose-500 link no-underline"
+            onClick={() => setIsOpen((prev) => !prev)}>
+            Details →
+          </p>
+        </div>
 
-      {isOpen && <ProjectModal onClose={() => setIsOpen(false)} />}
+        {isOpen && <ProjectModal onClose={() => setIsOpen(false)} />}
+      </div>
     </div>
   );
 };

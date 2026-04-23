@@ -22,10 +22,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${pixelifySans.variable} ${pixelifySans.className} h-full antialiased bg-slate-950 overflow-x-hidden scroll-smooth`}>
+      className={`${pixelifySans.variable} ${pixelifySans.className} h-full antialiased bg-slate-950 overflow-hidden scroll-smooth`}>
       <body className="min-h-full">
         <Navbar />
-        {children}
+        <div className="h-screen w-full bg-repeat bg-[url('/squares-pattern.svg')] bg-size-[675px_675px] bg-center animate-move-diagonal">
+          <span className="from-slate-950 bg-linear-0 w-full h-[30%] absolute bottom-0 left-0 right-0"></span>
+
+          {children}
+        </div>
       </body>
     </html>
   );

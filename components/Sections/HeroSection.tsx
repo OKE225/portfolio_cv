@@ -6,17 +6,17 @@ import WelcomeText from "../Hero/WelcomeText";
 
 const HeroSection = () => {
   return (
-    <div
-      className="min-h-screen w-full bg-repeat bg-[url('/squares-pattern.svg')] bg-size-[675px_675px] bg-center animate-move-diagonal"
-      id="home">
-      <div className="flex relative items-center flex-col justify-center h-screen z-20">
+    <>
+      <div
+        className="flex relative items-center flex-col justify-center min-h-screen z-20"
+        id="home">
         <WelcomeText />
         <Profession />
         <ShortDescription />
 
         <div className="mt-15 flex">
           <CTA />
-          <div className="flex ml-11 gap-2.5 max-lg:flex-col">
+          <div className="flex justify-center items-center ml-20">
             <SocialIcon
               icon="icon-[mdi--github]"
               link="https://github.com/OKE225"
@@ -28,8 +28,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <span className="from-slate-950 bg-linear-0 w-full h-[30%] absolute bottom-0 left-0 right-0"></span>
-    </div>
+    </>
   );
 };
 

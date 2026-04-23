@@ -3,7 +3,9 @@ interface HeadingTextProps {
 }
 
 const HeadingText = ({ children }: HeadingTextProps) => {
-  return <h1 className="text-5xl font-bold text-zinc-50 mb-5">{children}</h1>;
+  return (
+    <h1 className="text-5xl font-bold text-zinc-50 mb-5">{`<${children} />`}</h1>
+  );
 };
 
 export default HeadingText;
