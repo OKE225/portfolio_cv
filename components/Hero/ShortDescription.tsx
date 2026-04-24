@@ -1,9 +1,12 @@
 const ShortDescription = () => {
   return (
-    <p className="w-full text-xl text-center mt-5 text-gray-500">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend
-      consequat elit, sit amet ornare nisl ullamcorper ac. Donec accumsan massa
-      ut semper ultricies. Cras faucibus non purus eu bibendum.
+    <p className="max-w-225 text-xl text-center mt-5 text-gray-500">
+      Jestem programistą Frontend.{" "}
+      <span className="underline">
+        Projektuję i tworzę intuicyjne oraz responsywne strony / aplikacje
+        internetowe
+      </span>{" "}
+      z React, Next.js i TailwindCSS. Sprawdź moje projekty poniżej
     </p>
   );
 };

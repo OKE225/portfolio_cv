@@ -2,7 +2,7 @@ import Description from "../AboutMe/Description";
 import HeadingText from "../HeadingText";
 import SkillElement from "../AboutMe/SkillElement";
 import SubHeadingText from "../SubHeadingText";
-import ProgrammingLanguageItem from "../AboutMe/ProgrammingLanguageItem";
+import SkillsSetCard from "../AboutMe/SkillsSetCard";
 
 const frontendList = [
   {
@@ -86,33 +86,47 @@ const AboutMeSection = () => {
       <Description />
 
       <div className="grid grid-cols-3 gap-1 mt-10 ">
-        <SkillElement></SkillElement>
-        <SkillElement></SkillElement>
-        <SkillElement></SkillElement>
+        <SkillElement title="Responsywność">
+          Tworzę responsywne strony internetowe, które automatycznie dostosowują
+          się do każdego urządzenia: komputerów, laptopów, tabletów i telefonów.
+          Wyglądają świetnie i działają płynnie na każdym ekranie. Używam do
+          tego CSS Grid, Flexbox oraz breakpointów
+        </SkillElement>
+        <SkillElement title="Design UI/UX">
+          Tworzę intuicyjne i estetyczne projekty stron w Figma, dbając o wygodę
+          użytkownika (UX/UI). Zwracam uwagę na kolory, typografię oraz
+          wszystkie stany elementów (normalny, hover, focus, błąd, ładowanie).
+          Strony są przyjemne wizualnie i łatwe w obsłudze na każdym urządzeniu
+        </SkillElement>
+        <SkillElement title="Gotowe projekty">
+          Umiem także zaprogramować aplikację za pomocą gotowego projektu z
+          Figmy, zamieniając grafiki projektantów w działające strony www
+          dodając stany komponentów i interaktywność z animacjami. Efektem są w
+          pełni funkcjonalne strony
+        </SkillElement>
+        <SkillElement title="Bazy danych">
+          Łączę strony i aplikacje z bazami danych MongoDB oraz MySQL. Piszę
+          zapytania do pobierania, dodawania, edycji i usuwania danych (operacje
+          CRUD). oraz tworzę API które pobierają i zapisują dane bez odświeżania
+          strony
+        </SkillElement>
+        <SkillElement title="Czysty kod">
+          Piszę czytelny, uporządkowany, łatwy do zrozumienia kod przez innych
+          programistów. Używam TypeScript, żeby popełniać mniej błędów podczas
+          pisania kodu. Dzielę kod na małe, wielokrotnego użytku komponenty
+        </SkillElement>
+        <SkillElement title="API integracja">
+          Łączę aplikacje z zewnętrznymi usługami np. wysyłanie emaili przez
+          NodeMailer, czy logowanie OAuth oraz buduję REST API dla operacji CRUD
+          (Create, Read, Update, Delete) z error handling, czy walidacją danych.
+          Buduję także własne API
+        </SkillElement>
       </div>
 
       <SubHeadingText>Skills & Technologies</SubHeadingText>
-      <div className="flex justify-around">
-        <div>
-          <h3>Frontend</h3>
-          {frontendList.map((tech) => (
-            <ProgrammingLanguageItem
-              key={tech.name}
-              name={tech.name}
-              icon={tech.icon}
-            />
-          ))}
-        </div>
-        <div>
-          <h3>Backend</h3>
-          {backendList.map((tech) => (
-            <ProgrammingLanguageItem
-              key={tech.name}
-              name={tech.name}
-              icon={tech.icon}
-            />
-          ))}
-        </div>
+      <div className="grid grid-cols-2 gap-1">
+        <SkillsSetCard title="Frontend" techList={frontendList} />
+        <SkillsSetCard title="Backend" techList={backendList} />
       </div>
     </div>
   );

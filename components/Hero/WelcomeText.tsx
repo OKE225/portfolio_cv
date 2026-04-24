@@ -1,8 +1,7 @@
 const WelcomeText = () => {
   return (
-    <h1 className="text-zinc-50 text-8xl font-bold max-lg:flex max-lg:flex-col">
-      Hello!, I am{" "}
-      <span className="text-rose-500 px-2 max-lg:p-1">{"<Patryk />"}</span>
+    <h1 className="text-gray-400 text-4xl max-lg:flex max-lg:flex-col">
+      Cześć! Jestem Patryk
     </h1>
   );
 };

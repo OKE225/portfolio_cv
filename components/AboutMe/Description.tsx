@@ -2,22 +2,21 @@ const Description = () => {
   return (
     <div className="text-gray-400">
       <p className="mb-5">
-        Fusce at lorem ut arcu euismod posuere. Maecenas mollis eros at dui
-        placerat varius. Praesent sed consectetur mauris. Morbi in condimentum
-        erat. Nunc urna nibh, aliquet a tristique in, finibus eu nisl. Aenean
-        sit amet felis eu turpis facilisis feugiat vitae nec elit. In at
-        elementum eros, sit amet accumsan nulla. Aenean et sodales quam. Nam nec
-        neque vitae risus iaculis mollis eget at odio. Nullam at mattis neque.
-        Vivamus faucibus cursus rhoncus. Etiam consequat convallis orci, id
-        posuere metus tempor ut.
+        Nazywam się Patryk Jastrzębowski. Mam 20 lat i z wykształcenia jestem
+        technikiem informatykiem. Wolny czas poświęcam na programowanie – tworzę
+        responsywne strony i aplikacje internetowe. Najczęściej programuję
+        w Next.js, React, TypeScript, JavaScript oraz stylizuję je za
+        pomocą TailwindCSS. Do zarządzania kodem używam Git i GitHub. A strony
+        projektuję w Figmie, dbając o elementy, ich kolory i typografię. Umiem
+        zamieniać gotowe projekty z Figmy w działające strony www
       </p>
       <p>
-        Curabitur non ipsum tempor, ultrices mi vel, interdum ante. Integer
-        imperdiet tellus eget tellus mattis ultricies. Praesent dolor leo,
-        dignissim ut mollis eget, interdum ut odio. Proin id velit turpis. Nam
-        vel lectus purus. Donec suscipit libero sed metus efficitur bibendum.
-        Nulla a libero quam. Fusce malesuada lectus sed turpis imperdiet, et
-        efficitur nunc rhoncus. Aenean at eros a dui iaculis cursus.
+        Jestem dobrze zorganizowany, zaangażowany w zadania i skutecznie
+        zarządzam czasem, zawsze realizuję projekty terminowo i z pełnym
+        skupieniem. Łączę teorię z praktyką regularnie budując nowe projekty,
+        które zazwyczaj umieszczam na moim profilu GitHub. Podchodzę do
+        programowania z pasją i systematycznością, co pozwala mi szybko rozwijać
+        się jako programista
       </p>
     </div>
   );
