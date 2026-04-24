@@ -20,12 +20,12 @@ const ProjectItem = () => {
       </Link>
 
       <div className="card-body">
-        <h3 className="card-title">Project Name</h3>
+        <h3 className="card-title text-3xl">Project Name</h3>
         <div className="card-actions inline-block">
           <p
-            className="text-rose-500 link no-underline"
+            className="text-rose-500 link underline"
             onClick={() => setIsOpen((prev) => !prev)}>
-            Details →
+            Details
           </p>
         </div>
 

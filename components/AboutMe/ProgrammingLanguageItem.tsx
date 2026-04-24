@@ -8,9 +8,9 @@ const ProgrammingLanguageItem = ({
   icon,
 }: ProgrammingLanguageItemProps) => {
   return (
-    <div className="badge badge-xl badge-outline text-gray-400 border-gray-400 flex items-center px-2 py-1 text-sm rounded-none">
+    <div className="badge badge-xl badge-outline border-0 bg-slate-800 flex items-center gap-2 px-2 py-1 text-sm rounded-none">
       <span className={`${icon} text-lg`}></span>
-      <span className=" text-2xl">{name}</span>
+      <span className="text-2xl capitalize">{name}</span>
     </div>
   );
 };

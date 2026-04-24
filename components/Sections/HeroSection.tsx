@@ -14,15 +14,15 @@ const HeroSection = () => {
         <Profession />
         <ShortDescription />
 
-        <div className="mt-15 flex">
+        <div className="mt-20 flex">
           <CTA />
-          <div className="flex justify-center items-center ml-20">
+          <div className="flex justify-center items-center gap-2 ml-15">
             <SocialIcon
-              icon="icon-[mdi--github]"
+              icon="icon-[pixel--github]"
               link="https://github.com/OKE225"
             />
             <SocialIcon
-              icon="icon-[mdi--linkedin]"
+              icon="icon-[pixel--linkedin]"
               link="https://www.linkedin.com/in/patryk-jastrz%C4%99bowski"
             />
           </div>

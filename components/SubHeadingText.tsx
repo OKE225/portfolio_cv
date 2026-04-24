@@ -4,7 +4,7 @@ interface SubHeadingTextProps {
 
 const SubHeadingText = ({ children }: SubHeadingTextProps) => {
   return (
-    <h1 className="text-4xl font-bold mt-25 text-zinc-50">{`<${children} />`}</h1>
+    <h1 className="text-4xl font-bold mt-25 text-zinc-50 mb-5">{`<${children} />`}</h1>
   );
 };
 

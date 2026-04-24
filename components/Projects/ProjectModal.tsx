@@ -84,7 +84,7 @@ const ProjectModal = ({ onClose }: ProjectModalProps) => {
   return (
     <div className="fixed top-0 left-0 w-screen h-screen z-50 flex items-center justify-center">
       <div className="fixed inset-0 bg-zinc-950/90" onClick={onClose}></div>
-      <div className="relative z-50 bg-zinc-950 p-5 w-xl shadow-lg">
+      <div className="relative z-49 bg-slate-950 p-5 w-xl shadow-lg">
         <div className="w-full aspect-video relative">
           <Image
             src="https://placehold.co/600x400.png"
