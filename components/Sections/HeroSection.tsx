@@ -8,15 +8,15 @@ const HeroSection = () => {
   return (
     <>
       <div
-        className="flex relative items-center flex-col justify-center min-h-screen z-20"
+        className="flex relative items-center flex-col justify-center h-screen z-20"
         id="home">
         <WelcomeText />
         <Profession />
         <ShortDescription />
 
-        <div className="mt-20 flex">
+        <div className="mt-20 flex max-lg:flex-col max-md:w-full">
           <CTA />
-          <div className="flex justify-center items-center gap-2 ml-15">
+          <div className="flex justify-center items-center gap-2 ml-10 max-lg:ml-0 max-lg:mt-3">
             <SocialIcon
               icon="icon-[pixel--github]"
               link="https://github.com/OKE225"

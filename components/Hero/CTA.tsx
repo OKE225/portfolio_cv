@@ -11,14 +11,14 @@ const CTA = () => {
   return (
     <>
       <button
-        onClick={() => handleScroll("#projects")}
-        className="bg-rose-500 text-zinc-50 font-bold text-3xl px-5 py-2 mr-1 max-xl:text-2xl shadow-rose-950 shadow-lg">
-        Zobacz moje projekty
+        onClick={() => handleScroll("#contact")}
+        className="bg-rose-500 text-zinc-50 font-bold text-xl max-md:text-lg max-lg:w-full px-5 py-2 mr-1 max-lg:mr-0 max-lg:mb-1 shadow-rose-950 shadow-lg">
+        Wyślij wiadomość
       </button>
       <button
-        onClick={() => handleScroll("#contact")}
-        className="text-rose-500 font-bold text-3xl px-5 py-2 shadow-[inset_0_0_0_3px] shadow-rose-500 max-xl:text-2xl">
-        Wyślij wiadomość
+        onClick={() => handleScroll("#projects")}
+        className="text-rose-500 font-bold text-xl max-md:text-lg max-lg:w-full px-5 py-2 shadow-[inset_0_0_0_3px] shadow-rose-500">
+        Zobacz moje projekty
       </button>
     </>
   );

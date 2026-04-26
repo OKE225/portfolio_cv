@@ -1,7 +1,7 @@
 const Description = () => {
   return (
     <div className="text-gray-400">
-      <p className="mb-5">
+      <p className="mb-3">
         Nazywam się Patryk Jastrzębowski. Mam 20 lat i z wykształcenia jestem
         technikiem informatykiem. Wolny czas poświęcam na programowanie – tworzę
         responsywne strony i aplikacje internetowe. Najczęściej programuję
