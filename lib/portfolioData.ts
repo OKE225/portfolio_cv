@@ -1,0 +1,203 @@
+export interface Technology {
+  name: string;
+  icon: string;
+}
+
+export interface Project {
+  title?: string;
+  image?: string;
+  description?: string;
+  techStack?: Technology[];
+  liveUrl?: string;
+  repoUrl?: string;
+}
+
+export const technologies: Technology[] = [
+  {
+    name: "NextJS",
+    icon: "icon-[akar-icons--nextjs-fill]",
+  },
+  {
+    name: "React",
+    icon: "icon-[akar-icons--react-fill]",
+  },
+  {
+    name: "TypeScript",
+    icon: "icon-[akar-icons--typescript-fill]",
+  },
+  {
+    name: "JavaScript",
+    icon: "icon-[akar-icons--javascript-fill]",
+  },
+  {
+    name: "NodeJS",
+    icon: "icon-[akar-icons--node-fill]",
+  },
+  {
+    name: "ExpressJS",
+    icon: "icon-[simple-icons--express]",
+  },
+  {
+    name: "MongoDB",
+    icon: "icon-[simple-icons--mongodb]",
+  },
+  {
+    name: "PHP",
+    icon: "icon-[akar-icons--php-fill]",
+  },
+  {
+    name: "MySQL",
+    icon: "icon-[fontisto--mysql]",
+  },
+  {
+    name: "GIT",
+    icon: "icon-[bi--git]",
+  },
+  {
+    name: "TailwindCSS",
+    icon: "icon-[teenyicons--tailwind-solid]",
+  },
+  {
+    name: "MaterialUI",
+    icon: "icon-[devicon-plain--materialui]",
+  },
+  {
+    name: "Docker",
+    icon: "icon-[fa7-brands--docker]",
+  },
+  {
+    name: "JEST",
+    icon: "icon-[devicon-plain--jest]",
+  },
+  {
+    name: "Sass",
+    icon: "icon-[akar-icons--sass-fill]",
+  },
+  {
+    name: "CSS",
+    icon: "icon-[devicon-plain--css3]",
+  },
+  {
+    name: "HTML",
+    icon: "icon-[devicon-plain--html5]",
+  },
+];
+
+export const frontendTechnologies: Technology[] = technologies.filter((tech) =>
+  [
+    "NextJS",
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "GIT",
+    "TailwindCSS",
+    "MaterialUI",
+    "JEST",
+    "Sass",
+    "CSS",
+    "HTML",
+  ].includes(tech.name),
+);
+
+export const backendTechnologies: Technology[] = technologies.filter((tech) =>
+  ["NodeJS", "ExpressJS", "MongoDB", "PHP", "MySQL", "Docker"].includes(
+    tech.name,
+  ),
+);
+
+const getTechnologies = (names: string[]) => {
+  return technologies.filter((tech) => names.includes(tech.name));
+};
+
+export const projects: Project[] = [
+  {
+    title: "MindHealth",
+    image: "/mind-health.png",
+    description:
+      "Aplikacja wspierająca zdrowie psychiczne: wybór codziennych emocji z kalendarzem i streakami, porady, ćwiczenia mindfulness z krokami, pamiętnik myśli do autorefleksji oraz osobisty AIchatbot wspierający w stresie i emocjach",
+    techStack: getTechnologies([
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "JavaScript",
+      "NodeJS",
+      "ExpressJS",
+    ]),
+    liveUrl: "https://mind-health-online.vercel.app/",
+    repoUrl: "https://github.com/OKE225/MindHealth",
+  },
+  {
+    title: "Flora",
+    image: "/flora.png",
+    description:
+      "Responsywny landing page o roślinach i kwiatach: efekty tilt na kartach (React Tilt), animowane tła (Vanta.js), stylizacja MaterialUI (MUI)",
+    techStack: getTechnologies([
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "MaterialUI",
+      "Sass",
+    ]),
+    liveUrl: "https://oke225.github.io/Flora/",
+    repoUrl: "https://github.com/OKE225/Flora",
+  },
+  {
+    title: "Darmowy Ebook",
+    image: "/darmowy-ebook.png",
+    description:
+      'Aplikacji inspirowana "Dotcom Secrets" oferująca darmowy ebook za podanie emaila: waliduje emaile, sprawdza duplikaty w MongoDB, wysyła email z CTA do pobrania ebooka',
+    techStack: getTechnologies([
+      "NextJS",
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "TailwindCSS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+    ]),
+    liveUrl: "https://lead-squeeze-funnel.vercel.app/",
+    repoUrl: "https://github.com/OKE225/lead_squeeze_funnel",
+  },
+  {
+    title: "myKindle Highlights",
+    image: "https://placehold.co/600x400.png",
+    description:
+      "Aplikacja do przechowywania podkreśleń z Kindle. Użytkownik wczytuje plik z podkreśleniami, a aplikacja odczytuje jego zawartość. Podkreślenia są pogrupowane według książek i są przechowywane w localStorage. Użytkownik może wyszukiwać książki i poszczególne podkreślenia również może sortować listę książek, jak i podkreślenia",
+    techStack: getTechnologies([
+      "NextJS",
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "TailwindCSS",
+    ]),
+    liveUrl: "",
+    repoUrl: "https://github.com/OKE225/myKindle_Highlights_app",
+  },
+  {
+    title: "Cars website",
+    image: "/cars-website.png",
+    description:
+      "Responsywna aplikacja w React z TypeScript, przedstawiająca trzy samochody w różnych kolorach. Wykorzystuje React Router, media queries, interaktywny karuzel, animacje w SASS oraz modularne komponenty z obsługą stanu i localStorage",
+    techStack: getTechnologies(["React", "TypeScript", "JavaScript", "Sass"]),
+    liveUrl: "https://oke225.github.io/CARS_Website/",
+    repoUrl: "https://github.com/OKE225/CARS_Website",
+  },
+  {
+    title: "Notes app",
+    image: "/notes-app.png",
+    description:
+      "Prosty projekt w technologii MERN do zarządzania notatkami z pełną funkcjonalnością CRUD. Użytkownik może przeglądać listę notatek, dodawać, edytować, usunąć je, a także oznaczać jako ulubione. Frontend jest zbudowany w React z TypeScript i TailwindCSS, a backend w Node.js, Express.js i bazie danych MongoDB",
+    techStack: getTechnologies([
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "TailwindCSS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+    ]),
+    liveUrl: "https://github.com/OKE225/Notes_app",
+    repoUrl: "https://github.com/OKE225/Notes_app",
+  },
+];
