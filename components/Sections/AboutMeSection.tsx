@@ -3,89 +3,18 @@ import HeadingText from "../HeadingText";
 import SkillElement from "../AboutMe/SkillElement";
 import SubHeadingText from "../SubHeadingText";
 import SkillsSetCard from "../AboutMe/SkillsSetCard";
-
-const frontendList = [
-  {
-    name: "NextJS",
-    icon: "icon-[akar-icons--nextjs-fill]",
-  },
-  {
-    name: "React",
-    icon: "icon-[akar-icons--react-fill]",
-  },
-  {
-    name: "TypeScript",
-    icon: "icon-[akar-icons--typescript-fill]",
-  },
-  {
-    name: "JavaScript",
-    icon: "icon-[akar-icons--javascript-fill]",
-  },
-  {
-    name: "GIT",
-    icon: "icon-[bi--git]",
-  },
-  {
-    name: "TailwindCSS",
-    icon: "icon-[teenyicons--tailwind-solid]",
-  },
-  {
-    name: "MaterialUI",
-    icon: "icon-[devicon-plain--materialui]",
-  },
-  {
-    name: "JEST",
-    icon: "icon-[devicon-plain--jest]",
-  },
-  {
-    name: "Sass",
-    icon: "icon-[akar-icons--sass-fill]",
-  },
-  {
-    name: "CSS",
-    icon: "icon-[devicon-plain--css3]",
-  },
-  {
-    name: "HTML",
-    icon: "icon-[devicon-plain--html5]",
-  },
-];
-const backendList = [
-  {
-    name: "NodeJS",
-    icon: "icon-[akar-icons--node-fill]",
-  },
-  {
-    name: "ExpressJS",
-    icon: "icon-[simple-icons--express]",
-  },
-  {
-    name: "PHP",
-    icon: "icon-[akar-icons--php-fill]",
-  },
-  {
-    name: "MongoDB",
-    icon: "icon-[simple-icons--mongodb]",
-  },
-  {
-    name: "MySQL",
-    icon: "icon-[fontisto--mysql]",
-  },
-
-  {
-    name: "Docker",
-    icon: "icon-[fa7-brands--docker]",
-  },
-];
+import { backendTechnologies, frontendTechnologies } from "@/lib/portfolioData";
 
 const AboutMeSection = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center" id="about">
+    <div
+      className="flex flex-col justify-center pt-30 max-2xl:pt-20"
+      id="about">
       <HeadingText>O Mnie</HeadingText>
 
       <Description />
 
-      <div className="grid grid-cols-3 gap-1 mt-10 ">
+      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-1 my-10">
         <SkillElement title="Responsywność">
           Tworzę responsywne strony internetowe, które automatycznie dostosowują
           się do każdego urządzenia: komputerów, laptopów, tabletów i telefonów.
@@ -124,9 +53,9 @@ const AboutMeSection = () => {
       </div>
 
       <SubHeadingText>Skills & Technologies</SubHeadingText>
-      <div className="grid grid-cols-2 gap-1">
-        <SkillsSetCard title="Frontend" techList={frontendList} />
-        <SkillsSetCard title="Backend" techList={backendList} />
+      <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-1">
+        <SkillsSetCard title="Frontend" techList={frontendTechnologies} />
+        <SkillsSetCard title="Backend" techList={backendTechnologies} />
       </div>
     </div>
   );
