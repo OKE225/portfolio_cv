@@ -4,12 +4,13 @@ export interface Technology {
 }
 
 export interface Project {
-  title?: string;
-  image?: string;
-  description?: string;
-  techStack?: Technology[];
-  liveUrl?: string;
-  repoUrl?: string;
+  id: number;
+  title: string;
+  image: string;
+  description: string;
+  techStack: Technology[];
+  liveUrl: string;
+  repoUrl: string;
 }
 
 export const technologies: Technology[] = [
@@ -111,6 +112,7 @@ const getTechnologies = (names: string[]) => {
 
 export const projects: Project[] = [
   {
+    id: 0,
     title: "MindHealth",
     image: "/mind-health.png",
     description:
@@ -127,6 +129,7 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/OKE225/MindHealth",
   },
   {
+    id: 1,
     title: "Flora",
     image: "/flora.png",
     description:
@@ -142,6 +145,7 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/OKE225/Flora",
   },
   {
+    id: 2,
     title: "Darmowy Ebook",
     image: "/darmowy-ebook.png",
     description:
@@ -153,13 +157,13 @@ export const projects: Project[] = [
       "JavaScript",
       "TailwindCSS",
       "NodeJS",
-      "ExpressJS",
       "MongoDB",
     ]),
     liveUrl: "https://lead-squeeze-funnel.vercel.app/",
     repoUrl: "https://github.com/OKE225/lead_squeeze_funnel",
   },
   {
+    id: 3,
     title: "myKindle Highlights",
     image: "https://placehold.co/600x400.png",
     description:
@@ -175,6 +179,7 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/OKE225/myKindle_Highlights_app",
   },
   {
+    id: 4,
     title: "Cars website",
     image: "/cars-website.png",
     description:
@@ -184,6 +189,7 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/OKE225/CARS_Website",
   },
   {
+    id: 5,
     title: "Notes app",
     image: "/notes-app.png",
     description:
