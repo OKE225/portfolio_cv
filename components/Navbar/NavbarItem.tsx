@@ -29,7 +29,7 @@ const NavbarItem = ({
         isActive ? "text-zinc-50" : "text-gray-500"
       }`}
       onClick={onClick}>
-      <Link href={href} className="block w-full py-1 px-3">
+      <Link href={href} className="block w-full py-1 px-3 max-lg:p-5">
         {children}
       </Link>
     </li>

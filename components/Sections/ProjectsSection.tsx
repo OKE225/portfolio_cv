@@ -28,7 +28,7 @@ const ProjectsSection = () => {
 
   return (
     <div
-      className="flex flex-col justify-center pt-30 max-2xl:pt-20"
+      className="flex flex-col justify-center pt-30 max-2xl:pt-20 max-lg:pt-10"
       id="projects">
       <HeadingText>Moje Projekty</HeadingText>
 
@@ -40,7 +40,7 @@ const ProjectsSection = () => {
       </div>
       {!isShowMore && (
         <button
-          className="lg:hidden bg-rose-500 text-zinc-50 shadow-rose-950 shadow-md font-bold px-4 py-2 mt-5 w-fit mx-auto max-md:w-full"
+          className="lg:hidden bg-rose-500 text-zinc-50 shadow-rose-950 shadow-md font-bold px-4 py-2 mt-5 w-fit mx-auto max-lg:w-full"
           onClick={() => setIsShowMore(true)}>
           Pokaż więcej
         </button>

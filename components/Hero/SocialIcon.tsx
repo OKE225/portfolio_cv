@@ -10,7 +10,7 @@ const SocialIcon = ({ icon, link }: SocialIconProps) => {
     <Link
       href={link}
       target="_blank"
-      className="h-[75%] max-lg:h-8 justify-center items-center aspect-square">
+      className="h-8 justify-center items-center aspect-square">
       <span className={`${icon} w-full h-full bg-gray-400`}></span>
     </Link>
   );

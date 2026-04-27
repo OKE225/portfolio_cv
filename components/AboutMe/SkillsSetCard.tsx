@@ -12,8 +12,8 @@ const SkillsSetCard = ({ techList, title }: SkillsSetCardProps) => {
   return (
     <div className="card bg-slate-900 overflow-hidden">
       <div className="card-body">
-        <h3 className="card-title text-3xl max-xl:text-2xl font-bold capitalize text-zinc-50">
-          {`<${title} />`}
+        <h3 className="card-title text-3xl font-bold capitalize text-zinc-50">
+          {title}
         </h3>
         <div className="flex flex-wrap gap-1">
           {techList.map((tech) => (

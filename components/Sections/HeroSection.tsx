@@ -14,9 +14,9 @@ const HeroSection = () => {
         <Profession />
         <ShortDescription />
 
-        <div className="mt-20 flex max-lg:flex-col max-md:w-full">
+        <div className="mt-20 flex max-lg:flex-col max-lg:w-full">
           <CTA />
-          <div className="flex justify-center items-center gap-2 ml-10 max-lg:ml-0 max-lg:mt-3">
+          <div className="flex justify-center items-center gap-2 ml-10 max-lg:ml-0 max-lg:mt-5 max-lg:gap-8">
             <SocialIcon
               icon="icon-[pixel--github]"
               link="https://github.com/OKE225"

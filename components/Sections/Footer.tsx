@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="relative left-0 bottom-0 bg-slate-900 text-gray-400 w-screen py-4">
       <div className="max-w-5xl max-xl:max-w-4xl max-lg:w-[90%] m-auto">
-        <div className="grid grid-cols-3 max-lg:grid-cols-2">
+        <div className="grid gap-4 grid-cols-3 max-lg:grid-cols-2">
           <div>
             <p>Patryk Jastrzębowski</p>
             <p>Frontend Developer</p>

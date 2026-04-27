@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Pixelify_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
 
 const pixelifySans = Pixelify_Sans({
   variable: "--font-pixelify-sans",
@@ -22,10 +21,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${pixelifySans.variable} ${pixelifySans.className} h-full antialiased bg-slate-950 overflow-hidden scroll-smooth selection:bg-rose-800/50`}>
+      className={`${pixelifySans.variable} ${pixelifySans.className} h-full antialiased bg-slate-950 overflow-hidden scroll-smooth selection:bg-rose-700/40`}>
       <body className="min-h-full">
-        <Navbar />
-        <div className="h-screen w-full bg-repeat bg-[url('/squares-pattern.svg')] bg-size-[675px_675px] bg-center animate-move-diagonal">
+        <div className="h-screen w-full bg-repeat bg-[url('/squares-pattern.svg')] bg-size-[675px_675px] bg-center animate-move-diagonal bg-slate-950">
           <span className="from-slate-950 bg-linear-0 w-full h-screen absolute top-0"></span>
 
           {children}

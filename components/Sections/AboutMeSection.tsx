@@ -8,13 +8,13 @@ import { backendTechnologies, frontendTechnologies } from "@/lib/portfolioData";
 const AboutMeSection = () => {
   return (
     <div
-      className="flex flex-col justify-center pt-30 max-2xl:pt-20"
+      className="flex flex-col justify-center pt-30 max-2xl:pt-20 max-lg:pt-10"
       id="about">
       <HeadingText>O Mnie</HeadingText>
 
       <Description />
 
-      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-1 my-10">
+      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-1 my-5">
         <SkillElement title="Responsywność">
           Tworzę responsywne strony internetowe, które automatycznie dostosowują
           się do każdego urządzenia: komputerów, laptopów, tabletów i telefonów.
@@ -53,7 +53,7 @@ const AboutMeSection = () => {
       </div>
 
       <SubHeadingText>Skills & Technologies</SubHeadingText>
-      <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-1">
+      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-1">
         <SkillsSetCard title="Frontend" techList={frontendTechnologies} />
         <SkillsSetCard title="Backend" techList={backendTechnologies} />
       </div>

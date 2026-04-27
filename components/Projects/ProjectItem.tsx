@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Project } from "@/lib/portfolioData";
 import ProgrammingLanguageItem from "../AboutMe/ProgrammingLanguageItem";
+import SocialIcon from "../Hero/SocialIcon";
 
 const ProjectItem = ({
   image,
@@ -17,7 +18,7 @@ const ProjectItem = ({
   const [showDetails, setShowDetails] = useState<boolean>(false);
 
   return (
-    <div className="card overflow-hidden bg-slate-900 h-fit">
+    <div className="card hover:scale-99 transition overflow-hidden bg-slate-900 h-fit">
       <Link
         href={`${liveUrl}`}
         target="_blank"
@@ -35,7 +36,7 @@ const ProjectItem = ({
         {showDetails && (
           <div>
             <p className="text-gray-400">{description}</p>
-            <div className="flex flex-wrap gap-1">
+            <div className="flex flex-wrap gap-1 mt-3">
               {techStack?.map((tech) => (
                 <ProgrammingLanguageItem
                   key={tech.name}
@@ -44,19 +45,14 @@ const ProjectItem = ({
                 />
               ))}
             </div>
-            <div className="card-actions mt-10">
+            <div className="card-actions mt-8 flex flex-nowrap h-full justify-center items-center">
               <Link
                 href={`${liveUrl}`}
                 target="_blank"
-                className="text-rose-500 shadow-[inset_0_0_0_2px] shadow-rose-500 font-bold px-4 py-2">
+                className="text-rose-500 w-full text-center shadow-[inset_0_0_0_2px] shadow-rose-500 font-bold py-2">
                 Live project
               </Link>
-              {/* <div>
-                <SocialIcon
-                  icon="icon-[mdi--github]"
-                  link="https://github.com/OKE225"
-                />
-              </div> */}
+              <SocialIcon icon="icon-[pixel--github]" link={`${repoUrl}`} />
             </div>
           </div>
         )}
@@ -64,7 +60,7 @@ const ProjectItem = ({
           <p
             className="text-rose-500 link underline"
             onClick={() => setShowDetails((prev) => !prev)}>
-            {!showDetails ? "Zobacz więcej" : "Ukryj"}
+            {!showDetails ? "zobacz więcej" : "ukryj"}
           </p>
         </div>
       </div>
