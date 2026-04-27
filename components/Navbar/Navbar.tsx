@@ -6,6 +6,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>("#home");
 
+  const navbarItem = [
+    { href: "#home", text: "Home" },
+    { href: "#about", text: "O mnie" },
+    { href: "#projects", text: "Projekty" },
+    { href: "#contact", text: "Kontakt" },
+  ];
+
   useEffect(() => {
     const sections = ["#home", "#about", "#projects", "#contact"];
 
@@ -69,30 +76,16 @@ const Navbar = () => {
           isOpen ? "flex" : "hidden"
         }`}>
         <ul className="flex gap-1 flex-nowrap whitespace-nowrap text-xl max-lg:text-4xl max-lg:flex-col max-lg:gap-y-2 max-lg:h-[80%] max-lg:w-[90%] max-lg:mx-5">
-          <NavbarItem
-            href="#home"
-            closeMenu={() => setIsOpen(false)}
-            activeSection={activeSection}>
-            {"<Home />"}
-          </NavbarItem>
-          <NavbarItem
-            href="#about"
-            closeMenu={() => setIsOpen(false)}
-            activeSection={activeSection}>
-            {"<O mnie />"}
-          </NavbarItem>
-          <NavbarItem
-            href="#projects"
-            closeMenu={() => setIsOpen(false)}
-            activeSection={activeSection}>
-            {"<Projekty />"}
-          </NavbarItem>
-          <NavbarItem
-            href="#contact"
-            closeMenu={() => setIsOpen(false)}
-            activeSection={activeSection}>
-            {"<Kontakt />"}
-          </NavbarItem>
+          {navbarItem.map((item, id) => (
+            <NavbarItem
+              key={id}
+              id={id}
+              href={item.href}
+              closeMenu={() => setIsOpen(false)}
+              activeSection={activeSection}>
+              {item.text}
+            </NavbarItem>
+          ))}
         </ul>
       </nav>
     </>

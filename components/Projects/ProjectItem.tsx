@@ -8,6 +8,7 @@ import ProgrammingLanguageItem from "../AboutMe/ProgrammingLanguageItem";
 import SocialIcon from "../Hero/SocialIcon";
 
 const ProjectItem = ({
+  id,
   image,
   title,
   description,
@@ -18,7 +19,8 @@ const ProjectItem = ({
   const [showDetails, setShowDetails] = useState<boolean>(false);
 
   return (
-    <div className="card hover:scale-99 transition overflow-hidden bg-slate-900 h-fit">
+    <div
+      className={`card hover:scale-99 max-lg:hover:scale-none transition overflow-hidden bg-slate-900 h-fit intersect-once intersect:motion-preset-focus intersect:motion-delay-${id * 500 + 500} max-lg:intersect:motion-delay-${id > 1 ? 500 : (id + 1) * 500 + 500}`}>
       <Link
         href={`${liveUrl}`}
         target="_blank"
@@ -31,7 +33,7 @@ const ProjectItem = ({
         />
       </Link>
 
-      <div className="card-body">
+      <div className="card-body p-5">
         <h3 className="card-title text-3xl max-xl:text-2xl">{title}</h3>
         {showDetails && (
           <div>

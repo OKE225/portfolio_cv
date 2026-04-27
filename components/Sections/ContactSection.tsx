@@ -37,56 +37,67 @@ const ContactSection = () => {
       <HeadingText>Napisz Do Mnie</HeadingText>
 
       <div className="flex gap-10 max-lg:flex-col-reverse">
-        <form className="" onSubmit={handleSubmit}>
-          <label htmlFor="name" className="label-text inline-block text-lg">
-            Wpisz swoje imię <span className="text-rose-500">*</span>
-          </label>
-          <input
-            type="text"
-            className="input border-2 text-lg border-slate-900 bg-slate-950 focus:border-zinc-400! focus-within:shadow-none hover:border-zinc-500! focus:shadow-slate-900 focus:shadow-md focus-within:outline-zinc-400!"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            name="name"
-            id="name"
-            placeholder="Imię"
-          />
+        <form className="w-full" onSubmit={handleSubmit}>
+          <div className="intersect:motion-preset-blur-right intersect:motion-delay-1000 intersect-once">
+            <label htmlFor="name" className="label-text inline-block text-lg ">
+              Wpisz swoje imię <span className="text-rose-500">*</span>
+            </label>
+            <input
+              type="text"
+              className="input border-2 text-lg border-slate-900 bg-slate-950 focus:border-zinc-400! focus-within:shadow-none hover:border-zinc-500! focus:shadow-slate-900 focus:shadow-md focus-within:outline-zinc-400!"
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
+              name="name"
+              id="name"
+              placeholder="Imię"
+            />
+          </div>
 
-          <label
-            htmlFor="email"
-            className="label-text inline-block text-lg mt-2 ">
-            Wpisz swój email <span className="text-rose-500">*</span>
-          </label>
-          <input
-            type="text"
-            className="input border-2 text-lg border-slate-900 bg-slate-950 focus:border-zinc-400! focus-within:shadow-none hover:border-zinc-500! focus:shadow-slate-900 focus:shadow-md focus-within:outline-zinc-400!"
-            value={formData.email}
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value.toLowerCase() })
-            }
-            name="email"
-            id="email"
-            placeholder="Email"
-          />
+          <div className="intersect:motion-preset-blur-right intersect:motion-delay-1500 intersect-once">
+            <label
+              htmlFor="email"
+              className="label-text inline-block text-lg mt-2 ">
+              Wpisz swój email <span className="text-rose-500">*</span>
+            </label>
+            <input
+              type="text"
+              className="input border-2 text-lg border-slate-900 bg-slate-950 focus:border-zinc-400! focus-within:shadow-none hover:border-zinc-500! focus:shadow-slate-900 focus:shadow-md focus-within:outline-zinc-400!"
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({
+                  ...formData,
+                  email: e.target.value.toLowerCase(),
+                })
+              }
+              name="email"
+              id="email"
+              placeholder="Email"
+            />
+          </div>
 
-          <label
-            htmlFor="message"
-            className="label-text inline-block text-lg mt-2">
-            Wiadomość <span className="text-rose-500">*</span>
-          </label>
-          <textarea
-            name="message"
-            id="message"
-            className="textarea border-2 text-lg border-slate-900 bg-slate-950 focus:border-zinc-400! focus-within:shadow-none hover:border-zinc-500! focus:shadow-slate-900 focus:shadow-md focus-within:outline-zinc-400!"
-            value={formData.message}
-            onChange={(e) =>
-              setFormData({ ...formData, message: e.target.value })
-            }
-            rows={10}
-            placeholder="Treść wiadomości..."></textarea>
+          <div className="intersect:motion-preset-blur-right intersect:motion-delay-2000 intersect-once">
+            <label
+              htmlFor="message"
+              className="label-text inline-block text-lg mt-2">
+              Wiadomość <span className="text-rose-500">*</span>
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              className="textarea border-2 text-lg border-slate-900 bg-slate-950 focus:border-zinc-400! focus-within:shadow-none hover:border-zinc-500! focus:shadow-slate-900 focus:shadow-md focus-within:outline-zinc-400!"
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
+              rows={10}
+              placeholder="Treść wiadomości..."></textarea>
+          </div>
 
           <button
             type="submit"
-            className="bg-rose-500 text-zinc-50 shadow-rose-950 shadow-md font-bold px-4 py-2 max-lg:w-full mt-3">
+            className="bg-rose-500 text-zinc-50 shadow-rose-950 shadow-md font-bold px-4 py-2 max-lg:w-full mt-3 intersect:motion-preset-focus intersect:motion-delay-2500 intersect-once">
             Wyślij wiadomość
           </button>
 
@@ -104,7 +115,7 @@ const ContactSection = () => {
           </div>
         </form>
 
-        <div className="max-w-100 text-gray-400 flex flex-col mt-8 max-lg:mt-0 max-xl:max-w-98 max-lg:max-w-full">
+        <div className="max-w-100 text-gray-400 flex flex-col mt-8 max-lg:mt-0 max-xl:max-w-98 max-lg:max-w-full intersect:motion-preset-blur-right intersect:motion-delay-1000 intersect-once">
           <p>
             Jestem otwarty na współpracę z firmami, jak i osobami prywatnymi.
             Chętnie dołączę do Twojego zespołu jako frontend developer lub

@@ -14,10 +14,18 @@ const Footer = () => {
             <h4>Śledź mnie</h4>
             <ul>
               <li className="underline">
-                <Link href="https://github.com/OKE225">GitHub</Link>
+                <Link
+                  href="https://github.com/OKE225"
+                  className="link"
+                  target="_blank">
+                  GitHub
+                </Link>
               </li>
               <li className="underline">
-                <Link href="https://www.linkedin.com/in/patryk-jastrz%C4%99bowski">
+                <Link
+                  href="https://www.linkedin.com/in/patryk-jastrz%C4%99bowski"
+                  className="link"
+                  target="_blank">
                   LinkedIn
                 </Link>
               </li>
