@@ -165,7 +165,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "myKindle Highlights",
-    image: "https://placehold.co/600x400.png",
+    image: "/mykindle.png",
     description:
       "Aplikacja do przechowywania podkreśleń z Kindle. Użytkownik wczytuje plik z podkreśleniami, a aplikacja odczytuje jego zawartość. Podkreślenia są pogrupowane według książek i są przechowywane w localStorage. Użytkownik może wyszukiwać książki i poszczególne podkreślenia również może sortować listę książek, jak i podkreślenia",
     techStack: getTechnologies([
@@ -175,7 +175,7 @@ export const projects: Project[] = [
       "JavaScript",
       "TailwindCSS",
     ]),
-    liveUrl: "",
+    liveUrl: "https://github.com/OKE225/myKindle_Highlights_app",
     repoUrl: "https://github.com/OKE225/myKindle_Highlights_app",
   },
   {
