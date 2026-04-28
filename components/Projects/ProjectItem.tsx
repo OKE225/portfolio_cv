@@ -20,7 +20,7 @@ const ProjectItem = ({
 
   return (
     <div
-      className={`card hover:scale-99 max-lg:hover:scale-none transition overflow-hidden bg-slate-900 h-fit intersect-once intersect:motion-preset-focus intersect:motion-delay-${id * 500 + 500} max-lg:intersect:motion-delay-${id > 1 ? 500 : (id + 1) * 500 + 500}`}>
+      className={`card hover:scale-99 transition overflow-hidden bg-slate-900 h-fit intersect-once intersect:motion-preset-focus intersect:motion-delay-${id * 500 + 500}`}>
       <Link
         href={`${liveUrl}`}
         target="_blank"
@@ -30,6 +30,7 @@ const ProjectItem = ({
           alt="website preview"
           fill
           className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
         />
       </Link>
 
@@ -51,7 +52,7 @@ const ProjectItem = ({
               <Link
                 href={`${liveUrl}`}
                 target="_blank"
-                className="text-rose-500 w-full text-center shadow-[inset_0_0_0_2px] shadow-rose-500 font-bold py-2">
+                className="text-rose-500 w-full text-center shadow-[inset_0_0_0_2px] shadow-rose-500 hover:scale-98 transition font-bold py-2">
                 Live project
               </Link>
               <SocialIcon icon="icon-[pixel--github]" link={`${repoUrl}`} />
@@ -59,11 +60,11 @@ const ProjectItem = ({
           </div>
         )}
         <div className="inline-block">
-          <p
+          <button
             className="text-rose-500 link underline"
             onClick={() => setShowDetails((prev) => !prev)}>
             {!showDetails ? "zobacz więcej" : "ukryj"}
-          </p>
+          </button>
         </div>
       </div>
     </div>

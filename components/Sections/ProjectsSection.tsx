@@ -49,7 +49,7 @@ const ProjectsSection = () => {
       </div>
       {!isShowMore && (
         <button
-          className="lg:hidden bg-rose-500 text-zinc-50 shadow-rose-950 shadow-md font-bold px-4 py-2 mt-2 w-fit mx-auto max-lg:w-full intersect-once intersect:motion-preset-focus intersect:motion-delay-2000"
+          className="lg:hidden bg-rose-500 text-zinc-50 shadow-rose-950 shadow-md hover:bg-rose-600 hover:shadow-lg hover:scale-98 transition font-bold px-5 py-2 mt-1 w-fit mx-auto max-lg:w-full intersect-once intersect:motion-preset-focus intersect:motion-delay-2000"
           onClick={() => setIsShowMore(true)}>
           Pokaż więcej
         </button>

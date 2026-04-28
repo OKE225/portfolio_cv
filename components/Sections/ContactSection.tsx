@@ -97,7 +97,7 @@ const ContactSection = () => {
 
           <button
             type="submit"
-            className="bg-rose-500 text-zinc-50 shadow-rose-950 shadow-md font-bold px-4 py-2 max-lg:w-full mt-3 intersect:motion-preset-focus intersect:motion-delay-2500 intersect-once">
+            className="bg-rose-500 text-zinc-50 shadow-rose-950 shadow-md hover:bg-rose-600 hover:shadow-lg hover:scale-98 transition font-bold px-5 py-2 max-lg:w-full intersect:motion-preset-focus intersect:motion-delay-2500 intersect-once">
             Wyślij wiadomość
           </button>
 
