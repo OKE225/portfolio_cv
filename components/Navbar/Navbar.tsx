@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>("#home");
 
-  const navbarItem = [
+  const navbarItems = [
     { href: "#home", text: "Home" },
     { href: "#about", text: "O mnie" },
     { href: "#projects", text: "Projekty" },
@@ -76,7 +76,7 @@ const Navbar = () => {
           isOpen ? "flex" : "hidden"
         }`}>
         <ul className="flex gap-1 flex-nowrap whitespace-nowrap text-xl max-lg:text-4xl max-lg:flex-col max-lg:gap-y-2 max-lg:h-[80%] max-lg:w-[90%] max-lg:mx-5">
-          {navbarItem.map((item, id) => (
+          {navbarItems.map((item, id) => (
             <NavbarItem
               key={id}
               id={id}

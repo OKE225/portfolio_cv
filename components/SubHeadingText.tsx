@@ -4,7 +4,7 @@ interface SubHeadingTextProps {
 
 const SubHeadingText = ({ children }: SubHeadingTextProps) => {
   return (
-    <h1 className="text-4xl font-bold my-5 text-zinc-50 max-xl:text-3xl intersect-once intersect:motion-preset-blur-right intersect:motion-delay-1000">{`<${children} />`}</h1>
+    <h2 className="text-4xl font-bold my-5 text-zinc-50 max-xl:text-3xl intersect-once intersect:motion-preset-blur-right intersect:motion-delay-1000">{`<${children} />`}</h2>
   );
 };
 

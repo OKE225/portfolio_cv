@@ -115,7 +115,9 @@ const ContactSection = () => {
           </div>
         </form>
 
-        <div className="max-w-100 text-gray-400 flex flex-col mt-8 max-lg:mt-0 max-xl:max-w-98 max-lg:max-w-full intersect:motion-preset-blur-right intersect:motion-delay-1000 intersect-once">
+        <div
+          className="max-w-100 text-gray-400 flex flex-col mt-8 max-lg:mt-0 max-xl:max-w-98 max-lg:max-w-full intersect:motion-preset-blur-right intersect:motion-delay-1000 intersect-once"
+          data-testid="why-me">
           <p>
             Jestem otwarty na współpracę z firmami, jak i osobami prywatnymi.
             Chętnie dołączę do Twojego zespołu jako frontend developer lub

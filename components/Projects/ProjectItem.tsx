@@ -20,14 +20,15 @@ const ProjectItem = ({
 
   return (
     <div
-      className={`card hover:scale-99 transition overflow-hidden bg-slate-900 h-fit intersect-once intersect:motion-preset-focus intersect:motion-delay-${id * 500 + 500}`}>
+      className={`card hover:scale-99 transition overflow-hidden bg-slate-900 h-fit intersect-once intersect:motion-preset-focus intersect:motion-delay-${id * 500 + 500}`}
+      data-testid="project-card">
       <Link
         href={`${liveUrl}`}
         target="_blank"
         className="block w-full relative aspect-video">
         <Image
           src={image || ""}
-          alt="website preview"
+          alt={title}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"

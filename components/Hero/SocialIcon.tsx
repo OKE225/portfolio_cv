@@ -12,7 +12,8 @@ const SocialIcon = ({ icon, link }: SocialIconProps) => {
       target="_blank"
       className="h-8 justify-center items-center aspect-square transition">
       <span
-        className={`${icon} w-full h-full bg-gray-400 transition hover:bg-gray-200`}></span>
+        className={`${icon} w-full h-full bg-gray-400 transition hover:bg-gray-200`}
+        data-testid="icon"></span>
     </Link>
   );
 };

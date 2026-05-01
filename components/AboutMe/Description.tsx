@@ -1,6 +1,6 @@
 const Description = () => {
   return (
-    <div className="text-gray-400">
+    <div className="text-gray-400" data-testid="description">
       <p className="mb-3 intersect:motion-preset-blur-right intersect:motion-delay-1000 intersect-once">
         Nazywam się Patryk Jastrzębowski. Mam 20 lat i z wykształcenia jestem
         technikiem informatykiem. Wolny czas poświęcam na programowanie – tworzę
