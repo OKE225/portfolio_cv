@@ -14,7 +14,6 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormData({ name: "", email: "", message: "" });
     setSuccess(null);
     setError(null);
 
@@ -26,8 +25,10 @@ const ContactSection = () => {
 
     const data = await res.json();
 
-    if (res.ok) setSuccess("Wysłano!");
-    else setError(data.error || "Błąd");
+    if (res.ok) {
+      setSuccess("Wysłano!");
+      setFormData({ name: "", email: "", message: "" });
+    } else setError(data.error || "Błąd");
   };
 
   return (
