@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 interface NavbarItemProps {
-  id: number;
   href: string;
   children: React.ReactNode;
   closeMenu: () => void;
@@ -9,7 +8,6 @@ interface NavbarItemProps {
 }
 
 const NavbarItem = ({
-  id,
   href,
   children,
   closeMenu,
@@ -29,7 +27,7 @@ const NavbarItem = ({
     <li
       className={`bg-slate-950 border-3 border-slate-900 hover:text-zinc-50 transition shadow-xl ${
         isActive ? "text-zinc-50" : "text-gray-500"
-      } intersect-once intersect:motion-preset-focus intersect:motion-delay-[${id ? id * 500 : 0}ms]`}
+      } intersect-once intersect:motion-preset-focus intersect:motion-delay-50`}
       onClick={onClick}>
       <Link href={href} className="block w-full py-1 px-3 max-lg:p-5">
         {`<${children} />`}

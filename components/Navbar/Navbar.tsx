@@ -79,7 +79,6 @@ const Navbar = () => {
           {navbarItems.map((item, id) => (
             <NavbarItem
               key={id}
-              id={id}
               href={item.href}
               closeMenu={() => setIsOpen(false)}
               activeSection={activeSection}>
