@@ -1,5 +1,7 @@
 "use client";
 
+import ButtonVariant from "../ButtonVariant";
+
 const CTA = () => {
   const handleScroll = (id: string) => {
     const el = document.querySelector(id);
@@ -12,13 +14,17 @@ const CTA = () => {
     <>
       <button
         onClick={() => handleScroll("#contact")}
-        className="bg-rose-500 text-zinc-50 font-bold text-xl max-md:text-lg max-lg:w-full px-5 py-2 mr-1 max-lg:mr-0 max-lg:mb-1 shadow-rose-950 shadow-md hover:bg-rose-600 hover:scale-98 transition intersect:motion-preset-focus intersect:motion-delay-2000 intersect-once">
-        Wyślij wiadomość
+        className="text-xl max-md:text-lg max-lg:w-full mr-1 max-lg:mr-0 max-lg:mb-1">
+        <ButtonVariant btnVariant="primary" delay={2000}>
+          Wyślij wiadomość
+        </ButtonVariant>
       </button>
       <button
         onClick={() => handleScroll("#projects")}
-        className="text-rose-500 font-bold text-xl max-md:text-lg max-lg:w-full px-5 py-2 shadow-[inset_0_0_0_3px] shadow-rose-500 hover:scale-98 transition intersect:motion-preset-focus intersect:motion-delay-2500 intersect-once">
-        Zobacz moje projekty
+        className="text-xl max-md:text-lg max-lg:w-full">
+        <ButtonVariant btnVariant="secondary" delay={2500}>
+          Zobacz moje projekty
+        </ButtonVariant>
       </button>
     </>
   );

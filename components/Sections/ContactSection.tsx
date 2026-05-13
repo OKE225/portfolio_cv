@@ -1,5 +1,6 @@
 "use client";
 
+import ButtonVariant from "../ButtonVariant";
 import HeadingText from "../HeadingText";
 import { useState } from "react";
 
@@ -96,10 +97,15 @@ const ContactSection = () => {
               placeholder="Treść wiadomości..."></textarea>
           </div>
 
-          <button
+          {/* <button
             type="submit"
             className="bg-rose-500 text-zinc-50 shadow-rose-950 shadow-md hover:bg-rose-600 hover:scale-98 transition font-bold px-5 py-2 max-lg:w-full intersect:motion-preset-focus intersect:motion-delay-2500 intersect-once">
             Wyślij wiadomość
+          </button> */}
+          <button type="submit" className="w-fit block max-lg:w-full">
+            <ButtonVariant btnVariant="primary" delay={2500}>
+              Wyślij wiadomość
+            </ButtonVariant>
           </button>
 
           <div className="min-h-10 mt-2">

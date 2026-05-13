@@ -4,6 +4,7 @@ import { useState } from "react";
 import HeadingText from "../HeadingText";
 import ProjectItem from "../Projects/ProjectItem";
 import { Project, projects } from "@/lib/portfolioData";
+import ButtonVariant from "../ButtonVariant";
 
 const ProjectsSection = () => {
   const [isShowMore, setIsShowMore] = useState(false);
@@ -49,9 +50,11 @@ const ProjectsSection = () => {
       </div>
       {!isShowMore && (
         <button
-          className="lg:hidden bg-rose-500 text-zinc-50 shadow-rose-950 shadow-md hover:bg-rose-600 hover:shadow-lg hover:scale-98 transition font-bold px-5 py-2 mt-1 w-fit mx-auto max-lg:w-full intersect-once intersect:motion-preset-focus intersect:motion-delay-2000"
-          onClick={() => setIsShowMore(true)}>
-          Pokaż więcej
+          onClick={() => setIsShowMore(true)}
+          className="lg:hidden mt-1 intersect-once intersect:motion-preset-focus intersect:motion-delay-1500">
+          <ButtonVariant btnVariant="primary" delay={0}>
+            Pokaż więcej
+          </ButtonVariant>
         </button>
       )}
     </div>

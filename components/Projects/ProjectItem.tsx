@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Project } from "@/lib/portfolioData";
 import ProgrammingLanguageItem from "../AboutMe/ProgrammingLanguageItem";
 import SocialIcon from "../Hero/SocialIcon";
+import ButtonVariant from "../ButtonVariant";
 
 const ProjectItem = ({
   id,
@@ -51,10 +52,13 @@ const ProjectItem = ({
             </div>
             <div className="card-actions mt-8 flex flex-nowrap h-full justify-center items-center">
               <Link
-                href={`${liveUrl}`}
+                href={liveUrl}
                 target="_blank"
-                className="text-rose-500 w-full text-center shadow-[inset_0_0_0_2px] shadow-rose-500 hover:scale-98 transition font-bold py-2">
-                Live project
+                // className="text-rose-500 w-full text-center shadow-[inset_0_0_0_2px] shadow-rose-500 hover:scale-98 transition font-bold py-2"
+                className="w-full">
+                <ButtonVariant btnVariant="secondary" delay={0}>
+                  Live project
+                </ButtonVariant>
               </Link>
               <SocialIcon icon="icon-[pixel--github]" link={`${repoUrl}`} />
             </div>
