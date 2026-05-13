@@ -1,6 +1,7 @@
 export interface Technology {
   name: string;
   icon: string;
+  color: string;
 }
 
 export interface Project {
@@ -17,70 +18,87 @@ export const technologies: Technology[] = [
   {
     name: "NextJS",
     icon: "icon-[akar-icons--nextjs-fill]",
+    color: "text-neutral-200",
   },
   {
     name: "React",
     icon: "icon-[akar-icons--react-fill]",
+    color: "text-cyan-400",
   },
   {
     name: "TypeScript",
     icon: "icon-[akar-icons--typescript-fill]",
+    color: "text-blue-500",
   },
   {
     name: "JavaScript",
     icon: "icon-[akar-icons--javascript-fill]",
+    color: "text-yellow-300",
   },
   {
     name: "NodeJS",
     icon: "icon-[akar-icons--node-fill]",
+    color: "text-lime-500",
   },
   {
     name: "ExpressJS",
     icon: "icon-[simple-icons--express]",
+    color: "text-neutral-200",
   },
   {
     name: "MongoDB",
     icon: "icon-[simple-icons--mongodb]",
+    color: "text-green-600",
   },
   {
     name: "PHP",
     icon: "icon-[akar-icons--php-fill]",
+    color: "text-indigo-400",
   },
   {
     name: "MySQL",
     icon: "icon-[fontisto--mysql]",
+    color: "text-sky-600",
   },
   {
     name: "GIT",
     icon: "icon-[bi--git]",
+    color: "text-orange-600",
   },
   {
     name: "TailwindCSS",
     icon: "icon-[teenyicons--tailwind-solid]",
+    color: "text-cyan-500",
   },
   {
     name: "MaterialUI",
     icon: "icon-[devicon-plain--materialui]",
+    color: "text-blue-600",
   },
   {
     name: "Docker",
     icon: "icon-[fa7-brands--docker]",
+    color: "text-sky-400",
   },
   {
     name: "JEST",
     icon: "icon-[devicon-plain--jest]",
+    color: "text-rose-600",
   },
   {
     name: "Sass",
     icon: "icon-[akar-icons--sass-fill]",
+    color: "text-pink-400",
   },
   {
     name: "CSS",
     icon: "icon-[devicon-plain--css3]",
+    color: "text-blue-500",
   },
   {
     name: "HTML",
     icon: "icon-[devicon-plain--html5]",
+    color: "text-orange-500",
   },
 ];
 

@@ -41,16 +41,18 @@ const ProjectItem = ({
         {showDetails && (
           <div>
             <p className="text-gray-400">{description}</p>
-            <div className="flex flex-wrap gap-1 mt-3">
+            <div className="flex flex-wrap gap-2 mt-3">
               {techStack?.map((tech) => (
                 <ProgrammingLanguageItem
                   key={tech.name}
                   name={tech.name}
                   icon={tech.icon}
+                  color={tech.color}
+                  titleHidden
                 />
               ))}
             </div>
-            <div className="card-actions mt-8 flex flex-nowrap h-full justify-center items-center">
+            <div className="card-actions mt-5 flex flex-nowrap h-full justify-center items-center">
               <Link
                 href={liveUrl}
                 target="_blank"

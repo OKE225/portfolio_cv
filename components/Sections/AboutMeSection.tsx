@@ -53,7 +53,7 @@ const AboutMeSection = () => {
       </div>
 
       <SubHeadingText>Technologie</SubHeadingText>
-      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-1">
+      <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-25">
         <SkillsSetCard title="Frontend" techList={frontendTechnologies} />
         <SkillsSetCard title="Backend" techList={backendTechnologies} />
       </div>
