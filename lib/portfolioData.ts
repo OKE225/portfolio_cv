@@ -183,9 +183,9 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "myKindle Highlights",
-    image: "/mykindle.png",
+    image: "/myKindle.png",
     description:
-      "Aplikacja do przechowywania podkreśleń z Kindle. Użytkownik wczytuje plik z podkreśleniami, a aplikacja odczytuje jego zawartość. Podkreślenia są pogrupowane według książek i są przechowywane w localStorage. Użytkownik może wyszukiwać książki i poszczególne podkreślenia również może sortować listę książek, jak i podkreślenia",
+      "Aplikacja do zarządzania podkreśleniami z Kindle, która umożliwia import i automatyczne przetwarzanie danych oraz przechowywanie ich w bazie PostgreSQL (Supabase). Użytkownicy mogą zakładać konto (email/hasło, weryfikacja, reset hasła) lub logować się przez Google i GitHub. Wszystkie highlights są zebrane w jednym miejscu, uporządkowane według książek, z możliwością wyszukiwania i sortowania",
     techStack: getTechnologies([
       "NextJS",
       "React",
@@ -193,7 +193,7 @@ export const projects: Project[] = [
       "JavaScript",
       "TailwindCSS",
     ]),
-    liveUrl: "https://github.com/OKE225/myKindle_Highlights_app",
+    liveUrl: "https://my-kindle-highlights-app.vercel.app/",
     repoUrl: "https://github.com/OKE225/myKindle_Highlights_app",
   },
   {
