@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { Pixelify_Sans } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
-const pixelifySans = Pixelify_Sans({
+const pixelifySans = localFont({
+  src: [
+    { path: "./fonts/PixelifySans-Regular.ttf", weight: "400" },
+    { path: "./fonts/PixelifySans-Medium.ttf", weight: "500" },
+    { path: "./fonts/PixelifySans-SemiBold.ttf", weight: "600" },
+    { path: "./fonts/PixelifySans-Bold.ttf", weight: "700" },
+  ],
   variable: "--font-pixelify-sans",
-  subsets: ["latin"],
-  display: "swap",
 });
 
 export const metadata: Metadata = {
