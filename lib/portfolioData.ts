@@ -183,7 +183,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "myKindle Highlights",
-    image: "/myKindle.png",
+    image: "/myKindle-app.png",
     description:
       "Aplikacja do zarządzania podkreśleniami z Kindle, która umożliwia import i automatyczne przetwarzanie danych oraz przechowywanie ich w bazie PostgreSQL (Supabase). Użytkownicy mogą zakładać konto (email/hasło, weryfikacja, reset hasła) lub logować się przez Google i GitHub. Wszystkie highlights są zebrane w jednym miejscu, uporządkowane według książek, z możliwością wyszukiwania i sortowania",
     techStack: getTechnologies([
