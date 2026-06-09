@@ -21,7 +21,7 @@ const ProjectItem = ({
 
   return (
     <div
-      className={`card transition overflow-hidden bg-slate-900 h-fit intersect-once intersect:motion-preset-focus intersect:motion-delay-${id * 500 + 500}`}
+      className={`card transition overflow-hidden bg-transparent h-fit intersect-once intersect:motion-preset-focus intersect:motion-delay-${id * 500 + 500}`}
       data-testid="project-card">
       <Link
         href={`${liveUrl}`}
