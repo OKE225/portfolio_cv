@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
 
 const pixelifySans = localFont({
   src: [
@@ -32,6 +33,7 @@ export default function RootLayout({
 
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   );
