@@ -13,18 +13,12 @@ const ProjectsSection = () => {
 
   const createProjectCards = (array: Project[]) => {
     return array.map(
-      ({
+      (
+        { image, title, description, techStack, liveUrl, repoUrl }: Project,
         id,
-        image,
-        title,
-        description,
-        techStack,
-        liveUrl,
-        repoUrl,
-      }: Project) => (
+      ) => (
         <ProjectItem
           key={id}
-          id={id}
           image={image}
           title={title}
           description={description}
@@ -49,12 +43,8 @@ const ProjectsSection = () => {
         {createProjectCards(visibleProjects)}
       </div>
       {!isShowMore && (
-        <button
-          onClick={() => setIsShowMore(true)}
-          className="lg:hidden mt-1 intersect-once intersect:motion-preset-focus intersect:motion-delay-1500">
-          <ButtonVariant btnVariant="primary" delay={0}>
-            Pokaż więcej
-          </ButtonVariant>
+        <button onClick={() => setIsShowMore(true)} className="lg:hidden mt-1">
+          <ButtonVariant btnVariant="primary">Pokaż więcej</ButtonVariant>
         </button>
       )}
     </div>

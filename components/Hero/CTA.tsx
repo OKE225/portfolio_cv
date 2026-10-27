@@ -15,14 +15,12 @@ const CTA = () => {
       <button
         onClick={() => handleScroll("#contact")}
         className="text-xl max-md:text-lg max-lg:w-full mr-1 max-lg:mr-0 max-lg:mb-1">
-        <ButtonVariant btnVariant="primary" delay={2000}>
-          Wyślij wiadomość
-        </ButtonVariant>
+        <ButtonVariant btnVariant="primary">Wyślij wiadomość</ButtonVariant>
       </button>
       <button
         onClick={() => handleScroll("#projects")}
         className="text-xl max-md:text-lg max-lg:w-full">
-        <ButtonVariant btnVariant="secondary" delay={2500}>
+        <ButtonVariant btnVariant="secondary">
           Zobacz moje projekty
         </ButtonVariant>
       </button>

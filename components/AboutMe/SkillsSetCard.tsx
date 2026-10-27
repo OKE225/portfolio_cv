@@ -11,9 +11,7 @@ interface SkillsSetCardProps {
 
 const SkillsSetCard = ({ techList, title }: SkillsSetCardProps) => {
   return (
-    <div
-      className="overflow-hidden intersect-once intersect:motion-preset-focus intersect:motion-delay-1500"
-      data-testid="technologyCard">
+    <div className="overflow-hidden" data-testid="technologyCard">
       <div>
         <h3 className="text-2xl font-bold capitalize text-zinc-50 mb-5">
           {title}

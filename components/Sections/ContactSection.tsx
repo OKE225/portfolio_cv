@@ -40,7 +40,7 @@ const ContactSection = () => {
 
       <div className="flex gap-10 max-lg:flex-col-reverse">
         <form className="w-full" onSubmit={handleSubmit}>
-          <div className="intersect:motion-preset-blur-right intersect:motion-delay-1000 intersect-once">
+          <div>
             <label htmlFor="name" className="label-text inline-block text-lg ">
               Wpisz swoje imię <span className="text-rose-500">*</span>
             </label>
@@ -57,7 +57,7 @@ const ContactSection = () => {
             />
           </div>
 
-          <div className="intersect:motion-preset-blur-right intersect:motion-delay-1500 intersect-once">
+          <div>
             <label
               htmlFor="email"
               className="label-text inline-block text-lg mt-2 ">
@@ -79,7 +79,7 @@ const ContactSection = () => {
             />
           </div>
 
-          <div className="intersect:motion-preset-blur-right intersect:motion-delay-2000 intersect-once">
+          <div>
             <label
               htmlFor="message"
               className="label-text inline-block text-lg mt-2">
@@ -97,15 +97,8 @@ const ContactSection = () => {
               placeholder="Treść wiadomości..."></textarea>
           </div>
 
-          {/* <button
-            type="submit"
-            className="bg-rose-500 text-zinc-50 shadow-rose-950 shadow-md hover:bg-rose-600 hover:scale-98 transition font-bold px-5 py-2 max-lg:w-full intersect:motion-preset-focus intersect:motion-delay-2500 intersect-once">
-            Wyślij wiadomość
-          </button> */}
           <button type="submit" className="w-fit block max-lg:w-full">
-            <ButtonVariant btnVariant="primary" delay={2500}>
-              Wyślij wiadomość
-            </ButtonVariant>
+            <ButtonVariant btnVariant="primary">Wyślij wiadomość</ButtonVariant>
           </button>
 
           <div className="min-h-10 mt-2">
@@ -123,7 +116,7 @@ const ContactSection = () => {
         </form>
 
         <div
-          className="max-w-100 text-gray-400 flex flex-col mt-8 max-lg:mt-0 max-xl:max-w-98 max-lg:max-w-full intersect:motion-preset-blur-right intersect:motion-delay-1000 intersect-once"
+          className="max-w-100 text-gray-400 flex flex-col mt-8 max-lg:mt-0 max-xl:max-w-98 max-lg:max-w-full"
           data-testid="why-me">
           <p>
             Jestem otwarty na współpracę z firmami, jak i osobami prywatnymi.

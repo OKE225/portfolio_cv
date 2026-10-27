@@ -6,14 +6,8 @@ import ContactSection from "@/components/Sections/ContactSection";
 import Footer from "@/components/Sections/Footer";
 import HeroSection from "@/components/Sections/HeroSection";
 import ProjectsSection from "@/components/Sections/ProjectsSection";
-import { useEffect } from "react";
-import { Observer } from "tailwindcss-intersect";
 
 const Page = () => {
-  useEffect(() => {
-    Observer.start();
-  }, []);
-
   return (
     <>
       <Navbar />

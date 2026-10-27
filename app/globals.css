@@ -1,25 +1,23 @@
+@import "tailwindcss";
+@plugin "@iconify/tailwind4";
+
 * {
   border-radius: 0;
 }
 
-@import "tailwindcss";
-@import "tailwindcss-intersect";
-@plugin "tailwindcss-motion";
-
-@plugin "flyonui" {
-  themes: black --default;
-}
-@plugin "@iconify/tailwind4";
-
-:root::-webkit-scrollbar {
-  width: 0 !important;
-  display: none !important;
+body {
+  color: white;
 }
 
 :root {
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
   overflow: overlay !important;
+}
+
+:root::-webkit-scrollbar {
+  width: 0 !important;
+  display: none !important;
 }
 
 .animate-move-diagonal {

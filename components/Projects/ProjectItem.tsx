@@ -9,7 +9,6 @@ import SocialIcon from "../Hero/SocialIcon";
 import ButtonVariant from "../ButtonVariant";
 
 const ProjectItem = ({
-  id,
   image,
   title,
   description,
@@ -21,7 +20,7 @@ const ProjectItem = ({
 
   return (
     <div
-      className={`card transition overflow-hidden bg-transparent h-fit intersect-once intersect:motion-preset-focus intersect:motion-delay-${id * 500 + 500}`}
+      className={`card transition overflow-hidden bg-transparent h-fit`}
       data-testid="project-card">
       <Link
         href={`${liveUrl}`}
@@ -53,12 +52,8 @@ const ProjectItem = ({
               ))}
             </div>
             <div className="card-actions mt-5 flex flex-nowrap h-full justify-center items-center">
-              <Link
-                href={liveUrl}
-                target="_blank"
-                // className="text-rose-500 w-full text-center shadow-[inset_0_0_0_2px] shadow-rose-500 hover:scale-98 transition font-bold py-2"
-                className="w-full">
-                <ButtonVariant btnVariant="secondary" delay={0}>
+              <Link href={liveUrl} target="_blank" className="w-full">
+                <ButtonVariant btnVariant="secondary">
                   Live project
                 </ButtonVariant>
               </Link>
