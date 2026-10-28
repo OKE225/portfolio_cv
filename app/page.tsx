@@ -11,7 +11,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <div className="max-w-6xl max-xl:max-w-4xl max-lg:w-[90%] m-auto flex flex-col gap-80 max-2xl:gap-50">
+      <div className="flex flex-col mx-auto max-w-7xl max-xl:max-w-4xl max-lg:w-[90%]">
         <HeroSection />
         <AboutMeSection />
         <ProjectsSection />

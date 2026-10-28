@@ -1,27 +1,35 @@
 @import "tailwindcss";
-@plugin "@iconify/tailwind4";
 
 * {
   border-radius: 0;
+  cursor:
+    url("/cursor.svg") 1 1,
+    auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 31, 90, 0.35) transparent;
 }
 
-body {
-  color: white;
+a,
+button,
+[role="button"],
+[role="link"],
+input[type="submit"],
+input[type="button"],
+select,
+label[for] {
+  cursor:
+    url("/cursor-hover.svg") 1 1,
+    pointer;
 }
 
-:root {
-  -ms-overflow-style: none !important;
-  scrollbar-width: none !important;
-  overflow: overlay !important;
-}
-
-:root::-webkit-scrollbar {
-  width: 0 !important;
-  display: none !important;
+@theme inline {
+  --font-jetbrains: var(--font-jetbrains-mono), monospace;
+  --font-pixelify: var(--font-pixelify-sans), monospace;
 }
 
 .animate-move-diagonal {
-  animation: move-diagonal 50s linear infinite;
+  animation: move-diagonal 5s linear infinite !important;
 }
 
 @keyframes move-diagonal {
@@ -29,6 +37,6 @@ body {
     background-position: 0px 0px;
   }
   to {
-    background-position: 1000px 1000px;
+    background-position: 50px 50px;
   }
 }
