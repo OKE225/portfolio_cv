@@ -5,19 +5,14 @@
   cursor:
     url("/cursor.svg") 1 1,
     auto;
-
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 31, 90, 0.35) transparent;
 }
 
 a,
 button,
-[role="button"],
-[role="link"],
-input[type="submit"],
-input[type="button"],
-select,
-label[for] {
+label,
+input,
+textarea,
+svg {
   cursor:
     url("/cursor-hover.svg") 1 1,
     pointer;
@@ -29,7 +24,7 @@ label[for] {
 }
 
 .animate-move-diagonal {
-  animation: move-diagonal 5s linear infinite !important;
+  animation: move-diagonal 15s linear infinite !important;
 }
 
 @keyframes move-diagonal {
@@ -39,4 +34,37 @@ label[for] {
   to {
     background-position: 50px 50px;
   }
+}
+
+/* ===== Pikselowy scrollbar ===== */
+
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-color: #ff1f5a #12143a;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  border-left: 2px solid #2a2d5c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff1f5a;
+  border: 2px solid #0a0b26;
+  box-shadow:
+    inset 3px 3px 0 #ff8fae,
+    inset -3px -3px 0 #b3003a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4f7f;
+}
+
+::-webkit-scrollbar-corner {
+  background: #0a0b26;
 }
