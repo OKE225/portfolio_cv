@@ -4,7 +4,7 @@ interface HeadingTextProps {
 
 const HeadingText = ({ children }: HeadingTextProps) => {
   return (
-    <h1 className="text-5xl font-bold text-zinc-50 mb-5 max-xl:text-4xl">{`<${children} />`}</h1>
+    <h2 className="font-pixelify text-5xl font-bold text-white mb-2.5 capitalize max-sm:text-4xl max-lg:mb-0">{`<${children} />`}</h2>
   );
 };
 
