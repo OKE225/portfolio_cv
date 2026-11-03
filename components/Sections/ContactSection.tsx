@@ -1,8 +1,8 @@
 "use client";
 
-import ButtonVariant from "../ButtonVariant";
 import HeadingText from "../HeadingText";
 import { useState } from "react";
+import Container from "../UI/Container";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -33,109 +33,89 @@ const ContactSection = () => {
   };
 
   return (
-    <div
-      className="flex flex-col justify-center pb-40 pt-30 max-2xl:pt-20 max-2xl:pb-30 max-lg:pb-20 max-lg:pt-10"
-      id="contact">
-      <HeadingText>Napisz Do Mnie</HeadingText>
+    <div className="bg-[rgb(13,14,48)] py-24 border-y border-y-[rgb(42,45,92)]">
+      <Container>
+        <div className="flex flex-col scroll-mt-24 gap-10" id="contact">
+          <HeadingText>Napisz Do Mnie</HeadingText>
 
-      <div className="flex gap-10 max-lg:flex-col-reverse">
-        <form className="w-full" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="name" className="label-text inline-block text-lg ">
-              Wpisz swoje imię <span className="text-rose-500">*</span>
-            </label>
-            <input
-              type="text"
-              className="input border-2 text-lg border-slate-900 bg-slate-950 focus:border-zinc-400! focus-within:shadow-none hover:border-zinc-500! focus:shadow-slate-900 focus:shadow-md focus-within:outline-zinc-400!"
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
-              name="name"
-              id="name"
-              placeholder="Imię"
-            />
+          <div className="grid grid-cols-2 max-xl:grid-cols-1">
+            <form className="flex flex-col gap-4.5" onSubmit={handleSubmit}>
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="name" className="text-white text-sm font-bold">
+                  Wpisz swoje imię<sup className="text-rose-500">*</sup>
+                </label>
+                <input
+                  type="text"
+                  className="h-12 bg-[rgb(10,11,38)] text-white px-4 border border-[rgb(42,45,92)] transition-colors focus:border-rose-500 focus:ring-2 focus:ring-rose-500/30 focus:outline-none"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                  name="name"
+                  id="name"
+                  placeholder="Imię"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="email" className="text-white text-sm font-bold">
+                  Wpisz swój email<sup className="text-rose-500">*</sup>
+                </label>
+                <input
+                  type="text"
+                  className="h-12 bg-[rgb(10,11,38)] text-white px-4 border border-[rgb(42,45,92)] transition-colors focus:border-rose-500 focus:ring-2 focus:ring-rose-500/30 focus:outline-none"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      email: e.target.value.toLowerCase(),
+                    })
+                  }
+                  name="email"
+                  id="email"
+                  placeholder="E-mail"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <label
+                  htmlFor="message"
+                  className="text-white text-sm font-bold">
+                  Wiadomość<sup className="text-rose-500">*</sup>
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  className="min-h-40 h-40 max-h-40 max-md:min-h-55 max-md:h-55 max-md:max-h-55 bg-[rgb(10,11,38)] text-white py-3 px-4 border border-[rgb(42,45,92)] transition-colors focus:border-rose-500 focus:ring-2 focus:ring-rose-500/30 focus:outline-none"
+                  value={formData.message}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
+                  placeholder="Treść wiadomości..."></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="bg-rose-500 text-[rgb(10,11,38)] font-bold min-h-11 py-3 px-7 hover:scale-98 transition">
+                Wyślij wiadomość
+              </button>
+
+              <div className="min-h-8 uppercase">
+                {success && (
+                  <p className="text-green-500 inline-block text-lg font-bold focus:font-bold">
+                    {success}
+                  </p>
+                )}
+                {error && (
+                  <p className="text-red-500 inline-block text-lg font-bold focus:font-bold">
+                    {error}
+                  </p>
+                )}
+              </div>
+            </form>
           </div>
-
-          <div>
-            <label
-              htmlFor="email"
-              className="label-text inline-block text-lg mt-2 ">
-              Wpisz swój email <span className="text-rose-500">*</span>
-            </label>
-            <input
-              type="text"
-              className="input border-2 text-lg border-slate-900 bg-slate-950 focus:border-zinc-400! focus-within:shadow-none hover:border-zinc-500! focus:shadow-slate-900 focus:shadow-md focus-within:outline-zinc-400!"
-              value={formData.email}
-              onChange={(e) =>
-                setFormData({
-                  ...formData,
-                  email: e.target.value.toLowerCase(),
-                })
-              }
-              name="email"
-              id="email"
-              placeholder="Email"
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="message"
-              className="label-text inline-block text-lg mt-2">
-              Wiadomość <span className="text-rose-500">*</span>
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              className="textarea border-2 text-lg border-slate-900 bg-slate-950 focus:border-zinc-400! focus-within:shadow-none hover:border-zinc-500! focus:shadow-slate-900 focus:shadow-md focus-within:outline-zinc-400!"
-              value={formData.message}
-              onChange={(e) =>
-                setFormData({ ...formData, message: e.target.value })
-              }
-              rows={10}
-              placeholder="Treść wiadomości..."></textarea>
-          </div>
-
-          <button type="submit" className="w-fit block max-lg:w-full">
-            <ButtonVariant btnVariant="primary">Wyślij wiadomość</ButtonVariant>
-          </button>
-
-          <div className="min-h-10 mt-2">
-            {success && (
-              <p className="text-green-500 inline-block text-lg font-bold">
-                {success}
-              </p>
-            )}
-            {error && (
-              <p className="text-red-500 inline-block text-lg font-bold">
-                {error}
-              </p>
-            )}
-          </div>
-        </form>
-
-        <div
-          className="max-w-100 text-gray-400 flex flex-col mt-8 max-lg:mt-0 max-xl:max-w-98 max-lg:max-w-full"
-          data-testid="why-me">
-          <p>
-            Jestem otwarty na współpracę z firmami, jak i osobami prywatnymi.
-            Chętnie dołączę do Twojego zespołu jako frontend developer lub
-            stworzę dla Ciebie kompletną stronę internetową projektując ją od
-            zera w Figmie, albo zaimplementuję gotowy projekt z Figmy. Napisz do
-            mnie jeżeli jesteś zainteresowany
-          </p>
-          <p className="mt-3">Dlaczego ja?</p>
-          <ul className="list-inside list-disc">
-            <li>Stworzę kompletną stronę www od zera</li>
-            <li>Trzymam się terminów i szybko się uczę</li>
-            <li>Piszę czysty, uporządkowany kod</li>
-            <li>Solidny tech stack: Next.js, React, TypeScript</li>
-            <li>Pracuję z Git/GitHub</li>
-            <li>Integruję REST API, bazy MongoDB/MySQL</li>
-          </ul>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };
