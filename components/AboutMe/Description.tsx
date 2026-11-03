@@ -1,22 +1,23 @@
 const Description = () => {
   return (
-    <div className="text-gray-400" data-testid="description">
-      <p className="mb-3">
-        Nazywam się Patryk Jastrzębowski. Mam 20 lat i z wykształcenia jestem
-        technikiem informatykiem. Wolny czas poświęcam na programowanie – tworzę
-        responsywne strony i aplikacje internetowe. Najczęściej programuję
-        w Next.js, React, TypeScript, JavaScript oraz stylizuję je za
-        pomocą TailwindCSS. Do zarządzania kodem używam Git i GitHub. A strony
-        projektuję w Figmie, dbając o elementy, ich kolory i typografię. Umiem
-        zamieniać gotowe projekty z Figmy w działające strony www
+    <div className="text-justify" data-testid="description">
+      <p className="mb-4">
+        Nazywam się Patryk Jastrzębowski. Mam 20 lat. Jestem Fullstack
+        Developerem z wykształceniem technika informatyka. Wolny czas poświęcam
+        na programowanie tworząc nowoczesne strony internetowe oraz aplikacje
+        webowe i mobilne. Najczęściej programuję w Next.js, React, TypeScript,
+        JavaScript oraz stylizuję za pomocą TailwindCSS. Do zarządzania kodem
+        używam Gita i GitHuba. W pracy korzystam z narzędzi AI, które wspierają
+        proces tworzenia stron i aplikacji, ale nie zastępują samodzielnego
+        myślenia
       </p>
       <p>
         Jestem dobrze zorganizowany, zaangażowany w zadania i skutecznie
-        zarządzam czasem, zawsze realizuję projekty terminowo i z pełnym
-        skupieniem. Łączę teorię z praktyką regularnie budując nowe projekty,
-        które zazwyczaj umieszczam na moim profilu GitHub. Podchodzę do
-        programowania z pasją i systematycznością, co pozwala mi szybko rozwijać
-        się jako programista
+        zarządzam czasem, realizuję projekty z pełnym skupieniem. Chcę się
+        rozwijać razem z bardziej doświadczonymi programistami i mieć realny
+        wpływ na produkt. Łączę teorię z praktyką regularnie budując nowe
+        projekty, które umieszczam na moim profilu GitHub. Podchodzę do
+        programowania z pasją i systematycznością
       </p>
     </div>
   );

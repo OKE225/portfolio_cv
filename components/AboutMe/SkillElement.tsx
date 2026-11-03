@@ -6,10 +6,12 @@ interface SkillElementProps {
 const SkillElement = ({ title, children }: SkillElementProps) => {
   return (
     <div
-      className={`bg-rose-500/10 p-5 text-rose-500 first-of-type:bg-rose-500 first-of-type:text-zinc-50 first-of-type:shadow-rose-950 first-of-type:shadow-lg nth-[2]:bg-rose-500 nth-[2]:text-zinc-50 nth-[2]:shadow-rose-950 nth-[2]:shadow-lg`}
+      className="bg-[rgb(15,17,50)] border-t-3 border-t-rose-500 border border-[rgb(42,45,92)] p-6"
       data-testid="skillElement">
-      <h3 className="text-3xl font-bold mb-3">{title}</h3>
-      <p>{children}</p>
+      <h3 className="font-pixelify text-2xl text-rose-500 font-semibold mb-2.5">
+        {title}
+      </h3>
+      <p className="text-[15px]">{children}</p>
     </div>
   );
 };

@@ -1,63 +1,64 @@
 import Description from "../AboutMe/Description";
 import HeadingText from "../HeadingText";
 import SkillElement from "../AboutMe/SkillElement";
-import SubHeadingText from "../SubHeadingText";
-import SkillsSetCard from "../AboutMe/SkillsSetCard";
-import { backendTechnologies, frontendTechnologies } from "@/lib/portfolioData";
+import Container from "../UI/Container";
 
 const AboutMeSection = () => {
   return (
-    <div
-      className="flex flex-col justify-center pt-30 max-2xl:pt-20 max-lg:pt-10"
-      id="about">
-      <HeadingText>O Mnie</HeadingText>
+    <Container>
+      <div
+        className="flex flex-col justify-center scroll-mt-24 gap-8"
+        id="about">
+        <HeadingText>O Mnie</HeadingText>
 
-      <Description />
+        <Description />
 
-      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-1 my-5">
-        <SkillElement id={1} title="Responsywność">
-          Tworzę responsywne strony internetowe, które automatycznie dostosowują
-          się do każdego urządzenia: komputerów, laptopów, tabletów i telefonów.
-          Wyglądają świetnie i działają płynnie na każdym ekranie. Używam do
-          tego CSS Grid, Flexbox oraz breakpointów
-        </SkillElement>
-        <SkillElement id={2} title="Design UI/UX">
-          Tworzę intuicyjne i estetyczne projekty stron w Figma, dbając o wygodę
-          użytkownika (UX/UI). Zwracam uwagę na kolory, typografię oraz
-          wszystkie stany elementów (normalny, hover, focus, błąd, ładowanie).
-          Strony są przyjemne wizualnie i łatwe w obsłudze na każdym urządzeniu
-        </SkillElement>
-        <SkillElement id={3} title="Gotowe projekty">
-          Umiem także zaprogramować aplikację za pomocą gotowego projektu z
-          Figmy, zamieniając grafiki projektantów w działające strony www
-          dodając stany komponentów i interaktywność z animacjami. Efektem są w
-          pełni funkcjonalne strony
-        </SkillElement>
-        <SkillElement id={4} title="Bazy danych">
-          Łączę strony i aplikacje z bazami danych MongoDB oraz MySQL. Piszę
-          zapytania do pobierania, dodawania, edycji i usuwania danych (operacje
-          CRUD). oraz tworzę API które pobierają i zapisują dane bez odświeżania
-          strony
-        </SkillElement>
-        <SkillElement id={5} title="Czysty kod">
-          Piszę czytelny, uporządkowany, łatwy do zrozumienia kod przez innych
-          programistów. Używam TypeScript, żeby popełniać mniej błędów podczas
-          pisania kodu. Dzielę kod na małe, wielokrotnego użytku komponenty
-        </SkillElement>
-        <SkillElement id={6} title="API integracja">
-          Łączę aplikacje z zewnętrznymi usługami np. wysyłanie emaili przez
-          NodeMailer, czy logowanie OAuth oraz buduję REST API dla operacji CRUD
-          (Create, Read, Update, Delete) z error handling, czy walidacją danych.
-          Buduję także własne API
-        </SkillElement>
+        <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-5">
+          <SkillElement title="Dostosowanie do różnych ekranów">
+            CSS Grid, Flexbox i breakpointy. Strony dopasowane do komputerów,
+            tabletów i telefonów z dbałością o czytelność i wygodną obsługę na
+            każdym ekranie.{" "}
+            <strong>
+              Spójny wygląd i intuicyjna nawigacja niezależnie od rozmiaru
+              urządzenia
+            </strong>
+          </SkillElement>
+          <SkillElement title="Design UI/UX">
+            Nowoczesny wygląd, elementy 3D i projekty tworzone ze wsparciem AI.
+            Dbałość o kolory, typografię i stany elementów od hover i focus po
+            błędy i ładowanie. Interfejsy przyjemne wizualnie i wygodne w
+            obsłudze na każdym urządzeniu
+          </SkillElement>
+          <SkillElement title="Czysty kod">
+            Czytelny i uporządkowany kod, zrozumiały również dla innych
+            programistów. Jasne nazwy i podział na małe części, z których każda
+            ma konkretne zadanie. Komponenty i funkcje, które można wykorzystać
+            w wielu miejscach, łatwo poprawiać i rozbudowywać bez niepotrzebnego
+            powielania kodu
+          </SkillElement>
+          <SkillElement title="Praca z narzędziami AI">
+            AI jako <strong>wsparcie, nie zastępstwo myślenia</strong>. Pomoc w
+            szukaniu błędów, rozumieniu kodu i tworzeniu pomysłów na wygląd
+            stron. Sprawdzanie i dopasowywanie propozycji zamiast kopiowania
+            gotowych odpowiedzi bez zastanowienia. Eksperymentowanie z
+            narzędziami i szukanie nowych sposobów na usprawnienie pracy
+          </SkillElement>
+          <SkillElement title="Bazy danych">
+            MySQL, PostgreSQL i zarządzanie danymi, dodawanie, odczytywanie,
+            edycja i usuwanie. Logowanie użytkowników oraz role określające, kto
+            może zobaczyć lub zmienić konkretne informacje. Dodatkowe reguły
+            dostępu RLS, dzięki którym użytkownik ma dostęp tylko do
+            przeznaczonych dla niego danych
+          </SkillElement>
+          <SkillElement title="Komponenty wielokrotnego użytku">
+            Przyciski, formularze i karty tworzone jako uniwersalne komponenty.
+            Konfiguracja przez propsy i spójne warianty wyglądu zamiast
+            powielania kodu. Zmiany w jednym miejscu, które ułatwiają rozwój i
+            utrzymanie całej aplikacji
+          </SkillElement>
+        </div>
       </div>
-
-      <SubHeadingText>Technologie</SubHeadingText>
-      <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-25 max-lg:gap-10">
-        <SkillsSetCard title="Frontend" techList={frontendTechnologies} />
-        <SkillsSetCard title="Backend" techList={backendTechnologies} />
-      </div>
-    </div>
+    </Container>
   );
 };
 
