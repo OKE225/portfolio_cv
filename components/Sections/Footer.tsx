@@ -1,46 +1,35 @@
 import Link from "next/link";
+import Container from "../UI/Container";
 
 const Footer = () => {
   return (
-    <footer className="relative left-0 bottom-0 bg-slate-900 text-gray-400 w-screen py-4">
-      <div className="max-w-5xl max-xl:max-w-4xl max-lg:w-[90%] m-auto">
-        <div className="grid gap-4 grid-cols-3 max-lg:grid-cols-2">
+    <footer className="pt-12 pb-8">
+      <Container className="gap-8">
+        <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-8 max-sm:gap-4 text-[15px]">
           <div>
-            <p>Patryk Jastrzębowski</p>
-            <p>Frontend Developer</p>
+            <p className="font-pixelify text-xl text-white">
+              Patryk Jastrzębowski
+            </p>
+            <p>Fullstack Developer</p>
           </div>
 
           <div>
-            <h4>Śledź mnie</h4>
-            <ul>
-              <li className="underline">
-                <Link
-                  href="https://github.com/OKE225"
-                  className="link"
-                  target="_blank">
-                  GitHub
-                </Link>
-              </li>
-              <li className="underline">
-                <Link
-                  href="https://www.linkedin.com/in/patryk-jastrz%C4%99bowski"
-                  className="link"
-                  target="_blank">
-                  LinkedIn
-                </Link>
-              </li>
-            </ul>
+            <p className="font-pixelify text-xl text-white">Śledź mnie</p>
+            <Link href="https://github.com/OKE225" target="_blank">
+              GitHub
+            </Link>
           </div>
 
           <div>
-            <h4>Kontakt</h4>
+            <p className="font-pixelify text-xl text-white">Kontakt</p>
             <p>patryk.jastrzebowski.dev@gmail.com</p>
           </div>
         </div>
-        <div className="border-t border-slate-700 mt-5 pt-2 text-center font-bold">
-          © 2026 Patryk Jastrzębowski. Wszelkie prawa zastrzeżone
+
+        <div className="text-[13px] text-center pt-5 border-t border-t-[rgb(42,45,92)]">
+          <p>© 2026 Patryk Jastrzębowski. Wszelkie prawa zastrzeżone</p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };
