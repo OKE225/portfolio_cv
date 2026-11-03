@@ -1,23 +1,12 @@
-interface ProgrammingLanguageItemProps {
+interface Props {
   name: string;
-  icon: string;
-  color: string;
-  titleHidden?: boolean;
 }
 
-const ProgrammingLanguageItem = ({
-  name,
-  icon,
-  color,
-  titleHidden,
-}: ProgrammingLanguageItemProps) => {
+const ProgrammingLanguageItem = ({ name }: Props) => {
   return (
-    <div className={`${color} flex items-center flex-col text-sm rounded-none`}>
-      <span className={`${icon} text-4xl`} data-testid="icon"></span>
-      <span
-        className={`text-xl max-xl:text-lg capitalize ${titleHidden && "hidden"}`}>
-        {name}
-      </span>
+    <div className="flex items-center bg-[rgb(18,20,58)] border border-[rgb(42,45,92)] py-2 px-3.5 gap-2 rounded-none">
+      <span className="w-2 aspect-square bg-rose-500"></span>
+      <p className="text-white">{name}</p>
     </div>
   );
 };

@@ -2,30 +2,19 @@ import ProgrammingLanguageItem from "./ProgrammingLanguageItem";
 
 interface SkillsSetCardProps {
   title: string;
-  techList: {
-    name: string;
-    icon: string;
-    color: string;
-  }[];
+  techList: string[];
 }
 
 const SkillsSetCard = ({ techList, title }: SkillsSetCardProps) => {
   return (
-    <div className="overflow-hidden" data-testid="technologyCard">
-      <div>
-        <h3 className="text-2xl font-bold capitalize text-zinc-50 mb-5">
-          {title}
-        </h3>
-        <div className="flex flex-wrap gap-5">
-          {techList.map((tech) => (
-            <ProgrammingLanguageItem
-              key={tech.name}
-              name={tech.name}
-              icon={tech.icon}
-              color={tech.color}
-            />
-          ))}
-        </div>
+    <div className="flex flex-col gap-3.5" data-testid="technologyCard">
+      <p className="font-pixelify text-[22px] font-semibold text-white">
+        {title}
+      </p>
+      <div className="flex flex-wrap gap-2.5">
+        {techList.map((technology) => (
+          <ProgrammingLanguageItem key={technology} name={technology} />
+        ))}
       </div>
     </div>
   );
