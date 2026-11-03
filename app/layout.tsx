@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import PixelClickBurst from "@/components/PixelClickBurst";
 
 const pixelifySans = localFont({
   src: [
@@ -21,8 +22,9 @@ const jetbrainsMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "portfolio",
-  description: "opis",
+  title: "Patryk Jastrzębowski - Portfolio",
+  description:
+    "Buduję strony i aplikacje, które są wygodne w obsłudze, dopasowane do każdego ekranu i łatwe w dalszym rozwoju. Pracuję w Next.js, React i TypeScript, dbając o komponenty wielokrotnego użytku, bazy danych oraz bezpieczny dostęp użytkowników. AI wykorzystuję jako wsparcie w codziennej pracy",
 };
 
 export default function RootLayout({
@@ -39,6 +41,8 @@ export default function RootLayout({
           <span className="from-[#0A0B26] to-transparent to-40% bg-linear-0 w-full h-screen absolute top-0 pointer-events-none"></span>
 
           {children}
+
+          <PixelClickBurst />
         </div>
       </body>
     </html>
