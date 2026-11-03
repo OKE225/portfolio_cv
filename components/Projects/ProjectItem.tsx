@@ -1,12 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { Project } from "@/lib/portfolioData";
+import ButtonVariant from "../ButtonVariant";
+import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Project } from "@/lib/portfolioData";
-import ProgrammingLanguageItem from "../AboutMe/ProgrammingLanguageItem";
-import SocialIcon from "../Hero/SocialIcon";
-import ButtonVariant from "../ButtonVariant";
 
 const ProjectItem = ({
   image,
@@ -16,57 +14,57 @@ const ProjectItem = ({
   liveUrl,
   repoUrl,
 }: Project) => {
-  const [showDetails, setShowDetails] = useState<boolean>(false);
-
   return (
-    <div
-      className={`card transition overflow-hidden bg-transparent h-fit`}
-      data-testid="project-card">
-      <Link
-        href={`${liveUrl}`}
-        target="_blank"
-        className="block w-full relative aspect-video">
-        <Image
-          src={image || ""}
-          alt={title}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-        />
-      </Link>
+    <div className="bg-[rgb(15,17,50)] flex flex-col h-full border border-[rgb(42,45,92)] transition hover:shadow-[6px_6px_0_rgba(255,255,255,0.05)] motion-safe:hover:-translate-y-2">
+      <div className="bg-[rgb(18,20,58)] flex flex-col min-h-47.5 border-b border-b-[rgb(42,45,92)]">
+        <div className="flex items-center gap-1.5 px-3 h-7 border-b border-b-[rgb(42,45,92)]">
+          <span className="block w-2 h-2 bg-rose-500" />
+          <span className="block w-2 h-2 bg-[rgb(42,45,92)]" />
+          <span className="block w-2 h-2 bg-[rgb(42,45,92)]" />
+        </div>
 
-      <div className="card-body p-5">
-        <h3 className="card-title text-3xl max-xl:text-2xl">{title}</h3>
-        {showDetails && (
-          <div>
-            <p className="text-gray-400">{description}</p>
-            <div className="flex flex-wrap gap-2 mt-3">
-              {techStack?.map((tech) => (
-                <ProgrammingLanguageItem
-                  key={tech.name}
-                  name={tech.name}
-                  icon={tech.icon}
-                  color={tech.color}
-                  titleHidden
-                />
-              ))}
-            </div>
-            <div className="card-actions mt-5 flex flex-nowrap h-full justify-center items-center">
-              <Link href={liveUrl} target="_blank" className="w-full">
-                <ButtonVariant btnVariant="secondary">
-                  Live project
-                </ButtonVariant>
-              </Link>
-              <SocialIcon icon="icon-[pixel--github]" link={`${repoUrl}`} />
-            </div>
-          </div>
-        )}
-        <div className="inline-block">
-          <button
-            className="text-rose-500 link underline"
-            onClick={() => setShowDetails((prev) => !prev)}>
-            {!showDetails ? "zobacz więcej" : "ukryj"}
-          </button>
+        <Image
+          src={image}
+          width={1920}
+          height={1080}
+          className="aspect-video object-contain"
+          alt=""
+        />
+      </div>
+
+      <div className="flex flex-1 flex-col p-6 gap-4 max-sm:p-4">
+        <h3 className="text-[26px] text-white font-pixelify font-semibold m-0">
+          {title}
+        </h3>
+        <p className="text-[15px] m-0">{description}</p>
+
+        <div className="flex flex-wrap gap-2">
+          {techStack.map((language, index) => (
+            <span
+              key={index}
+              className="text-xs text-[rgb(213,216,238)] py-0.75 px-2.5 border border-[rgb(42,45,92)]">
+              {language}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap gap-2.5 mt-auto">
+          {liveUrl && (
+            <ButtonVariant
+              variant="secondary"
+              href={liveUrl}
+              className="flex items-center gap-2 text-sm! font-semibold py-2.5! px-5! w-fit!">
+              Live project <MoveUpRight strokeWidth={5} size={10} />
+            </ButtonVariant>
+          )}
+
+          {repoUrl && (
+            <Link
+              href={repoUrl}
+              className="flex items-center gap-2 text-white text-sm font-semibold py-2.5 px-5 border-2 border-[rgb(42,45,92)]">
+              Kod <MoveUpRight strokeWidth={5} size={10} />
+            </Link>
+          )}
         </div>
       </div>
     </div>

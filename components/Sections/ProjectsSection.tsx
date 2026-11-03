@@ -1,52 +1,128 @@
 "use client";
 
-import { useState } from "react";
 import HeadingText from "../HeadingText";
 import ProjectItem from "../Projects/ProjectItem";
-import { Project, projects } from "@/lib/portfolioData";
-import ButtonVariant from "../ButtonVariant";
+import HighlightProjectCard from "../UI/HighlightProjectCard";
+import Container from "../UI/Container";
 
 const ProjectsSection = () => {
-  const [isShowMore, setIsShowMore] = useState(false);
-
-  const visibleProjects = isShowMore ? projects : projects.slice(0, 2);
-
-  const createProjectCards = (array: Project[]) => {
-    return array.map(
-      (
-        { image, title, description, techStack, liveUrl, repoUrl }: Project,
-        id,
-      ) => (
-        <ProjectItem
-          key={id}
-          image={image}
-          title={title}
-          description={description}
-          techStack={techStack}
-          liveUrl={liveUrl}
-          repoUrl={repoUrl}
-        />
-      ),
-    );
-  };
-
   return (
     <div
-      className="flex flex-col justify-center pt-30 max-2xl:pt-20 max-lg:pt-10"
+      className="bg-[rgb(13,14,48)] flex flex-col justify-center py-24 border-y border-y-[rgb(42,45,92)]"
       id="projects">
-      <HeadingText>Moje Projekty</HeadingText>
+      <Container>
+        <HeadingText>Moje Projekty</HeadingText>
 
-      <div className="grid grid-cols-3 gap-1 max-lg:hidden">
-        {createProjectCards(projects)}
-      </div>
-      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-1 lg:hidden">
-        {createProjectCards(visibleProjects)}
-      </div>
-      {!isShowMore && (
-        <button onClick={() => setIsShowMore(true)} className="lg:hidden mt-1">
-          <ButtonVariant btnVariant="primary">Pokaż więcej</ButtonVariant>
-        </button>
-      )}
+        <HighlightProjectCard />
+
+        <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-md:grid-cols-1">
+          {/* {projects.map(
+            (
+              {
+                image,
+                title,
+                description,
+                techStack,
+                liveUrl,
+                repoUrl,
+              }: Project,
+              id,
+            ) => (
+              <ProjectItem
+                key={id}
+                image={image}
+                title={title}
+                description={description}
+                techStack={techStack}
+                liveUrl={liveUrl}
+                repoUrl={repoUrl}
+              />
+            ),
+          )} */}
+
+          <ProjectItem
+            image="/projects/MindHealth.png"
+            title="MindHealth"
+            description="Aplikacja wspierająca dbanie o zdrowie psychiczne. Użytkownicy mogą codziennie zaznaczać samopoczucie, śledzić je w kalendarzu i budować serię kolejnych dni, a także korzystać z ćwiczeń uważności, dziennika myśli oraz chatbota AI oferującego wsparcie"
+            techStack={[
+              "React",
+              "TypeScript",
+              "JavaScript",
+              "TailwindCSS",
+              "Node.js",
+              "Express.js",
+            ]}
+            liveUrl="https://mind-health-online.vercel.app/"
+            repoUrl="https://github.com/OKE225/MindHealth"
+          />
+
+          <ProjectItem
+            image="/projects/Travel-Dreams.gif"
+            title="Travel Dreams"
+            description="Mobilna aplikacja do zapisywania miejsc, które użytkownik chce odwiedzić. Na mapie można oznaczać wymarzone lokalizacje, dodawać zdjęcia i krótkie opisy, a także przeglądać oraz usuwać zapisane punkty tworząc osobistą mapę podróżniczych marzeń"
+            techStack={[
+              "React",
+              "React Native",
+              "TypeScript",
+              "JavaScript",
+              "Supabase",
+              "PostgreSQL",
+            ]}
+            repoUrl="https://github.com/OKE225/Travel_Dreams_mobile_app"
+          />
+
+          <ProjectItem
+            image="/projects/Earth-3D.png"
+            title="Earth 3D"
+            description="Interaktywna strona landingowa poświęcona Ziemi. Jej głównym elementem jest model 3D planety, który reaguje na przewijanie strony animacjami pozycji, obrotu i zbliżenia, a całość uzupełniają sekcje z informacjami o Ziemi"
+            techStack={[
+              "React",
+              "TypeScript",
+              "JavaScript",
+              "Three.js",
+              "TailwindCSS",
+            ]}
+            liveUrl="https://oke225.github.io/earth-3d-website/"
+            repoUrl="https://github.com/OKE225/earth-3d-website"
+          />
+
+          <ProjectItem
+            image="/projects/myKindle.png"
+            title="myKindle Highlights"
+            description="Aplikacja webowa do gromadzenia cytatów z Kindle w jednym miejscu. Po zaimportowaniu notatek automatycznie rozpoznaje tytuł książki, autora i zaznaczenia, a użytkownik może wyszukiwać oraz sortować książki i cytaty"
+            techStack={[
+              "Next.js",
+              "React",
+              "TypeScript",
+              "JavaScript",
+              "TailwindCSS",
+              "Supabase",
+              "PostgreSQL",
+              "Jest",
+              "Docker",
+            ]}
+            liveUrl="https://my-kindle-highlights-app.vercel.app/"
+            repoUrl="https://github.com/OKE225/myKindle_Highlights_app"
+          />
+
+          <ProjectItem
+            image="/projects/Pinky-Promise.png"
+            title="Pinky Promise"
+            description="Responsywna strona internetowa dla prywatnej stylistki paznokci. Prezentuje ofertę, ceny i czas trwania usług, portfolio realizacji oraz informacje o artystce, a także ułatwia kontakt i umawianie wizyty dzięki spójnej, różowej identyfikacji wizualnej"
+            techStack={["HTML", "CSS"]}
+            liveUrl="https://pinky-promise-mk.vercel.app/"
+          />
+
+          <ProjectItem
+            image="/projects/Flora.png"
+            title="Flora"
+            description="Responsywny landing page poświęcony roślinom i kwiatom. Wyróżnia się animowanym tłem, efektownymi kartami reagującymi na ruch kursora oraz nowoczesnym, czytelnym układem, który ułatwia przeglądanie treści"
+            techStack={["React", "TypeScript", "Material UI", "Sass"]}
+            liveUrl="https://oke225.github.io/Flora/"
+            repoUrl="https://github.com/OKE225/Flora"
+          />
+        </div>
+      </Container>
     </div>
   );
 };
