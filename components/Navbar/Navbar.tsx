@@ -1,93 +1,171 @@
 "use client";
-import { useState, useEffect } from "react";
-import NavbarItem from "./NavbarItem";
+
+import { useEffect, useRef, useState } from "react";
+import { Menu, X } from "lucide-react";
+import Initials from "../UI/Initials";
+import NavigationListItems from "../UI/NavigationListItems";
+import CopyMyMail from "../UI/CopyMyMail";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [activeSection, setActiveSection] = useState<string>("#home");
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("#home");
 
-  const navbarItems = [
-    { href: "#home", text: "Home" },
-    { href: "#about", text: "O mnie" },
-    { href: "#projects", text: "Projekty" },
-    { href: "#contact", text: "Kontakt" },
-  ];
+  const navbarRef = useRef<HTMLElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
+  // Podświetlanie aktywnej sekcji
   useEffect(() => {
-    const sections = ["#home", "#about", "#projects", "#contact"];
+    const sections = [
+      "#home",
+      "#about",
+      "#projects",
+      "#contact",
+      "#project-case-study",
+    ];
+    let frameId: number | null = null;
 
     const updateActiveSection = () => {
-      const windowHeight = window.innerHeight - 100;
+      const offset = (navbarRef.current?.offsetHeight ?? 80) + 512;
 
-      let topVisibleSection = "#home";
-      let maxVisibleHeight = 0;
+      let currentSection = "#home";
 
       for (const id of sections) {
-        const el = document.querySelector(id);
-        if (!el) continue;
+        const element = document.querySelector(id);
 
-        const rect = el.getBoundingClientRect();
-        const top = rect.top;
-        const bottom = rect.bottom;
+        if (!element) continue;
 
-        const visibleTop = Math.max(top, 0);
-        const visibleBottom = Math.min(bottom, windowHeight);
-        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-
-        if (visibleHeight > maxVisibleHeight) {
-          maxVisibleHeight = visibleHeight;
-          topVisibleSection = id;
+        if (element.getBoundingClientRect().top <= offset) {
+          currentSection = id;
         }
       }
 
-      if (topVisibleSection !== activeSection) {
-        setActiveSection(topVisibleSection);
+      const isAtBottom =
+        window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight - 50;
+
+      if (isAtBottom && document.querySelector("#contact")) {
+        currentSection = "#contact";
       }
+
+      setActiveSection(currentSection);
     };
 
     const handleScroll = () => {
-      window.requestAnimationFrame(updateActiveSection);
+      if (frameId !== null) return;
+
+      frameId = window.requestAnimationFrame(() => {
+        frameId = null;
+        updateActiveSection();
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleScroll);
-    handleScroll();
+
+    updateActiveSection();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
+
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId);
+      }
     };
-  }, [activeSection]);
+  }, []);
+
+  // Zamknięcie po kliknięciu poza nawigacją lub klawiszem Escape
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (
+        event.target instanceof Node &&
+        !navbarRef.current?.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
+  // Reset menu po przejściu na desktop
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(width < 64rem)");
+
+    const handleBreakpointChange = () => {
+      if (!mediaQuery.matches) {
+        setIsOpen(false);
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleBreakpointChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleBreakpointChange);
+    };
+  }, []);
 
   return (
-    <>
-      <label className="swap fixed top-2 right-2 z-50 lg:hidden">
-        <input
-          type="checkbox"
-          checked={isOpen}
-          onChange={() => setIsOpen((prev) => !prev)}
-        />
-        <span className="icon-[rivet-icons--close] swap-on w-8 h-8 bg-gray-500"></span>
-        <span className="icon-[rivet-icons--menu] swap-off w-8 h-8 bg-gray-500"></span>
-      </label>
+    <nav
+      ref={navbarRef}
+      className="fixed inset-x-0 top-0 z-100 border-b border-[rgb(42,45,92)] bg-[rgb(10,11,38)]">
+      <div className="flex min-h-20 items-center justify-between gap-6 px-6 py-3 max-lg:gap-4 max-lg:min-h-0 max-sm:px-4">
+        <div onClick={() => setIsOpen(false)}>
+          <Initials />
+        </div>
 
-      <nav
-        className={`fixed top-3 left-1/2 -translate-x-1/2 w-fit lg:block z-49 max-lg:top-0 max-lg:bg-slate-950 max-lg:w-full max-lg:h-full max-lg:justify-center max-lg:items-center ${
-          isOpen ? "flex" : "hidden"
-        }`}>
-        <ul className="flex gap-1 flex-nowrap whitespace-nowrap text-xl max-lg:text-4xl max-lg:flex-col max-lg:gap-y-2 max-lg:h-[80%] max-lg:w-[90%] max-lg:mx-5">
-          {navbarItems.map((item, id) => (
-            <NavbarItem
-              key={id}
-              href={item.href}
-              closeMenu={() => setIsOpen(false)}
-              activeSection={activeSection}>
-              {item.text}
-            </NavbarItem>
-          ))}
-        </ul>
-      </nav>
-    </>
+        {/* Nawigacja desktopowa */}
+        <div className="max-lg:hidden">
+          <NavigationListItems activeSection={activeSection} />
+        </div>
+
+        <div className="flex shrink-0 items-center gap-3 max-sm:gap-2">
+          <CopyMyMail />
+
+          {/* Przycisk menu mobilnego */}
+          <button
+            ref={menuButtonRef}
+            type="button"
+            onClick={() => setIsOpen((previous) => !previous)}
+            className="hidden h-11 w-11 shrink-0 cursor-pointer items-center justify-center border-2 border-rose-500 text-rose-500 transition-colors hover:bg-rose-500/10 max-lg:inline-flex max-lg:h-10 max-lg:w-10">
+            {isOpen ? (
+              <X size={18} className="pointer-events-none" />
+            ) : (
+              <Menu size={18} className="pointer-events-none" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Panel jest pozycjonowany pod paskiem i nie zmienia jego wysokości */}
+      {isOpen && (
+        <div
+          id="mobile-navigation"
+          className="absolute inset-x-0 top-full lg:hidden">
+          <div className="overflow-y-auto border-b border-[rgb(42,45,92)] bg-[rgb(10,11,38)] px-6 py-5 shadow-[0_6px_0_rgba(255,255,255,0.05)] max-sm:px-4">
+            <NavigationListItems
+              activeSection={activeSection}
+              onNavigate={() => setIsOpen(false)}
+            />
+          </div>
+        </div>
+      )}
+    </nav>
   );
 };
 
