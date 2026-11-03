@@ -1,9 +1,9 @@
+import TypewriterText from "./TypewriterText";
+
 const Profession = () => {
   return (
-    <h2
-      className="text-rose-500 text-8xl font-bold text-center max-xl:text-[7vw]
- max-lg:text-9xl max-md:text-[16vw] max-sm:text-[18vw]">
-      Frontend Developer
+    <h2 className="font-pixelify text-rose-500 text-9xl font-bold text-center max-lg:text-[calc(8vw+48px)] max-md:text-[calc(10vw+38px)] max-sm:text-[calc(13.5vw+16px)] tracking-tight">
+      <TypewriterText lines={["Fullstack", "Developer"]} />
     </h2>
   );
 };

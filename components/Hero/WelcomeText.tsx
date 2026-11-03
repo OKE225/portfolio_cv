@@ -1,6 +1,6 @@
 const WelcomeText = () => {
   return (
-    <h1 className="text-gray-400 text-4xl max-xl:text-3xl max-lg:flex max-lg:flex-col max-sm:text-2xl">
+    <h1 className="text-[rgb(213,216,238)] font-pixelify text-3xl max-xl:text-3xl max-lg:flex max-lg:flex-col">
       Cześć! Jestem Patryk
     </h1>
   );

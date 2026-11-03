@@ -1,34 +1,37 @@
+import Link from "next/link";
 import CTA from "../Hero/CTA";
 import Profession from "../Hero/Profession";
 import ShortDescription from "../Hero/ShortDescription";
-import SocialIcon from "../Hero/SocialIcon";
 import WelcomeText from "../Hero/WelcomeText";
+import { MoveUpRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <>
-      <div
-        className="flex relative items-center flex-col justify-center h-screen z-20"
-        id="home">
-        <WelcomeText />
-        <Profession />
-        <ShortDescription />
+    <div
+      className="flex relative items-center flex-col justify-center h-screen z-20 max-lg:w-[90%] max-lg:mx-auto"
+      id="home">
+      <WelcomeText />
+      <Profession />
+      <ShortDescription />
 
-        <div className="mt-20 flex max-lg:flex-col max-lg:w-full">
-          <CTA />
-          <div className="flex justify-center items-center gap-2 ml-10 max-lg:ml-0 max-lg:mt-5 max-lg:gap-8">
-            <SocialIcon
-              icon="icon-[pixel--github]"
-              link="https://github.com/OKE225"
-            />
-            <SocialIcon
-              icon="icon-[pixel--linkedin]"
-              link="https://www.linkedin.com/in/patryk-jastrz%C4%99bowski"
-            />
-          </div>
-        </div>
+      <div className="mt-20 flex max-lg:flex-col max-lg:w-full max-lg:gap-2.5 max-lg:mt-15">
+        <CTA />
       </div>
-    </>
+
+      <div className="flex gap-6 mt-6 ">
+        <Link
+          href="mailto:patryk.jastrzebowski.dev@gmail.com"
+          title="patryk.jastrzebowski.dev@gmail.com"
+          className="flex items-center text-white text-[15px] gap-2">
+          E-mail <MoveUpRight size={14} />
+        </Link>
+        <Link
+          href="https://github.com/OKE225"
+          className="flex items-center text-white text-[15px] gap-2">
+          GitHub <MoveUpRight size={14} />
+        </Link>
+      </div>
+    </div>
   );
 };
 

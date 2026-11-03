@@ -1,18 +1,33 @@
+import Link from "next/link";
+
 interface ButtonVariantProps {
-  btnVariant: "primary" | "secondary";
+  variant: "primary" | "secondary";
+  className?: string;
   children: React.ReactNode;
+  href?: string;
 }
 
-const ButtonVariant = ({ children, btnVariant }: ButtonVariantProps) => {
+const ButtonVariant = ({
+  children,
+  variant,
+  className,
+  href,
+}: ButtonVariantProps) => {
   let btnClass = "";
 
-  if (btnVariant === "primary") {
-    btnClass = `block bg-rose-500 text-zinc-50 font-bold px-5 py-2 shadow-md shadow-rose-950 hover:bg-rose-600 hover:scale-98 transition text-center`;
-  } else if (btnVariant === "secondary") {
-    btnClass = `block bg-transparent text-rose-500 font-bold px-5 py-2 shadow-[inset_0_0_0_3px] text-center shadow-rose-500 hover:scale-98 transition`;
+  if (variant === "primary") {
+    btnClass = `bg-rose-500 text-[rgb(10,11,38)]`;
+  } else if (variant === "secondary") {
+    btnClass = `text-rose-500`;
   }
 
-  return <div className={btnClass}>{children}</div>;
+  return (
+    <Link
+      href={href ? href : "#"}
+      className={`${className} font-bold min-h-11 py-3 px-7 border-2 border-rose-500 hover:scale-98 transition max-md:text-lg max-lg:w-full mx-1 ${btnClass}`}>
+      {children}
+    </Link>
+  );
 };
 
 export default ButtonVariant;
