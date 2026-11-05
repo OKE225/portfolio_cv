@@ -98,15 +98,16 @@ const HighlightProjectCard = () => {
             Studium przypadku <ArrowDown strokeWidth={2} size={15} />
           </ButtonVariant>
 
-          <ButtonVariant
-            variant="secondary"
+          <Link
             href="https://ecommerce-full-apple-3d.vercel.app/"
-            className="flex items-center gap-2 text-sm! font-semibold py-2.5! px-5! w-fit!">
+            target="_blank"
+            className="flex items-center gap-2 text-rose-500 border-2 border-rose-500 text-sm! font-semibold py-2.5! px-5! w-fit!">
             Live project <MoveUpRight strokeWidth={5} size={10} />
-          </ButtonVariant>
+          </Link>
 
           <Link
             href="https://github.com/OKE225/Ecommerce-fullApple-3D"
+            target="_blank"
             className="flex items-center gap-2 text-white text-sm font-semibold py-2.5 px-5 border-2 border-[rgb(42,45,92)]">
             Kod <MoveUpRight strokeWidth={5} size={10} />
           </Link>

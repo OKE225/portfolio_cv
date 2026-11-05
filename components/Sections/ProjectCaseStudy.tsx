@@ -196,13 +196,13 @@ const ProjectCaseStudy = () => {
         <div className="flex flex-wrap gap-10 mt-8 max-sm:mt-4 max-sm:flex-col max-sm:gap-4">
           <Link
             href="https://ecommerce-full-apple-3d.vercel.app/"
-            title="patryk.jastrzebowski.dev@gmail.com"
+            target="_blank"
             className="flex items-center text-white text-sm font-semibold gap-2">
             Zobacz demo <MoveUpRight size={14} />
           </Link>
           <Link
             href="https://github.com/OKE225/Ecommerce-fullApple-3D"
-            title="patryk.jastrzebowski.dev@gmail.com"
+            target="_blank"
             className="flex items-center text-white text-sm font-semibold gap-2">
             Kod na GitHubie <MoveUpRight size={14} />
           </Link>

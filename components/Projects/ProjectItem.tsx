@@ -1,7 +1,6 @@
 "use client";
 
 import { Project } from "@/lib/portfolioData";
-import ButtonVariant from "../ButtonVariant";
 import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +27,7 @@ const ProjectItem = ({
           width={1920}
           height={1080}
           className="aspect-video object-contain"
-          alt=""
+          alt={title}
         />
       </div>
 
@@ -50,17 +49,18 @@ const ProjectItem = ({
 
         <div className="flex flex-wrap gap-2.5 mt-auto">
           {liveUrl && (
-            <ButtonVariant
-              variant="secondary"
+            <Link
+              target="_blank"
               href={liveUrl}
-              className="flex items-center gap-2 text-sm! font-semibold py-2.5! px-5! w-fit!">
+              className="flex items-center gap-2 text-rose-500 border-2 border-rose-500 text-sm! font-semibold py-2.5! px-5! w-fit!">
               Live project <MoveUpRight strokeWidth={5} size={10} />
-            </ButtonVariant>
+            </Link>
           )}
 
           {repoUrl && (
             <Link
               href={repoUrl}
+              target="_blank"
               className="flex items-center gap-2 text-white text-sm font-semibold py-2.5 px-5 border-2 border-[rgb(42,45,92)]">
               Kod <MoveUpRight strokeWidth={5} size={10} />
             </Link>

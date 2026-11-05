@@ -37,6 +37,7 @@ const GithubStatistics = async () => {
             <p className="text-white">Aktywność na GitHubie</p>
             <Link
               href="https://github.com/OKE225"
+              target="_blank"
               className="flex items-center text-white text-[15px] gap-2">
               Zobacz profil <MoveUpRight size={14} />
             </Link>

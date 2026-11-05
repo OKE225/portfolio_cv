@@ -22,11 +22,13 @@ const HeroSection = () => {
         <Link
           href="mailto:patryk.jastrzebowski.dev@gmail.com"
           title="patryk.jastrzebowski.dev@gmail.com"
+          target="_blank"
           className="flex items-center text-white text-[15px] gap-2">
           E-mail <MoveUpRight size={14} />
         </Link>
         <Link
           href="https://github.com/OKE225"
+          target="_blank"
           className="flex items-center text-white text-[15px] gap-2">
           GitHub <MoveUpRight size={14} />
         </Link>
