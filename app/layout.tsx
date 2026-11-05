@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import PixelClickBurst from "@/components/PixelClickBurst";
+import { Analytics } from "@vercel/analytics/next";
 
 const pixelifySans = localFont({
   src: [
@@ -44,6 +45,8 @@ export default function RootLayout({
 
           <PixelClickBurst />
         </div>
+
+        <Analytics />
       </body>
     </html>
   );
