@@ -76,10 +76,10 @@ const ContributionGraph = ({ weeks }: { weeks: ContributionDay[][] }) => {
     <div className="w-full min-w-0">
       <div
         ref={scrollRef}
-        role="region"
+        role="github dashboard"
         aria-label="Kalendarz aktywności na GitHubie"
         tabIndex={0}
-        className="mb-4 w-full overflow-x-auto pb-3 focus-visible:outline-2 focus-visible:outline-rose-500">
+        className="mb-4 w-full overflow-x-auto pb-3">
         <div className="w-max pr-4 pt-1">
           {/* Miesiące */}
           <div className="mb-2 flex gap-1.5 text-xs max-lg:gap-1">

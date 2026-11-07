@@ -18,6 +18,14 @@ svg {
     pointer;
 }
 
+a:focus-visible,
+button:focus-visible,
+svg:focus-visible,
+div[role="github dashboard"]:focus-visible {
+  outline: 3px solid var(--color-cyan-500);
+  outline-offset: 3px;
+}
+
 @theme inline {
   --font-jetbrains: var(--font-jetbrains-mono), monospace;
   --font-pixelify: var(--font-pixelify-sans), monospace;
