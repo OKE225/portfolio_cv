@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import Initials from "../UI/Initials";
 import NavigationListItems from "../UI/NavigationListItems";
 import CopyMyMail from "../UI/CopyMyMail";
+import MobileNavigation from "./MobileNavigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,13 +16,7 @@ const Navbar = () => {
 
   // Podświetlanie aktywnej sekcji
   useEffect(() => {
-    const sections = [
-      "#home",
-      "#about",
-      "#projects",
-      "#contact",
-      "#project-case-study",
-    ];
+    const sections = ["#home", "#about", "#projects", "#contact"];
     let frameId: number | null = null;
 
     const updateActiveSection = () => {
@@ -124,7 +119,7 @@ const Navbar = () => {
     <nav
       ref={navbarRef}
       className="fixed inset-x-0 top-0 z-100 border-b border-[rgb(42,45,92)] bg-[rgb(10,11,38)]">
-      <div className="flex min-h-20 items-center justify-between gap-6 px-6 py-3 max-lg:gap-4 max-lg:min-h-0 max-sm:px-4">
+      <div className="flex items-center justify-between gap-6 px-6 py-3 max-lg:gap-4 max-sm:px-4">
         <div onClick={() => setIsOpen(false)}>
           <Initials />
         </div>
@@ -154,16 +149,7 @@ const Navbar = () => {
 
       {/* Panel jest pozycjonowany pod paskiem i nie zmienia jego wysokości */}
       {isOpen && (
-        <div
-          id="mobile-navigation"
-          className="absolute inset-x-0 top-full lg:hidden">
-          <div className="overflow-y-auto border-b border-[rgb(42,45,92)] bg-[rgb(10,11,38)] px-6 py-5 shadow-[0_6px_0_rgba(255,255,255,0.05)] max-sm:px-4">
-            <NavigationListItems
-              activeSection={activeSection}
-              onNavigate={() => setIsOpen(false)}
-            />
-          </div>
-        </div>
+        <MobileNavigation activeSection={activeSection} setIsOpen={setIsOpen} />
       )}
     </nav>
   );
