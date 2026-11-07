@@ -24,7 +24,7 @@ const ButtonVariant = ({
   return (
     <Link
       href={href ? href : "#"}
-      className={`${className} font-bold min-h-11 py-3 px-7 border-2 border-rose-500 hover:scale-98 transition max-md:text-lg max-lg:w-full mx-1 ${btnClass}`}>
+      className={`${className} font-bold text-center min-h-11 py-3 px-7 border-2 border-rose-500 hover:scale-98 transition max-md:text-lg max-lg:w-full mx-1 ${btnClass}`}>
       {children}
     </Link>
   );
