@@ -1,13 +1,18 @@
 @import "tailwindcss";
 
-* {
+html,
+body {
   border-radius: 0;
   cursor:
     url("/cursor.svg") 1 1,
     auto;
 }
 
-a,
+* {
+  border-radius: 0;
+}
+
+html a,
 button,
 label,
 input,
@@ -84,4 +89,94 @@ div[role="github dashboard"]:focus-visible {
 
 ::-webkit-scrollbar-corner {
   background: #0a0b26;
+}
+
+/* ===== Osiągnięcia: dopisz na końcu globals.css ===== */
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes toast-out {
+  to {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+}
+@keyframes toast-bar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes item-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes platinum-glow {
+  from {
+    box-shadow: 0 0 8px rgba(49, 210, 247, 0.5);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(49, 210, 247, 0.9);
+  }
+}
+
+/* Toast wjeżdża, a tuż przed końcem czasu wyjeżdża. Pasek kurczy się przez cały czas życia toasta. */
+.toast-card {
+  animation:
+    toast-in 0.35s both,
+    toast-out 0.3s calc(var(--toast-ms) - 300ms) forwards;
+}
+.toast-bar {
+  animation: toast-bar var(--toast-ms) linear forwards;
+}
+
+/* "backwards": nie blokuje później hovera (transform) po zakończeniu animacji */
+.animate-panel-in {
+  animation: panel-in 0.25s backwards;
+}
+.animate-item-in {
+  animation: item-in 0.3s backwards;
+}
+.animate-pop {
+  animation: pop 0.35s;
+}
+.ach-platinum {
+  animation: platinum-glow 2s ease-in-out infinite alternate;
 }

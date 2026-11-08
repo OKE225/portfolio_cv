@@ -1,8 +1,11 @@
+import UnlockOnMount from "@/components/UnlockOnMount";
 import Link from "next/link";
 
 export default function NotFound() {
   return (
     <div className="flex relative flex-col items-center justify-center max-w-190 h-screen text-center gap-6 mx-auto z-100">
+      <UnlockOnMount id="bug" />
+
       <span className="bg-[rgb(18,20,58)] text-[13px] text-white py-1.5 px-4 border border-[rgb(42,45,92)]">
         Błąd 404
       </span>
