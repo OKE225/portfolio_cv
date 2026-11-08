@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import PixelClickBurst from "@/components/PixelClickBurst";
 import { Analytics } from "@vercel/analytics/next";
 import AchievementsProvider from "@/AchievementsProvider";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const pixelifySans = localFont({
   src: [
@@ -38,6 +39,8 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${pixelifySans.variable} ${jetbrainsMono.variable} ${pixelifySans.className} ${jetbrainsMono.className} h-full antialiased bg-[#0A0B26] overflow-x-hidden scroll-smooth selection:text-cyan-400 selection:bg-sky-700/25`}>
+      <GoogleTagManager gtmId="GTM-58RDV6ZJ" />
+
       <body className="min-h-full text-[rgb(185,190,220)]">
         <AchievementsProvider>
           <div className="relative h-screen w-full bg-[linear-gradient(rgba(255,31,90,0.08)_2px,transparent_2px),linear-gradient(90deg,rgba(255,31,90,0.08)_2px,transparent_2px)] bg-size-[50px_50px] bg-repeat bg-center animate-move-diagonal bg-[#0A0B26]">
