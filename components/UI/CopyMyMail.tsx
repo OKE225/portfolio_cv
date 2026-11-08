@@ -24,7 +24,7 @@ const CopyMyMail = () => {
         className="text-rose-500 inline-flex items-center justify-center px-3 h-11 w-11 max-lg:h-10 max-lg:w-10 max-lg:px-2 border-2 cursor-pointer"
         onClick={copyMail}
         title="Skopiuj adres e-mail"
-        aria-label="Skopiuj adres e-mail">
+        data-achievement="mail">
         {copied ? (
           <Check size={18} className="pointer-events-none" />
         ) : (

@@ -19,7 +19,8 @@ const NavbarItem = ({ href, children, activeSection }: NavbarItemProps) => {
   return (
     <li
       className={`font-pixelify text-lg transition max-lg:text-2xl ${isActive ? "text-rose-500" : "text-white"}`}
-      onClick={onClick}>
+      onClick={onClick}
+      data-achievement="nav">
       <Link href={href} className="block w-full">
         {`<${children} />`}
       </Link>

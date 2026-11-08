@@ -50,8 +50,9 @@ const ProjectItem = ({
         <div className="flex flex-wrap gap-2.5 mt-auto">
           {liveUrl && (
             <Link
-              target="_blank"
               href={liveUrl}
+              target="_blank"
+              data-achievement="live"
               className="flex items-center gap-2 text-rose-500 border-2 border-rose-500 text-sm! font-semibold py-2.5! px-5! w-fit!">
               Live project <MoveUpRight strokeWidth={5} size={10} />
             </Link>
@@ -61,6 +62,7 @@ const ProjectItem = ({
             <Link
               href={repoUrl}
               target="_blank"
+              data-achievement="code"
               className="flex items-center gap-2 text-white text-sm font-semibold py-2.5 px-5 border-2 border-[rgb(42,45,92)]">
               Kod <MoveUpRight strokeWidth={5} size={10} />
             </Link>
