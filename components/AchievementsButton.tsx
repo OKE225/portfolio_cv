@@ -1,77 +1,3 @@
-// "use client";
-
-// import { useState } from "react";
-// import AchievementElement from "./AchievementElement";
-// import { useAchievements } from "@/AchievementsProvider";
-// import { achievementsList, getLevelProgress, RANKS } from "@/lib/achievements";
-
-// const AchievementsButton = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const { unlocked, xp, level, unlock } = useAchievements();
-
-//   // Postęp w obrębie aktualnego poziomu (0–100%)
-//   const progress = getLevelProgress(xp);
-
-//   const toggle = () => {
-//     if (!isOpen) unlock("panel");
-//     setIsOpen(!isOpen);
-//   };
-
-//   return (
-//     <>
-//       <button
-//         className="fixed flex font-pixelify bg-[#0F1132] text-white items-center py-1.5 px-3 bottom-4 left-4 border-2 border-[rgb(42,45,92)] gap-3 shadow-[4px_4px_0_rgba(255,31,90,.35)] z-999 cursor-pointer"
-//         onClick={toggle}>
-//         <span className="flex items-center justify-center text-2xl">🏆</span>
-
-//         <span className="flex flex-col text-[15px] text-left min-w-25 gap-1">
-//           <strong>LVL {level}</strong>
-//           <span className="block bg-[#12143A] h-3 border-2 border-[#2A2D5C]">
-//             <span
-//               className="block h-full bg-rose-500"
-//               style={{ width: `${progress}%` }}
-//             />
-//           </span>
-//         </span>
-
-//         <span className="text-sm text-[#B9BEDC]">
-//           {unlocked.length}/{achievementsList.length}
-//         </span>
-//       </button>
-
-//       {isOpen && (
-//         <div className="fixed block bg-[#0F1132] max-w-xl max-h-[70vh] left-4 bottom-20 border-2 border-[#2A2D5C] p-2 overflow-y-auto z-999">
-//           <div className="flex justify-between items-baseline mb-2 gap-3">
-//             <p className="font-pixelify text-[22px] text-rose-500">Trofea</p>
-//             <p className="text-[13px] text-[#B9BEDC]">
-//               LVL {level} · {RANKS[level - 1]} · {xp} XP
-//             </p>
-//           </div>
-
-//           <span className="block bg-[#12143A] h-4 mb-3.5 border-2 border-[#2A2D5C]">
-//             <span
-//               className="block h-full bg-rose-500"
-//               style={{ width: `${progress}%` }}
-//             />
-//           </span>
-
-//           <div className="grid grid-cols-2 gap-2">
-//             {achievementsList.map((achievement) => (
-//               <AchievementElement
-//                 key={achievement.id}
-//                 achievement={achievement}
-//                 unlocked={unlocked.includes(achievement.id)}
-//               />
-//             ))}
-//           </div>
-//         </div>
-//       )}
-//     </>
-//   );
-// };
-
-// export default AchievementsButton;
-
 "use client";
 
 import { useState } from "react";
@@ -95,7 +21,6 @@ const AchievementsButton = () => {
     <>
       <button
         aria-expanded={isOpen}
-        aria-label="Osiągnięcia"
         onClick={toggle}
         className="font-pixelify fixed bottom-3 left-3 z-999 flex cursor-pointer items-center gap-2 border-2 border-[rgb(42,45,92)] bg-[#0F1132] px-2.5 py-1.5 text-white shadow-[4px_4px_0_rgba(255,255,255,0.05)] transition-all duration-150 hover:-translate-y-0.5 hover:border-rose-500 hover:shadow-[4px_4px_0_rgba(255,31,90,.5)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none sm:bottom-4 sm:left-4 sm:gap-3 sm:px-3">
         {/* key = przy każdym nowym osiągnięciu puchar "podskakuje" */}

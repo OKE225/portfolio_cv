@@ -19,70 +19,43 @@ export async function POST(req: NextRequest) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (typeof name !== "string") {
-    return NextResponse.json(
-      { error: "Niepoprawny typ imienia!" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "invalidNameType" }, { status: 400 });
   }
 
   if (!trimmedName) {
-    return NextResponse.json({ error: "Imię jest wymagane!" }, { status: 400 });
+    return NextResponse.json({ error: "nameRequired" }, { status: 400 });
   }
 
   if (trimmedName.length > 100) {
-    return NextResponse.json(
-      { error: "Imię jest zbyt długie!" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "nameTooLong" }, { status: 400 });
   }
 
   if (typeof email !== "string") {
-    return NextResponse.json(
-      { error: "Niepoprawny typ emaila!" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "invalidEmailType" }, { status: 400 });
   }
 
   if (!normalizedEmail) {
-    return NextResponse.json(
-      { error: "Email jest wymagany!" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "emailRequired" }, { status: 400 });
   }
 
   if (!emailRegex.test(normalizedEmail)) {
-    return NextResponse.json(
-      { error: "Niepoprawny format emaila!" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "invalidEmailFormat" }, { status: 400 });
   }
 
   if (normalizedEmail.length > 255) {
-    return NextResponse.json(
-      { error: "Email jest zbyt długi!" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "emailTooLong" }, { status: 400 });
   }
 
   if (typeof message !== "string") {
-    return NextResponse.json(
-      { error: "Niepoprawny typ wiadomości!" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "invalidMessageType" }, { status: 400 });
   }
 
   if (!trimmedMessage) {
-    return NextResponse.json(
-      { error: "Wiadomość jest wymagana!" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "messageRequired" }, { status: 400 });
   }
 
   if (trimmedMessage.length > 5000) {
-    return NextResponse.json(
-      { error: "Wiadomość jest zbyt długa!" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "messageTooLong" }, { status: 400 });
   }
 
   const escapedMessage = trimmedMessage
@@ -99,10 +72,7 @@ export async function POST(req: NextRequest) {
       html: `<p>Od: ${normalizedEmail}</p><p>${escapedMessage}</p>`,
     });
     return NextResponse.json({ success: true });
-  } catch (error) {
-    return NextResponse.json(
-      { error: "Błąd wysyłki, spróbuj ponownie" },
-      { status: 500 },
-    );
+  } catch {
+    return NextResponse.json({ error: "sendFailed" }, { status: 500 });
   }
 }

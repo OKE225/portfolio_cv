@@ -15,11 +15,11 @@ import {
   achievementsList,
   getLevel,
   getXp,
-  RANKS,
   RARITY,
   type Achievement,
   type AchievementId,
 } from "@/lib/achievements";
+import { useTranslations } from "next-intl";
 
 type Toast = {
   key: number;
@@ -73,6 +73,7 @@ export default function AchievementsProvider({
   const [toasts, setToasts] = useState<Toast[]>([]);
   const seen = useRef(new Set<AchievementId>()); // chroni przed duplikatami
   const toastKey = useRef(0);
+  const t = useTranslations("Achievements");
 
   const showToast = useCallback((t: Omit<Toast, "key">) => {
     const key = toastKey.current++;
@@ -102,10 +103,10 @@ export default function AchievementsProvider({
       const r = RARITY[a.rarity];
       showToast({
         icon: a.icon,
-        label: "Odblokowano osiągnięcie",
-        title: a.title,
-        text: a.description,
-        meta: `${r.label} · +${r.xp} XP`,
+        label: t("unlocked"),
+        title: t(`items.${id}.title`),
+        text: t(`items.${id}.description`),
+        meta: `${t(`rarities.${a.rarity}`)} · +${r.xp} XP`,
         rarity: a.rarity,
       });
 
@@ -113,14 +114,14 @@ export default function AchievementsProvider({
       if (levelAfter > levelBefore) {
         showToast({
           icon: "⭐",
-          label: "Level up!",
-          title: `Poziom ${levelAfter}`,
-          text: RANKS[levelAfter - 1],
+          label: t("levelUp"),
+          title: t("level", { level: levelAfter }),
+          text: t(`ranks.${levelAfter - 1}`),
           rarity: "gold",
         });
       }
     },
-    [showToast],
+    [showToast, t],
   );
 
   // Wczytaj zapisane osiągnięcia (bez toastów). Robimy to w useEffect, a nie

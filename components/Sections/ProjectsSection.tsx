@@ -4,46 +4,25 @@ import HeadingText from "../HeadingText";
 import ProjectItem from "../Projects/ProjectItem";
 import HighlightProjectCard from "../UI/HighlightProjectCard";
 import Container from "../UI/Container";
+import { useTranslations } from "next-intl";
 
 const ProjectsSection = () => {
+  const t = useTranslations("Projects");
+
   return (
     <div
       className="bg-[rgb(13,14,48)] flex flex-col justify-center py-24 border-y border-y-[rgb(42,45,92)]"
       id="projects">
       <Container>
-        <HeadingText>Moje Projekty</HeadingText>
+        <HeadingText>{t("title")}</HeadingText>
 
         <HighlightProjectCard />
 
         <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-md:grid-cols-1">
-          {/* {projects.map(
-            (
-              {
-                image,
-                title,
-                description,
-                techStack,
-                liveUrl,
-                repoUrl,
-              }: Project,
-              id,
-            ) => (
-              <ProjectItem
-                key={id}
-                image={image}
-                title={title}
-                description={description}
-                techStack={techStack}
-                liveUrl={liveUrl}
-                repoUrl={repoUrl}
-              />
-            ),
-          )} */}
-
           <ProjectItem
             image="/projects/MindHealth.png"
             title="MindHealth"
-            description="Aplikacja wspierająca dbanie o zdrowie psychiczne. Użytkownicy mogą codziennie zaznaczać samopoczucie, śledzić je w kalendarzu i budować serię kolejnych dni, a także korzystać z ćwiczeń uważności, dziennika myśli oraz chatbota AI oferującego wsparcie"
+            description={t("mindhealth.description")}
             techStack={[
               "React",
               "TypeScript",
@@ -59,7 +38,7 @@ const ProjectsSection = () => {
           <ProjectItem
             image="/projects/Travel-Dreams.gif"
             title="Travel Dreams"
-            description="Mobilna aplikacja do zapisywania miejsc, które użytkownik chce odwiedzić. Na mapie można oznaczać wymarzone lokalizacje, dodawać zdjęcia i krótkie opisy, a także przeglądać oraz usuwać zapisane punkty tworząc osobistą mapę podróżniczych marzeń"
+            description={t("travelDreams.description")}
             techStack={[
               "React",
               "React Native",
@@ -74,7 +53,7 @@ const ProjectsSection = () => {
           <ProjectItem
             image="/projects/Earth-3D.png"
             title="Earth 3D"
-            description="Interaktywna strona landingowa poświęcona Ziemi. Jej głównym elementem jest model 3D planety, który reaguje na przewijanie strony animacjami pozycji, obrotu i zbliżenia, a całość uzupełniają sekcje z informacjami o Ziemi"
+            description={t("earth3d.description")}
             techStack={[
               "React",
               "TypeScript",
@@ -89,7 +68,7 @@ const ProjectsSection = () => {
           <ProjectItem
             image="/projects/myKindle.png"
             title="myKindle Highlights"
-            description="Aplikacja webowa do gromadzenia cytatów z Kindle w jednym miejscu. Po zaimportowaniu notatek automatycznie rozpoznaje tytuł książki, autora i zaznaczenia, a użytkownik może wyszukiwać oraz sortować książki i cytaty"
+            description={t("kindle.description")}
             techStack={[
               "Next.js",
               "React",
@@ -108,7 +87,7 @@ const ProjectsSection = () => {
           <ProjectItem
             image="/projects/Pinky-Promise.png"
             title="Pinky Promise"
-            description="Responsywna strona internetowa dla prywatnej stylistki paznokci. Prezentuje ofertę, ceny i czas trwania usług, portfolio realizacji oraz informacje o artystce, a także ułatwia kontakt i umawianie wizyty dzięki spójnej, różowej identyfikacji wizualnej"
+            description={t("pinkyPromise.description")}
             techStack={["HTML", "CSS"]}
             liveUrl="https://pinky-promise-mk.vercel.app/"
           />
@@ -116,7 +95,7 @@ const ProjectsSection = () => {
           <ProjectItem
             image="/projects/Flora.png"
             title="Flora"
-            description="Responsywny landing page poświęcony roślinom i kwiatom. Wyróżnia się animowanym tłem, efektownymi kartami reagującymi na ruch kursora oraz nowoczesnym, czytelnym układem, który ułatwia przeglądanie treści"
+            description={t("flora.description")}
             techStack={["React", "TypeScript", "Material UI", "Sass"]}
             liveUrl="https://oke225.github.io/Flora/"
             repoUrl="https://github.com/OKE225/Flora"

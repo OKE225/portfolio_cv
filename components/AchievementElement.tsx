@@ -1,4 +1,5 @@
 import { RARITY, type Achievement } from "@/lib/achievements";
+import { useTranslations } from "next-intl";
 
 const AchievementElement = ({
   achievement,
@@ -7,13 +8,13 @@ const AchievementElement = ({
 }: {
   achievement: Achievement;
   unlocked: boolean;
-  index?: number; // kolejność na liście, używana do opóźnienia animacji
+  index?: number;
 }) => {
+  const t = useTranslations("Achievements");
   const r = RARITY[achievement.rarity];
 
   return (
     <div
-      // Kolejne kafelki pojawiają się z lekkim opóźnieniem
       style={{ animationDelay: `${Math.min(index, 12) * 25}ms` }}
       className={`animate-item-in flex min-w-0 items-start gap-3 border-2 p-2.5 text-[13px] transition-transform duration-150 ${
         unlocked
@@ -29,14 +30,20 @@ const AchievementElement = ({
 
       <div className="flex min-w-0 flex-col gap-1">
         <strong className="text-white wrap-break-word">
-          {unlocked ? achievement.title : "???"}
+          {unlocked ? t(`items.${achievement.id}.title`) : "???"}
         </strong>
+
         <p className="text-xs text-[#B9BEDC] wrap-break-word">
-          {unlocked ? achievement.description : achievement.hint}
+          {unlocked
+            ? t(`items.${achievement.id}.description`)
+            : t(`items.${achievement.id}.hint`)}
         </p>
+
         <p
-          className={`text-[11px] tracking-[0.06em] uppercase ${unlocked ? r.text : "text-[#B9BEDC]"}`}>
-          {r.label} · {r.xp} XP
+          className={`text-[11px] tracking-[0.06em] uppercase ${
+            unlocked ? r.text : "text-[#B9BEDC]"
+          }`}>
+          {t(`rarities.${achievement.rarity}`)} · {r.xp} XP
         </p>
       </div>
     </div>

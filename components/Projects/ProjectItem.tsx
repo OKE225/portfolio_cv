@@ -2,6 +2,7 @@
 
 import { Project } from "@/lib/portfolioData";
 import { MoveUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,6 +14,8 @@ const ProjectItem = ({
   liveUrl,
   repoUrl,
 }: Project) => {
+  const t = useTranslations("Projects");
+
   return (
     <div className="bg-[rgb(15,17,50)] flex flex-col h-full border border-[rgb(42,45,92)] transition hover:shadow-[6px_6px_0_rgba(255,255,255,0.05)] motion-safe:hover:-translate-y-2">
       <div className="bg-[rgb(18,20,58)] flex flex-col min-h-47.5 border-b border-b-[rgb(42,45,92)]">
@@ -64,7 +67,7 @@ const ProjectItem = ({
               target="_blank"
               data-achievement="code"
               className="flex items-center gap-2 text-white text-sm font-semibold py-2.5 px-5 border-2 border-[rgb(42,45,92)]">
-              Kod <MoveUpRight strokeWidth={5} size={10} />
+              {t("code")} <MoveUpRight strokeWidth={5} size={10} />
             </Link>
           )}
         </div>

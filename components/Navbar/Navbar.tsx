@@ -6,6 +6,7 @@ import Initials from "../UI/Initials";
 import NavigationListItems from "../UI/NavigationListItems";
 import CopyMyMail from "../UI/CopyMyMail";
 import MobileNavigation from "./MobileNavigation";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -130,6 +131,8 @@ const Navbar = () => {
         </div>
 
         <div className="flex shrink-0 items-center gap-3 max-sm:gap-2">
+          <LanguageSwitcher />
+
           <CopyMyMail />
 
           {/* Przycisk menu mobilnego */}

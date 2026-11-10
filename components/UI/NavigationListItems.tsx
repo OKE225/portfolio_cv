@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import NavbarItem from "../Navbar/NavbarItem";
 
 interface Props {
@@ -6,11 +7,13 @@ interface Props {
 }
 
 const NavigationListItems = ({ activeSection, onNavigate }: Props) => {
+  const t = useTranslations("Navbar");
+
   const navbarItems = [
-    { href: "#home", text: "Home" },
-    { href: "#about", text: "O mnie" },
-    { href: "#projects", text: "Projekty" },
-    { href: "#contact", text: "Kontakt" },
+    { href: "#home", text: t("home") },
+    { href: "#about", text: t("about") },
+    { href: "#projects", text: t("projects") },
+    { href: "#contact", text: t("contact") },
   ];
 
   return (

@@ -1,11 +1,14 @@
+import { useTranslations } from "next-intl";
 import SkillsSetCard from "../AboutMe/SkillsSetCard";
 import HeadingText from "../HeadingText";
 import Container from "../UI/Container";
 
 const TechnologiesList = () => {
+  const t = useTranslations("Technologies");
+
   return (
     <Container className="gap-8">
-      <HeadingText>Technologie</HeadingText>
+      <HeadingText>{t("title")}</HeadingText>
       <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-8 max-lg:gap-10">
         <SkillsSetCard
           title="Frontend"

@@ -2,8 +2,10 @@ import { ArrowDown, MoveUpRight } from "lucide-react";
 import ButtonVariant from "../ButtonVariant";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const HighlightProjectCard = () => {
+  const t = useTranslations("Projects");
   const usedLanguages = [
     "Next.js",
     "React",
@@ -27,12 +29,12 @@ const HighlightProjectCard = () => {
 
         <div className="relative flex-1 min-h-0 overflow-hidden">
           <span className="flex items-center gap-2 text-[13px] absolute left-2 top-2 bg-rose-500 text-[rgb(10,11,38)] font-bold py-1 px-3 uppercase z-10 max-sm:text-xs">
-            ★ WYRÓŻNIONY PROJEKT
+            ★ {t("featured")}
           </span>
 
           <Image
             src="/projects/fullApple-3D.png"
-            alt="Podgląd wyróżnionego projektu"
+            alt={t("preview")}
             width={1920}
             height={1080}
             className="object-cover"
@@ -44,40 +46,29 @@ const HighlightProjectCard = () => {
         <h3 className="text-white text-[44px] font-pixelify font-semibold leading-[1.1]">
           fullApple 3D E-commerce
         </h3>
-        <p className="text-[13px]">Problem → Rozwiązanie → Efekt</p>
+        <p className="text-[13px]">{t("problemSolutionEffect")}</p>
 
         <div className="border-l-3 border-l-rose-500 py-1 pl-4">
           <p className="font-pixelify font-semibold text-xl text-rose-500">
-            01 Problem
+            {t("problem")}
           </p>
           <p className="mt-1 text-[15px] max-w-4xl">
-            Stworzenie aplikacji e-commerce, która łączy wygodne przeglądanie
-            produktów z prostym zarządzaniem katalogiem. Ważne było również
-            rozdzielenie dostępu klientów i administratorów oraz dopasowanie
-            interfejsu do różnych ekranów
+            {t("problemDescription")}
           </p>
         </div>
         <div className="border-l-3 border-l-rose-500 py-1 pl-4">
           <p className="font-pixelify font-semibold text-xl text-rose-500">
-            02 Rozwiązanie
+            {t("solution")}
           </p>
           <p className="mt-1 text-[15px] max-w-4xl">
-            Aplikacja w Next.js i Supabase z wyszukiwaniem, sortowaniem,
-            koszykiem i interaktywnymi modelami 3D. Panel administratora
-            umożliwia zarządzanie produktami i zdjęciami, a logowanie, role
-            użytkowników oraz reguły RLS kontrolują dostęp do danych
+            {t("solutionDescription")}
           </p>
         </div>
         <div className="border-l-3 border-l-rose-500 py-1 pl-4">
           <p className="font-pixelify font-semibold text-xl text-rose-500">
-            03 Efekt
+            {t("effect")}
           </p>
-          <p className="mt-1 text-[15px] max-w-4xl">
-            <strong>Demonstracyjny sklep</strong> z responsywnym interfejsem i
-            panelem zarządzania katalogiem. Użytkownicy mogą przeglądać
-            produkty, sprawdzać specyfikacje i dodawać je do koszyka, a
-            administratorzy aktualizować ofertę bez edytowania kodu
-          </p>
+          <p className="mt-1 text-[15px] max-w-4xl">{t("effectDescription")}</p>
         </div>
 
         <div className="flex flex-wrap gap-2 mb-4">
@@ -95,7 +86,7 @@ const HighlightProjectCard = () => {
             variant="primary"
             href="#project-case-study"
             className="flex items-center gap-2 text-sm! font-semibold py-2.5! px-5! w-fit!">
-            Studium przypadku <ArrowDown strokeWidth={2} size={15} />
+            {t("caseStudy")} <ArrowDown strokeWidth={2} size={15} />
           </ButtonVariant>
 
           <Link
@@ -109,7 +100,7 @@ const HighlightProjectCard = () => {
             href="https://github.com/OKE225/Ecommerce-fullApple-3D"
             target="_blank"
             className="flex items-center gap-2 text-white text-sm font-semibold py-2.5 px-5 border-2 border-[rgb(42,45,92)]">
-            Kod <MoveUpRight strokeWidth={5} size={10} />
+            {t("code")} <MoveUpRight strokeWidth={5} size={10} />
           </Link>
         </div>
       </div>

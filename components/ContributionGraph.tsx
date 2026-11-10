@@ -2,21 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import type { ContributionDay } from "@/lib/github";
-
-const MONTHS = [
-  "Sty",
-  "Lut",
-  "Mar",
-  "Kwi",
-  "Maj",
-  "Cze",
-  "Lip",
-  "Sie",
-  "Wrz",
-  "Paź",
-  "Lis",
-  "Gru",
-];
+import { useTranslations } from "next-intl";
 
 const LEVEL_CLASS: Record<number, string> = {
   0: "bg-white/5",
@@ -30,6 +16,10 @@ const monthOf = (date: string) => Number(date.slice(5, 7)) - 1;
 
 const ContributionGraph = ({ weeks }: { weeks: ContributionDay[][] }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  const t = useTranslations("GitHub");
+
+  const MONTHS = t.raw("months");
 
   useEffect(() => {
     const scrollToEnd = () => {
@@ -119,7 +109,7 @@ const ContributionGraph = ({ weeks }: { weeks: ContributionDay[][] }) => {
 
       {/* Legenda */}
       <div className="flex flex-wrap items-center justify-end gap-1.5 text-xs">
-        <span className="mr-1">Mniej</span>
+        <span className="mr-1">{t("less")}</span>
 
         {[0, 1, 2, 3, 4].map((level) => (
           <div
@@ -128,7 +118,7 @@ const ContributionGraph = ({ weeks }: { weeks: ContributionDay[][] }) => {
           />
         ))}
 
-        <span className="ml-1">Więcej</span>
+        <span className="ml-1">{t("more")}</span>
       </div>
     </div>
   );

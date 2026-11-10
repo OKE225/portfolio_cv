@@ -1,218 +1,65 @@
 type Rarity = "bronze" | "silver" | "gold" | "error" | "platinum";
 
+export type AchievementId =
+  | "hi"
+  | "about"
+  | "nav"
+  | "tech"
+  | "github"
+  | "projects"
+  | "case"
+  | "team"
+  | "contact"
+  | "half"
+  | "end"
+  | "click10"
+  | "click30"
+  | "fireworks"
+  | "panel"
+  | "live"
+  | "recruiter"
+  | "code"
+  | "typing"
+  | "time"
+  | "coffee"
+  | "mail"
+  | "konami"
+  | "bug"
+  | "perfectionist";
+
 export interface Achievement {
-  id: string;
+  id: AchievementId;
   icon: string;
-  title: string;
-  hint: string; // PRZED: co zrobić, żeby odblokować (imperatyw)
-  description: string; // PO: co użytkownik zrobił (czas przeszły)
   rarity: Rarity;
 }
 
 export const achievementsList: Achievement[] = [
-  {
-    id: "hi",
-    icon: "👋",
-    title: "Witaj, wędrowcze",
-    hint: "Zostań chwilę na stronie",
-    description: "Wszedłeś na moje portfolio",
-    rarity: "bronze",
-  },
-  {
-    id: "about",
-    icon: "🧑",
-    title: "Poznajmy się",
-    hint: "Przewiń do sekcji „O mnie”",
-    description: "Odwiedziłeś sekcję „O mnie”",
-    rarity: "bronze",
-  },
-  {
-    id: "nav",
-    icon: "🗺️",
-    title: "Nawigator",
-    hint: "Kliknij link w nawigacji",
-    description: "Skorzystałeś z nawigacji",
-    rarity: "bronze",
-  },
-  {
-    id: "tech",
-    icon: "⚙️",
-    title: "Stack Master",
-    hint: "Sprawdź technologie",
-    description: "Zobaczyłeś moje technologie",
-    rarity: "bronze",
-  },
-  {
-    id: "github",
-    icon: "🌱",
-    title: "Contributor",
-    hint: "Zajrzyj do sekcji GitHub",
-    description: "Sprawdziłeś aktywność na GitHubie",
-    rarity: "bronze",
-  },
-  {
-    id: "projects",
-    icon: "🚀",
-    title: "Odkrywca projektów",
-    hint: "Przewiń do projektów",
-    description: "Odwiedziłeś projekty",
-    rarity: "silver",
-  },
-  {
-    id: "case",
-    icon: "🔍",
-    title: "Detektyw",
-    hint: "Przeczytaj studium przypadku",
-    description: "Doszedłeś do studium przypadku",
-    rarity: "silver",
-  },
-  {
-    id: "team",
-    icon: "🤝",
-    title: "Team player",
-    hint: "Zobacz, co wnoszę do zespołu",
-    description: "Sprawdziłeś, co wnoszę do zespołu",
-    rarity: "silver",
-  },
-  {
-    id: "contact",
-    icon: "✉️",
-    title: "Gotowy do kontaktu",
-    hint: "Przewiń do kontaktu",
-    description: "Dotarłeś do formularza kontaktowego",
-    rarity: "silver",
-  },
-  {
-    id: "half",
-    icon: "🧭",
-    title: "Półmetek",
-    hint: "Przewiń połowę strony",
-    description: "Przewinąłeś połowę strony",
-    rarity: "bronze",
-  },
-  {
-    id: "end",
-    icon: "🏁",
-    title: "Koniec gry",
-    hint: "Przewiń do stopki",
-    description: "Dotarłeś na sam dół",
-    rarity: "silver",
-  },
-  {
-    id: "click10",
-    icon: "👆",
-    title: "Klikacz",
-    hint: "Kliknij 10 razy",
-    description: "10 kliknięć na stronie",
-    rarity: "bronze",
-  },
-  {
-    id: "click30",
-    icon: "🥊",
-    title: "Mistrz klikania",
-    hint: "Kliknij 30 razy",
-    description: "30 kliknięć na stronie",
-    rarity: "silver",
-  },
-  {
-    id: "fireworks",
-    icon: "💥",
-    title: "Fajerwerki",
-    hint: "Kliknij 100 razy",
-    description: "100 kliknięć na stronie",
-    rarity: "gold",
-  },
-  {
-    id: "panel",
-    icon: "🏆",
-    title: "Kolekcjoner",
-    hint: "Otwórz listę trofeów",
-    description: "Otworzyłeś listę trofeów",
-    rarity: "bronze",
-  },
-  {
-    id: "live",
-    icon: "🌐",
-    title: "Ciekawski",
-    hint: "Kliknij „Live project”",
-    description: "Otworzyłeś projekt na żywo",
-    rarity: "silver",
-  },
-  {
-    id: "recruiter",
-    icon: "🗂️",
-    title: "Rekruter",
-    hint: "Otwórz 3 różne projekty na żywo",
-    description: "Otworzyłeś 3 różne projekty na żywo",
-    rarity: "silver",
-  },
-  {
-    id: "code",
-    icon: "💻",
-    title: "Hacker",
-    hint: "Kliknij „Kod”",
-    description: "Zajrzałeś do kodu projektu",
-    rarity: "silver",
-  },
-  {
-    id: "typing",
-    icon: "⌨️",
-    title: "Pierwsze słowa",
-    hint: "Zacznij wypełniać formularz",
-    description: "Zacząłeś pisać wiadomość",
-    rarity: "silver",
-  },
-  {
-    id: "time",
-    icon: "⏳",
-    title: "Cierpliwy",
-    hint: "Zostań 45 sekund",
-    description: "Spędziłeś 45 sekund na stronie",
-    rarity: "silver",
-  },
-  {
-    id: "coffee",
-    icon: "☕",
-    title: "Kawa",
-    hint: "Zostań 2 minuty",
-    description: "Spędziłeś 2 minuty na stronie",
-    rarity: "gold",
-  },
-  {
-    id: "mail",
-    icon: "📬",
-    title: "Kontakt nawiązany",
-    hint: "Kliknij adres e-mail",
-    description: "Kliknąłeś mój adres e-mail",
-    rarity: "gold",
-  },
-  {
-    id: "konami",
-    icon: "🎯",
-    title: "Cheat code",
-    hint: "↑ ↑ ↓ ↓ ← → ← → B A",
-    description: "Wpisałeś kod Konami",
-    rarity: "gold",
-  },
-  {
-    id: "bug",
-    icon: "❌",
-    title: "Bug hunter",
-    hint: "Zgub się na nieistniejącej stronie",
-    description: "Znalazłeś stronę 404",
-    rarity: "error",
-  },
-  {
-    id: "perfectionist",
-    icon: "💎",
-    title: "Perfekcjonista",
-    hint: "Zdobądź wszystkie trofea",
-    description: "Odblokowałeś wszystkie osiągnięcia",
-    rarity: "platinum",
-  },
+  { id: "hi", icon: "👋", rarity: "bronze" },
+  { id: "about", icon: "🧑", rarity: "bronze" },
+  { id: "nav", icon: "🗺️", rarity: "bronze" },
+  { id: "tech", icon: "⚙️", rarity: "bronze" },
+  { id: "github", icon: "🌱", rarity: "bronze" },
+  { id: "projects", icon: "🚀", rarity: "silver" },
+  { id: "case", icon: "🔍", rarity: "silver" },
+  { id: "team", icon: "🤝", rarity: "silver" },
+  { id: "contact", icon: "✉️", rarity: "silver" },
+  { id: "half", icon: "🧭", rarity: "bronze" },
+  { id: "end", icon: "🏁", rarity: "silver" },
+  { id: "click10", icon: "👆", rarity: "bronze" },
+  { id: "click30", icon: "🥊", rarity: "silver" },
+  { id: "fireworks", icon: "💥", rarity: "gold" },
+  { id: "panel", icon: "🏆", rarity: "bronze" },
+  { id: "live", icon: "🌐", rarity: "silver" },
+  { id: "recruiter", icon: "🗂️", rarity: "silver" },
+  { id: "code", icon: "💻", rarity: "silver" },
+  { id: "typing", icon: "⌨️", rarity: "silver" },
+  { id: "time", icon: "⏳", rarity: "silver" },
+  { id: "coffee", icon: "☕", rarity: "gold" },
+  { id: "mail", icon: "📬", rarity: "gold" },
+  { id: "konami", icon: "🎯", rarity: "gold" },
+  { id: "bug", icon: "❌", rarity: "error" },
+  { id: "perfectionist", icon: "💎", rarity: "platinum" },
 ];
-
-export type AchievementId = (typeof achievementsList)[number]["id"];
 
 export const achievementsById = Object.fromEntries(
   achievementsList.map((a) => [a.id, a]),

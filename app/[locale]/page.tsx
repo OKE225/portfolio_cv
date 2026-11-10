@@ -10,8 +10,12 @@ import ProjectCaseStudy from "@/components/Sections/ProjectCaseStudy";
 import ProjectsSection from "@/components/Sections/ProjectsSection";
 import TechnologiesList from "@/components/Sections/TechnologiesList";
 import UnlockOnView from "@/components/UnlockOnView";
+import { setRequestLocale } from "next-intl/server";
 
-const Page = () => {
+const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <Navbar />

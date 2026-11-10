@@ -1,16 +1,19 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import ButtonVariant from "../ButtonVariant";
 
 const CTA = () => {
+  const t = useTranslations("Hero");
+
   return (
     <>
       <ButtonVariant variant="primary" href="#projects">
-        Zobacz moje projekty
+        {t("ctaProjects")}
       </ButtonVariant>
 
       <ButtonVariant variant="secondary" href="#about">
-        Więcej o mnie
+        {t("ctaAbout")}
       </ButtonVariant>
     </>
   );

@@ -4,14 +4,16 @@ import { getGithubStats } from "@/lib/github";
 import Container from "../UI/Container";
 import Link from "next/link";
 import { MoveUpRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 const GithubStatistics = async () => {
   const stats = await getGithubStats();
+  const t = await getTranslations("GitHub");
 
   const cards = [
-    { value: stats?.topLanguage, label: "Najczęstszy język" },
-    { value: stats?.commits, label: "Commity (ostatni rok)" },
-    { value: stats?.publicRepos, label: "Publiczne repozytoria" },
+    { value: stats?.topLanguage, label: t("topLanguage") },
+    { value: stats?.commits, label: t("commits") },
+    { value: stats?.publicRepos, label: t("repositories") },
   ];
 
   return (
@@ -34,21 +36,19 @@ const GithubStatistics = async () => {
 
         <div className="bg-[rgb(15,17,50)] w-full border border-[rgb(42,45,92)] p-6">
           <div className="flex flex-wrap justify-between text-[15px] gap-2 mb-6">
-            <p className="text-white">Aktywność na GitHubie</p>
+            <p className="text-white">{t("activity")}</p>
             <Link
               href="https://github.com/OKE225"
               target="_blank"
               className="flex items-center text-white text-[15px] gap-2">
-              Zobacz profil <MoveUpRight size={14} />
+              {t("viewProfile")} <MoveUpRight size={14} />
             </Link>
           </div>
 
           {stats ? (
             <ContributionGraph weeks={stats.weeks} />
           ) : (
-            <p className="text-[15px]">
-              Nie udało się pobrać danych z GitHuba. Spróbuj ponownie później
-            </p>
+            <p className="text-[15px]">{t("githubStatsError")}</p>
           )}
         </div>
       </Container>

@@ -3,8 +3,11 @@
 import HeadingText from "../HeadingText";
 import { useState } from "react";
 import Container from "../UI/Container";
+import { useTranslations } from "next-intl";
 
 const ContactSection = () => {
+  const t = useTranslations("Contact");
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,22 +30,32 @@ const ContactSection = () => {
     const data = await res.json();
 
     if (res.ok) {
-      setSuccess("Wysłano!");
+      setSuccess(t("send"));
       setFormData({ name: "", email: "", message: "" });
-    } else setError(data.error || "Błąd");
+      return;
+    }
+
+    const errorKey = data?.error;
+
+    setError(
+      errorKey && t.has(`errors.${errorKey}`)
+        ? t(`errors.${errorKey}`)
+        : t("error"),
+    );
   };
 
   return (
     <div className="bg-[rgb(13,14,48)] py-24 border-y border-y-[rgb(42,45,92)]">
       <Container>
         <div className="flex flex-col scroll-mt-24 gap-10" id="contact">
-          <HeadingText>Napisz Do Mnie</HeadingText>
+          <HeadingText>{t("title")}</HeadingText>
 
           <div className="grid grid-cols-2 max-xl:grid-cols-1">
             <form className="flex flex-col gap-4.5" onSubmit={handleSubmit}>
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="name" className="text-white text-sm font-bold">
-                  Wpisz swoje imię<sup className="text-rose-500">*</sup>
+                  {t("namePlaceholder")}
+                  <sup className="text-rose-500">*</sup>
                 </label>
                 <input
                   type="text"
@@ -53,13 +66,14 @@ const ContactSection = () => {
                   }
                   name="name"
                   id="name"
-                  placeholder="Imię"
+                  placeholder={t("name")}
                 />
               </div>
 
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="email" className="text-white text-sm font-bold">
-                  Wpisz swój email<sup className="text-rose-500">*</sup>
+                  {t("emailPlaceholder")}
+                  <sup className="text-rose-500">*</sup>
                 </label>
                 <input
                   type="text"
@@ -81,7 +95,8 @@ const ContactSection = () => {
                 <label
                   htmlFor="message"
                   className="text-white text-sm font-bold">
-                  Wiadomość<sup className="text-rose-500">*</sup>
+                  {t("message")}
+                  <sup className="text-rose-500">*</sup>
                 </label>
                 <textarea
                   name="message"
@@ -91,13 +106,13 @@ const ContactSection = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  placeholder="Treść wiadomości..."></textarea>
+                  placeholder={t("messagePlaceholder")}></textarea>
               </div>
 
               <button
                 type="submit"
                 className="bg-rose-500 text-[rgb(10,11,38)] font-bold min-h-11 py-3 px-7 hover:scale-98 transition">
-                Wyślij wiadomość
+                {t("submit")}
               </button>
 
               <div className="min-h-8 uppercase">
