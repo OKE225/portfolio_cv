@@ -27,8 +27,8 @@ a:focus-visible,
 button:focus-visible,
 svg:focus-visible,
 div[role="github dashboard"]:focus-visible {
-  outline: 3px solid var(--color-cyan-500);
-  outline-offset: 3px;
+  outline: 2px solid var(--color-rose-500);
+  outline-offset: 2px;
 }
 
 @theme inline {
