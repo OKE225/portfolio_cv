@@ -1,0 +1,401 @@
+{
+  "Metadata": {
+    "description": "Buduję strony i aplikacje, które są wygodne w obsłudze, dopasowane do każdego ekranu i łatwe w dalszym rozwoju. Pracuję w Next.js, React i TypeScript, dbając o komponenty wielokrotnego użytku, bazy danych oraz bezpieczny dostęp użytkowników. AI wykorzystuję jako wsparcie w codziennej pracy"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "about": "O mnie",
+    "projects": "Projekty",
+    "contact": "Kontakt",
+    "copyEmail": "E-mail skopiowany!",
+    "copyEmailError": "Nie udało się skopiować adresu:"
+  },
+
+  "Hero": {
+    "greeting": "Cześć! Jestem Patryk",
+    "description": "Buduję nowoczesne strony internetowe oraz aplikacje webowe i mobilne, korzystając z React, Next.js i TypeScript. Dbam o czytelny interfejs, responsywność i szczegóły, a AI wykorzystuję jako wsparcie w codziennej pracy. Sprawdź moje projekty i zobacz, jak działają w praktyce",
+    "ctaProjects": "Zobacz moje projekty",
+    "ctaAbout": "Więcej o mnie"
+  },
+
+  "AboutMe": {
+    "title": "O Mnie",
+    "intro": "Nazywam się Patryk Jastrzębowski. Mam 20 lat. Jestem Fullstack Developerem z wykształceniem technika informatyka. Wolny czas poświęcam na programowanie tworząc nowoczesne strony internetowe oraz aplikacje webowe i mobilne. Najczęściej programuję w Next.js, React, TypeScript, JavaScript oraz stylizuję za pomocą TailwindCSS. Do zarządzania kodem używam Gita i GitHuba. W pracy korzystam z narzędzi AI, które wspierają proces tworzenia stron i aplikacji, ale nie zastępują samodzielnego myślenia",
+    "moreInfo": "Jestem dobrze zorganizowany, zaangażowany w zadania i skutecznie zarządzam czasem, realizuję projekty z pełnym skupieniem. Chcę się rozwijać razem z bardziej doświadczonymi programistami i mieć realny wpływ na produkt. Łączę teorię z praktyką regularnie budując nowe projekty, które umieszczam na moim profilu GitHub. Podchodzę do programowania z pasją i systematycznością",
+
+    "skillCards": {
+      "responsive": {
+        "title": "Dostosowanie do różnych ekranów",
+        "text": "CSS Grid, Flexbox i breakpointy. Strony dopasowane do komputerów, tabletów i telefonów z dbałością o czytelność i wygodną obsługę na każdym ekranie. Spójny wygląd i intuicyjna nawigacja niezależnie od rozmiaru urządzenia"
+      },
+      "uiux": {
+        "title": "Design UI/UX",
+        "text": "Nowoczesny wygląd, elementy 3D i projekty tworzone ze wsparciem AI. Dbałość o kolory, typografię i stany elementów od hover i focus po błędy i ładowanie. Interfejsy przyjemne wizualnie i wygodne w obsłudze na każdym urządzeniu"
+      },
+      "cleanCode": {
+        "title": "Czysty kod",
+        "text": "Czytelny i uporządkowany kod, zrozumiały również dla innych programistów. Jasne nazwy i podział na małe części, z których każda ma konkretne zadanie. Komponenty i funkcje, które można wykorzystać w wielu miejscach, łatwo poprawiać i rozbudowywać bez niepotrzebnego powielania kodu"
+      },
+      "ai": {
+        "title": "Praca z narzędziami AI",
+        "text": "AI jako wsparcie, nie zastępstwo myślenia. Pomoc w szukaniu błędów, rozumieniu kodu i tworzeniu pomysłów na wygląd stron. Sprawdzanie i dopasowywanie propozycji zamiast kopiowania gotowych odpowiedzi bez zastanowienia. Eksperymentowanie z narzędziami i szukanie nowych sposobów na usprawnienie pracy"
+      },
+      "database": {
+        "title": "Bazy danych",
+        "text": "MySQL, PostgreSQL i zarządzanie danymi, dodawanie, odczytywanie, edycja i usuwanie. Logowanie użytkowników oraz role określające, kto może zobaczyć lub zmienić konkretne informacje. Dodatkowe reguły dostępu RLS, dzięki którym użytkownik ma dostęp tylko do przeznaczonych dla niego danych"
+      },
+      "components": {
+        "title": "Komponenty wielokrotnego użytku",
+        "text": "Przyciski, formularze i karty tworzone jako uniwersalne komponenty. Konfiguracja przez propsy i spójne warianty wyglądu zamiast powielania kodu. Zmiany w jednym miejscu, które ułatwiają rozwój i utrzymanie całej aplikacji"
+      }
+    }
+  },
+
+  "Technologies": { "title": "Technologie" },
+
+  "GitHub": {
+    "topLanguage": "Najczęstszy język",
+    "commits": "Commity (ostatni rok)",
+    "repositories": "Publiczne repozytoria",
+
+    "activity": "Aktywność na GitHubie",
+    "viewProfile": "Zobacz mój profil",
+
+    "months": [
+      "Sty",
+      "Lut",
+      "Mar",
+      "Kwi",
+      "Maj",
+      "Cze",
+      "Lip",
+      "Sie",
+      "Wrz",
+      "Paź",
+      "Lis",
+      "Gru"
+    ],
+
+    "less": "Mniej",
+    "more": "Więcej",
+
+    "githubStatsError": "Nie udało się pobrać danych z GitHuba. Spróbuj ponownie później"
+  },
+
+  "Projects": {
+    "title": "Moje projekty",
+    "featured": "Wyróżniony projekt",
+    "preview": "Podgląd wyróżnionego projektu",
+    "problemSolutionEffect": "Problem → Rozwiązanie → Efekt",
+
+    "problem": "01 Problem",
+    "problemDescription": "Stworzenie aplikacji e-commerce, która łączy wygodne przeglądanie produktów z prostym zarządzaniem katalogiem. Ważne było również rozdzielenie dostępu klientów i administratorów oraz dopasowanie interfejsu do różnych ekranów",
+
+    "solution": "02 Rozwiązanie",
+    "solutionDescription": "Aplikacja w Next.js i Supabase z wyszukiwaniem, sortowaniem, koszykiem i interaktywnymi modelami 3D. Panel administratora umożliwia zarządzanie produktami i zdjęciami, a logowanie, role użytkowników oraz reguły RLS kontrolują dostęp do danych",
+
+    "effect": "03 Efekt",
+    "effectDescription": "Demonstracyjny sklep z responsywnym interfejsem i panelem zarządzania katalogiem. Użytkownicy mogą przeglądać produkty, sprawdzać specyfikacje i dodawać je do koszyka, a administratorzy aktualizować ofertę bez edytowania kodu",
+
+    "caseStudy": "Studium przypadku",
+    "code": "Kod",
+
+    "mindhealth": {
+      "description": "Aplikacja wspierająca dbanie o zdrowie psychiczne. Użytkownicy mogą codziennie zaznaczać samopoczucie, śledzić je w kalendarzu i budować serię kolejnych dni, a także korzystać z ćwiczeń uważności, dziennika myśli oraz chatbota AI oferującego wsparcie"
+    },
+    "travelDreams": {
+      "description": "Mobilna aplikacja do zapisywania miejsc, które użytkownik chce odwiedzić. Na mapie można oznaczać wymarzone lokalizacje, dodawać zdjęcia i krótkie opisy, a także przeglądać oraz usuwać zapisane punkty tworząc osobistą mapę podróżniczych marzeń"
+    },
+    "earth3d": {
+      "description": "Interaktywna strona landingowa poświęcona Ziemi. Jej głównym elementem jest model 3D planety, który reaguje na przewijanie strony animacjami pozycji, obrotu i zbliżenia, a całość uzupełniają sekcje z informacjami o Ziemi"
+    },
+    "kindle": {
+      "description": "Aplikacja webowa do gromadzenia cytatów z Kindle w jednym miejscu. Po zaimportowaniu notatek automatycznie rozpoznaje tytuł książki, autora i zaznaczenia, a użytkownik może wyszukiwać oraz sortować książki i cytaty"
+    },
+    "pinkyPromise": {
+      "description": "Responsywna strona internetowa dla prywatnej stylistki paznokci. Prezentuje ofertę, ceny i czas trwania usług, portfolio realizacji oraz informacje o artystce, a także ułatwia kontakt i umawianie wizyty dzięki spójnej, różowej identyfikacji wizualnej"
+    },
+    "flora": {
+      "description": "Responsywny landing page poświęcony roślinom i kwiatom. Wyróżnia się animowanym tłem, efektownymi kartami reagującymi na ruch kursora oraz nowoczesnym, czytelnym układem, który ułatwia przeglądanie treści"
+    }
+  },
+
+  "CaseStudy": {
+    "title": "Proces tworzenia",
+    "description": "Demonstracyjna aplikacja e-commerce inspirowana produktami Apple. Łączy katalog produktów, interaktywne modele 3D i koszyk z panelem do zarządzania ofertą. Użytkownicy mogą przeglądać specyfikacje i zapisywać produkty w koszyku, a administratorzy dodawać oraz aktualizować katalog. Projekt edukacyjny, który nie jest prawdziwym sklepem ani oficjalną stroną Apple",
+    "type": "Typ",
+    "typeValue": "Aplikacja E-commerce",
+    "role": "Rola",
+    "goal": "Cel",
+    "goalValue": "Projekt edukacyjny",
+
+    "features": {
+      "catalog": {
+        "title": "Katalog i koszyk",
+        "text": "Przeglądanie produktów według kategorii, wyszukiwanie i sortowanie. Szczegółowe specyfikacje oraz koszyk aktualizowany na bieżąco po zmianach"
+      },
+      "models": {
+        "title": "Modele 3D",
+        "text": "Interaktywne modele wybranych produktów, które pozwalają obejrzeć urządzenie z różnych stron i przyjrzeć się jego wyglądowi"
+      },
+      "admin": {
+        "title": "Panel administratora",
+        "text": "Dodawanie, edycja i usuwanie produktów bez zmieniania kodu. Przesyłanie zdjęć z automatycznym kadrowaniem oraz uzupełnianie specyfikacji"
+      },
+      "auth": {
+        "title": "Konta i uprawnienia",
+        "text": "Rejestracja i logowanie przez Supabase Auth. Oddzielny dostęp dla użytkowników i administratorów oraz reguły RLS kontrolujące dostęp do danych"
+      }
+    },
+
+    "goalTitle": "Cel i założenia",
+    "goalText": "Celem było stworzenie demonstracyjnego sklepu, który łączy wygodne przeglądanie produktów z zarządzaniem ofertą. Projekt obejmuje zarówno część dla użytkownika, jak i panel administratora z katalogiem, koszykiem, kontami oraz kontrolą dostępu",
+
+    "interfaceTitle": "Interfejs i prezentacja produktów",
+    "interfaceText": "Katalog podzielony na kategorie uzupełniają wyszukiwanie, sortowanie i szczegółowe specyfikacje. Interaktywne modele 3D pozwalają obejrzeć wybrane urządzenia z różnych stron. Całość dopełniają responsywny układ, stany ładowania i efekty po najechaniu",
+
+    "databaseTitle": "Aplikacja i baza danych",
+    "databaseText": "Projekt powstał w Next.js z wykorzystaniem Supabase oraz komponentów shadcn/ui. Dane zostały podzielone na cztery główne tabele: kategorie, produkty, produkty powiązane i role użytkowników. Taki układ łączy katalog z informacjami potrzebnymi do zarządzania ofertą i uprawnieniami",
+
+    "adminTitle": "Zarządzanie ofertą i dostępem",
+    "adminText": "Panel administratora umożliwia obsługę produktów, zdjęć i specyfikacji. Formularze są sprawdzane po stronie serwera, a usunięcie produktu wymaga potwierdzenia. Dostęp do panelu ograniczają role użytkowników, natomiast reguły RLS kontrolują dostęp na poziomie bazy danych",
+
+    "resultTitle": "Efekt i zakres projektu",
+    "resultText": "Efektem jest demonstracyjna aplikacja e-commerce z częścią dla użytkownika i narzędziami dla administratora. Projekt łączy interfejs, logowanie, bazę danych oraz zarządzanie katalogiem w jednej aplikacji. Nie obsługuje rzeczywistej sprzedaży jego zadaniem jest pokazanie opisanych funkcji w praktyce",
+
+    "demo": "Zobacz demo",
+    "code": "Kod na GitHubie"
+  },
+
+  "MyValue": {
+    "title": "Co mnie wyróżnia",
+
+    "details": {
+      "title": "Dopracowane szczegóły",
+      "text": "Dbam nie tylko o wygląd, ale też o wygodę korzystania z aplikacji. Czytelny układ, dopasowanie do różnych ekranów i przemyślane stany przycisków czy formularzy to dla mnie część gotowego projektu"
+    },
+    "code": {
+      "title": "Kod",
+      "text": "Piszę kod tak, żeby inni mogli go łatwo zrozumieć i rozwijać. Stawiam na jasne nazwy, uporządkowaną strukturę i komponenty wielokrotnego użytku, które ułatwiają zmiany bez powtarzania kodu"
+    },
+    "ai": {
+      "title": "AI z głową",
+      "text": "Korzystam z AI, żeby lepiej rozumieć kod, szukać błędów i sprawdzać pomysły na interfejsy. Nie kopiuję odpowiedzi bez zastanowienia, analizuję propozycje i dopasowuję je do potrzeb projektu"
+    },
+    "growth": {
+      "title": "Rozwój przez praktykę",
+      "text": "Regularnie tworzę projekty i publikuję je na GitHubie. Pracuję systematycznie, angażuję się w zadania i chcę uczyć się od bardziej doświadczonych programistów, mając realny wpływ na produkt"
+    }
+  },
+
+  "Contact": {
+    "title": "Napisz do mnie",
+
+    "name": "Imię",
+    "namePlaceholder": "Wpisz swoje imię",
+
+    "emailPlaceholder": "Wpisz swój email",
+
+    "message": "Wiadomość",
+    "messagePlaceholder": "Treść wiadomości...",
+
+    "submit": "Wyślij wiadomość",
+
+    "send": "Wysłano!",
+    "error": "Błąd!",
+
+    "errors": {
+      "invalidNameType": "Niepoprawny typ imienia!",
+      "nameRequired": "Imię jest wymagane!",
+      "nameTooLong": "Imię jest zbyt długie!",
+
+      "invalidEmailType": "Niepoprawny typ emaila!",
+      "emailRequired": "Email jest wymagany!",
+      "invalidEmailFormat": "Niepoprawny format emaila!",
+      "emailTooLong": "Email jest zbyt długi!",
+
+      "invalidMessageType": "Niepoprawny typ wiadomości!",
+      "messageRequired": "Wiadomość jest wymagana!",
+      "messageTooLong": "Wiadomość jest zbyt długa!",
+
+      "sendFailed": "Błąd wysyłki, spróbuj ponownie"
+    }
+  },
+
+  "Footer": {
+    "follow": "Śledź mnie",
+    "contact": "Kontakt",
+    "copyright": "Wszelkie prawa zastrzeżone"
+  },
+
+  "NotFound": {
+    "errorBadge": "Błąd 404",
+    "title": "Strona nie istnieje",
+    "description": "Link jest nieprawidłowy albo strona została przeniesiona. Wróć do strony głównej",
+    "secret": "niespodzianka",
+    "suggestion": "Sugestia: wróć na stronę główną",
+    "ctaBack": "Wróć na stronę główną",
+    "ctaProjects": "Zobacz moje projekty"
+  },
+
+  "Loading": {
+    "title": "Ładowanie..."
+  },
+
+  "Achievements": {
+    "unlocked": "Odblokowano osiągnięcie",
+    "levelUp": "Level up!",
+    "level": "Poziom {level}",
+    "allUnlocked": "Odblokowałeś wszystkie osiągnięcia",
+
+    "rarities": {
+      "bronze": "Brąz",
+      "silver": "Srebro",
+      "gold": "Złoto",
+      "error": "Error",
+      "platinum": "Platyna"
+    },
+
+    "ranks": [
+      "Nowicjusz",
+      "Odkrywca",
+      "Łowca bugów",
+      "Frontendowiec",
+      "Mistrz pikseli",
+      "Legenda",
+      "Boss końcowy",
+      "Mityczny dev",
+      "Arcymistrz",
+      "Fan PJ"
+    ],
+
+    "items": {
+      "hi": {
+        "title": "Witaj, wędrowcze",
+        "hint": "Zostań chwilę na stronie",
+        "description": "Wszedłeś na moje portfolio"
+      },
+      "about": {
+        "title": "Poznajmy się",
+        "hint": "Przewiń do sekcji „O mnie”",
+        "description": "Odwiedziłeś sekcję „O mnie”"
+      },
+      "nav": {
+        "title": "Nawigator",
+        "hint": "Kliknij link w nawigacji",
+        "description": "Skorzystałeś z nawigacji"
+      },
+      "tech": {
+        "title": "Stack Master",
+        "hint": "Sprawdź technologie",
+        "description": "Zobaczyłeś moje technologie"
+      },
+      "github": {
+        "title": "Contributor",
+        "hint": "Zajrzyj do sekcji GitHub",
+        "description": "Sprawdziłeś aktywność na GitHubie"
+      },
+      "projects": {
+        "title": "Odkrywca projektów",
+        "hint": "Przewiń do projektów",
+        "description": "Odwiedziłeś projekty"
+      },
+      "case": {
+        "title": "Detektyw",
+        "hint": "Przeczytaj studium przypadku",
+        "description": "Doszedłeś do studium przypadku"
+      },
+      "team": {
+        "title": "Team player",
+        "hint": "Zobacz, co wnoszę do zespołu",
+        "description": "Sprawdziłeś, co wnoszę do zespołu"
+      },
+      "contact": {
+        "title": "Gotowy do kontaktu",
+        "hint": "Przewiń do kontaktu",
+        "description": "Dotarłeś do formularza kontaktowego"
+      },
+      "half": {
+        "title": "Półmetek",
+        "hint": "Przewiń połowę strony",
+        "description": "Przewinąłeś połowę strony"
+      },
+      "end": {
+        "title": "Koniec gry",
+        "hint": "Przewiń do stopki",
+        "description": "Dotarłeś na sam dół"
+      },
+      "click10": {
+        "title": "Klikacz",
+        "hint": "Kliknij 10 razy",
+        "description": "10 kliknięć na stronie"
+      },
+      "click30": {
+        "title": "Mistrz klikania",
+        "hint": "Kliknij 30 razy",
+        "description": "30 kliknięć na stronie"
+      },
+      "fireworks": {
+        "title": "Fajerwerki",
+        "hint": "Kliknij 100 razy",
+        "description": "100 kliknięć na stronie"
+      },
+      "panel": {
+        "title": "Kolekcjoner",
+        "hint": "Otwórz listę trofeów",
+        "description": "Otworzyłeś listę trofeów"
+      },
+      "live": {
+        "title": "Ciekawski",
+        "hint": "Kliknij „Live project”",
+        "description": "Otworzyłeś projekt na żywo"
+      },
+      "recruiter": {
+        "title": "Rekruter",
+        "hint": "Otwórz 3 różne projekty na żywo",
+        "description": "Otworzyłeś 3 różne projekty na żywo"
+      },
+      "code": {
+        "title": "Hacker",
+        "hint": "Kliknij „Kod”",
+        "description": "Zajrzałeś do kodu projektu"
+      },
+      "typing": {
+        "title": "Pierwsze słowa",
+        "hint": "Zacznij wypełniać formularz",
+        "description": "Zacząłeś pisać wiadomość"
+      },
+      "time": {
+        "title": "Cierpliwy",
+        "hint": "Zostań 45 sekund",
+        "description": "Spędziłeś 45 sekund na stronie"
+      },
+      "coffee": {
+        "title": "Kawa",
+        "hint": "Zostań 2 minuty",
+        "description": "Spędziłeś 2 minuty na stronie"
+      },
+      "mail": {
+        "title": "Kontakt nawiązany",
+        "hint": "Kliknij adres e-mail",
+        "description": "Kliknąłeś mój adres e-mail"
+      },
+      "konami": {
+        "title": "Cheat code",
+        "hint": "↑ ↑ ↓ ↓ ← → ← → B A",
+        "description": "Wpisałeś kod Konami"
+      },
+      "bug": {
+        "title": "Bug hunter",
+        "hint": "Zgub się na nieistniejącej stronie",
+        "description": "Znalazłeś stronę 404"
+      },
+      "perfectionist": {
+        "title": "Perfekcjonista",
+        "hint": "Zdobądź wszystkie trofea",
+        "description": "Odblokowałeś wszystkie osiągnięcia"
+      }
+    }
+  }
+}

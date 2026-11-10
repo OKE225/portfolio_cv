@@ -1,0 +1,403 @@
+{
+  "Metadata": {
+    "description": "I build websites and applications that are easy to use, responsive on every screen and easy to develop further. I work with Next.js, React and TypeScript, focusing on reusable components, databases and secure user access. I use AI as support in my daily work."
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "copyEmail": "E-mail copied!",
+    "copyEmailError": "Failed to copy the email address:"
+  },
+
+  "Hero": {
+    "greeting": "Hi! I’m Patryk",
+    "description": "I build modern websites as well as web and mobile applications using React, Next.js and TypeScript. I focus on clear interfaces, responsiveness and attention to detail, using AI as support in my daily work. Check out my projects and see how they work in practice",
+    "ctaProjects": "View my projects",
+    "ctaAbout": "More about me"
+  },
+
+  "AboutMe": {
+    "title": "About me",
+    "intro": "My name is Patryk Jastrzębowski. I’m 20 years old and a Fullstack Developer with a degree in IT technician studies. In my free time, I focus on programming and creating modern websites as well as web and mobile applications. I mostly work with Next.js, React, TypeScript and JavaScript, styling interfaces with TailwindCSS. I use Git and GitHub for version control. I also use AI tools to support the process of building websites and applications, but not as a replacement for independent thinking",
+    "moreInfo": "I am well organised, committed to my tasks and effective at managing my time. I approach projects with full focus. I want to grow alongside more experienced developers and have a real impact on the product. I combine theory with practice by regularly building new projects and publishing them on my GitHub profile. I approach programming with passion and consistency",
+
+    "skillCards": {
+      "responsive": {
+        "title": "Responsive design",
+        "text": "CSS Grid, Flexbox and breakpoints. Websites adapted for desktops, tablets and phones, with attention to readability and comfortable use on every screen. Consistent appearance and intuitive navigation regardless of device size"
+      },
+      "uiux": {
+        "title": "UI/UX design",
+        "text": "Modern visuals, 3D elements and projects created with AI support. Attention to colours, typography and element states, from hover and focus to errors and loading. Interfaces that are visually pleasing and comfortable to use on any device"
+      },
+      "cleanCode": {
+        "title": "Clean code",
+        "text": "Readable and well-organised code that other developers can understand. Clear naming and a division into small parts, each with a specific purpose. Components and functions that can be reused, easily improved and extended without unnecessary code duplication"
+      },
+      "ai": {
+        "title": "Working with AI tools",
+        "text": "AI as support, not a replacement for thinking. Help with finding bugs, understanding code and generating interface ideas. Reviewing and adapting suggestions instead of copying ready-made answers without reflection. Experimenting with tools and looking for new ways to improve my workflow"
+      },
+      "database": {
+        "title": "Databases",
+        "text": "MySQL, PostgreSQL and data management: creating, reading, updating and deleting records. User authentication and roles that define who can view or modify specific information. Additional RLS policies ensure that users can access only the data intended for them"
+      },
+      "components": {
+        "title": "Reusable components",
+        "text": "Buttons, forms and cards built as reusable components. Configuration through props and consistent visual variants instead of duplicating code. Changes made in one place make it easier to develop and maintain the entire application"
+      }
+    }
+  },
+
+  "Technologies": {
+    "title": "Technologies"
+  },
+
+  "GitHub": {
+    "topLanguage": "Most used language",
+    "commits": "Commits (last year)",
+    "repositories": "Public repositories",
+
+    "activity": "GitHub activity",
+    "viewProfile": "View my profile",
+
+    "months": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+
+    "less": "Less",
+    "more": "More",
+
+    "githubStatsError": "Failed to load GitHub data. Please try again later."
+  },
+
+  "Projects": {
+    "title": "My projects",
+    "featured": "Featured project",
+    "preview": "Featured project preview",
+    "problemSolutionEffect": "Problem → Solution → Result",
+
+    "problem": "01 Problem",
+    "problemDescription": "Create an e-commerce application that combines convenient product browsing with simple catalogue management. It was also important to separate customer and administrator access and adapt the interface to different screen sizes",
+
+    "solution": "02 Solution",
+    "solutionDescription": "A Next.js and Supabase application with search, sorting, a shopping cart and interactive 3D models. The admin panel allows product and image management, while authentication, user roles and RLS policies control data access",
+
+    "effect": "03 Result",
+    "effectDescription": "A demonstration store with a responsive interface and catalogue management panel. Users can browse products, view specifications and add items to the cart, while administrators can update the offer without editing code",
+
+    "caseStudy": "Case study",
+    "code": "Code",
+
+    "mindhealth": {
+      "description": "An application that supports mental wellbeing. Users can record how they feel each day, track it in a calendar, build daily streaks and use mindfulness exercises, a thought journal and an AI chatbot offering support"
+    },
+    "travelDreams": {
+      "description": "A mobile application for saving places you want to visit. Users can mark dream locations on a map, add photos and short descriptions, and browse or remove saved points to create a personal travel wishlist"
+    },
+    "earth3d": {
+      "description": "An interactive landing page about Earth. Its main feature is a 3D model of the planet that reacts to scrolling with position, rotation and zoom animations, complemented by sections with information about Earth"
+    },
+    "kindle": {
+      "description": "A web application for collecting Kindle highlights in one place. After importing notes, it automatically detects the book title, author and highlights. Users can search and sort books and quotes"
+    },
+    "pinkyPromise": {
+      "description": "A responsive website for a private nail stylist. It presents services, prices, duration, a portfolio of work and information about the artist, while making it easy to contact and book an appointment through a consistent pink visual identity"
+    },
+    "flora": {
+      "description": "A responsive landing page about plants and flowers. It features an animated background, eye-catching cards that react to cursor movement and a modern, readable layout that makes browsing content easier"
+    }
+  },
+
+  "CaseStudy": {
+    "title": "Case study",
+    "description": "A demonstration e-commerce application inspired by Apple products. It combines a product catalogue, interactive 3D models and a shopping cart with an offer management panel. Users can browse specifications and add products to the cart, while administrators can add and update the catalogue. It is an educational project and is not a real store or Apple’s official website",
+    "type": "Type",
+    "typeValue": "E-commerce application",
+    "role": "Role",
+    "goal": "Goal",
+    "goalValue": "Educational project",
+
+    "features": {
+      "catalog": {
+        "title": "Catalogue and cart",
+        "text": "Browse products by category, search and sort them. Detailed specifications and a cart that updates immediately after changes"
+      },
+      "models": {
+        "title": "3D models",
+        "text": "Interactive models of selected products that let users view a device from different angles and examine its appearance"
+      },
+      "admin": {
+        "title": "Admin panel",
+        "text": "Add, edit and remove products without changing code. Upload images with automatic cropping and complete product specifications"
+      },
+      "auth": {
+        "title": "Accounts and permissions",
+        "text": "Registration and sign-in with Supabase Auth. Separate access for users and administrators, with RLS policies controlling data access"
+      }
+    },
+
+    "goalTitle": "Goal and assumptions",
+    "goalText": "The goal was to create a demonstration store that combines convenient product browsing with offer management. The project includes both the user-facing part and an admin panel with a catalogue, cart, accounts and access control",
+
+    "interfaceTitle": "Interface and product presentation",
+    "interfaceText": "The category-based catalogue complements search, sorting and detailed specifications. Interactive 3D models let users view selected devices from different angles. The experience is completed by a responsive layout, loading states and hover effects",
+
+    "databaseTitle": "Application and database",
+    "databaseText": "The project was built with Next.js, Supabase and shadcn/ui components. Data is divided into four main tables: categories, products, related products and user roles. This structure connects the catalogue with the information needed to manage the offer and permissions",
+
+    "adminTitle": "Offer and access management",
+    "adminText": "The admin panel supports product, image and specification management. Forms are validated on the server, and deleting a product requires confirmation. User roles restrict access to the panel, while RLS policies control access at the database level",
+
+    "resultTitle": "Result and project scope",
+    "resultText": "The result is a demonstration e-commerce application with a user-facing part and administrator tools. It combines the interface, authentication, database and catalogue management in one application. It does not process real sales, its purpose is to demonstrate the described features in practice",
+
+    "demo": "View demo",
+    "code": "View code on GitHub"
+  },
+
+  "MyValue": {
+    "title": "Why I'm unique",
+
+    "details": {
+      "title": "Attention to detail",
+      "text": "I care not only about appearance, but also about how comfortable an application is to use. A clear layout, responsiveness and well-designed button and form states are part of a finished project"
+    },
+    "code": {
+      "title": "Code",
+      "text": "I write code that other developers can easily understand and extend. I focus on clear naming, organised structure and reusable components that make changes easier without repeating code"
+    },
+    "ai": {
+      "title": "Using AI wisely",
+      "text": "I use AI to better understand code, find bugs and explore interface ideas. I do not copy answers without thinking, I analyse suggestions and adapt them to the needs of the project"
+    },
+    "growth": {
+      "title": "Growth through practice",
+      "text": "I regularly build projects and publish them on GitHub. I work consistently, engage with tasks and want to learn from more experienced developers while having a real impact on the product"
+    }
+  },
+
+  "Contact": {
+    "title": "Get in touch",
+
+    "name": "Name",
+    "namePlaceholder": "Enter your name",
+
+    "emailPlaceholder": "Enter your email",
+
+    "message": "Message",
+    "messagePlaceholder": "Your message...",
+
+    "submit": "Send message",
+
+    "send": "Sent!",
+    "error": "Error!",
+
+    "errors": {
+      "invalidNameType": "Invalid name type!",
+      "nameRequired": "Name is required!",
+      "nameTooLong": "Name is too long!",
+
+      "invalidEmailType": "Invalid email type!",
+      "emailRequired": "Email is required!",
+      "invalidEmailFormat": "Invalid email format!",
+      "emailTooLong": "Email is too long!",
+
+      "invalidMessageType": "Invalid message type!",
+      "messageRequired": "Message is required!",
+      "messageTooLong": "Message is too long!",
+
+      "sendFailed": "Failed to send the message. Please try again"
+    }
+  },
+
+  "Footer": {
+    "follow": "Follow me",
+    "contact": "Contact",
+    "copyright": "All rights reserved"
+  },
+
+  "NotFound": {
+    "errorBadge": "404 error",
+    "title": "Page not found",
+    "description": "The link is invalid or the page has been moved. Return to the home page",
+    "secret": "surprise",
+    "suggestion": "Suggestion: return to the home page",
+    "ctaBack": "Back to home",
+    "ctaProjects": "View my projects"
+  },
+
+  "Loading": {
+    "title": "Loading..."
+  },
+
+  "Achievements": {
+    "unlocked": "Achievement unlocked",
+    "levelUp": "Level up!",
+    "level": "Level {level}",
+    "allUnlocked": "You unlocked all achievements",
+
+    "rarities": {
+      "bronze": "Bronze",
+      "silver": "Silver",
+      "gold": "Gold",
+      "error": "Error",
+      "platinum": "Platinum"
+    },
+
+    "ranks": [
+      "Novice",
+      "Explorer",
+      "Bug Hunter",
+      "Frontend Developer",
+      "Pixel Master",
+      "Legend",
+      "Final Boss",
+      "Mythic Dev",
+      "Grandmaster",
+      "PJ Fan"
+    ],
+
+    "items": {
+      "hi": {
+        "title": "Welcome, traveller",
+        "hint": "Stay on the page for a moment",
+        "description": "You visited my portfolio"
+      },
+      "about": {
+        "title": "Let’s get acquainted",
+        "hint": "Scroll to the “About me” section",
+        "description": "You visited the “About me” section"
+      },
+      "nav": {
+        "title": "Navigator",
+        "hint": "Click a link in the navigation",
+        "description": "You used the navigation"
+      },
+      "tech": {
+        "title": "Stack Master",
+        "hint": "Check out the technologies",
+        "description": "You viewed my technologies"
+      },
+      "github": {
+        "title": "Contributor",
+        "hint": "Visit the GitHub section",
+        "description": "You checked my GitHub activity"
+      },
+      "projects": {
+        "title": "Project explorer",
+        "hint": "Scroll to the projects",
+        "description": "You visited the projects"
+      },
+      "case": {
+        "title": "Detective",
+        "hint": "Read the case study",
+        "description": "You reached the case study"
+      },
+      "team": {
+        "title": "Team player",
+        "hint": "See what I bring to a team",
+        "description": "You checked what I bring to a team"
+      },
+      "contact": {
+        "title": "Ready to connect",
+        "hint": "Scroll to the contact section",
+        "description": "You reached the contact form"
+      },
+      "half": {
+        "title": "Halfway there",
+        "hint": "Scroll through half of the page",
+        "description": "You scrolled through half of the page"
+      },
+      "end": {
+        "title": "Game over",
+        "hint": "Scroll to the footer",
+        "description": "You reached the bottom of the page"
+      },
+      "click10": {
+        "title": "Clicker",
+        "hint": "Click 10 times",
+        "description": "10 clicks on the page"
+      },
+      "click30": {
+        "title": "Clicking master",
+        "hint": "Click 30 times",
+        "description": "30 clicks on the page"
+      },
+      "fireworks": {
+        "title": "Fireworks",
+        "hint": "Click 100 times",
+        "description": "100 clicks on the page"
+      },
+      "panel": {
+        "title": "Collector",
+        "hint": "Open the trophy list",
+        "description": "You opened the trophy list"
+      },
+      "live": {
+        "title": "Curious",
+        "hint": "Click “Live project”",
+        "description": "You opened a live project"
+      },
+      "recruiter": {
+        "title": "Recruiter",
+        "hint": "Open 3 different live projects",
+        "description": "You opened 3 different live projects"
+      },
+      "code": {
+        "title": "Hacker",
+        "hint": "Click “Code”",
+        "description": "You viewed a project’s code"
+      },
+      "typing": {
+        "title": "First words",
+        "hint": "Start filling in the form",
+        "description": "You started writing a message"
+      },
+      "time": {
+        "title": "Patient",
+        "hint": "Stay for 45 seconds",
+        "description": "You spent 45 seconds on the page"
+      },
+      "coffee": {
+        "title": "Coffee",
+        "hint": "Stay for 2 minutes",
+        "description": "You spent 2 minutes on the page"
+      },
+      "mail": {
+        "title": "Contact established",
+        "hint": "Click the email address",
+        "description": "You clicked my email address"
+      },
+      "konami": {
+        "title": "Cheat code",
+        "hint": "↑ ↑ ↓ ↓ ← → ← → B A",
+        "description": "You entered the Konami code"
+      },
+      "bug": {
+        "title": "Bug hunter",
+        "hint": "Get lost on a non-existent page",
+        "description": "You found the 404 page"
+      },
+      "perfectionist": {
+        "title": "Perfectionist",
+        "hint": "Unlock all trophies",
+        "description": "You unlocked all achievements"
+      }
+    }
+  }
+}
